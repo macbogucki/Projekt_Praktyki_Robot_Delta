@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gPickRegister" Type="pickregister">
+    <Selector ID="Type" Value="LinearConveyor">
+      <Property ID="StandardFrameName" Value="ConveyorPick" />
+      <Property ID="Length" Value="2000" />
+      <Property ID="Width" Value="250" />
+      <Selector ID="MotionSource" Value="Axis">
+        <Property ID="AxisRef" Value="gAxis_1" />
+        <Selector ID="MovementLimits" Value="UseAxisLimits" />
+      </Selector>
+      <Selector ID="SceneObject" Value="Visible">
+        <Property ID="RegisterName" Value="Visible" />
+        <Property ID="Opacitiy" Value="0.45" />
+        <Property ID="Dimensions" Value="NotUsed" />
+        <Property ID="ConveyorBelt" Value="NotUsed" />
+            </Selector>
+          </Selector>
+    <Group ID="SceneViewerSettings">
+      <Property ID="FileDevice" Value="CNC_PrgDir" />
+      <Property ID="FileNamePrefix" Value="PickRegister_" />
+        </Group>
+    <Selector ID="Alarms" Value="None" />
+  </Element>
+  <Element ID="gPlaceRegister" Type="pickregister">
+    <Selector ID="Type" Value="LinearConveyor">
+      <Property ID="StandardFrameName" Value="ConveyorPlace" />
+      <Property ID="Length" Value="2000" />
+      <Property ID="Width" Value="250" />
+      <Selector ID="MotionSource" Value="Axis">
+        <Property ID="AxisRef" Value="gAxis_2" />
+        <Selector ID="MovementLimits" Value="UseAxisLimits" />
+      </Selector>
+      <Selector ID="SceneObject" Value="Visible">
+        <Property ID="RegisterName" Value="Visible" />
+        <Property ID="Opacitiy" Value="0.45" />
+        <Property ID="Dimensions" Value="NotUsed" />
+        <Property ID="ConveyorBelt" Value="NotUsed" />
+    </Selector>
+          </Selector>
+    <Group ID="SceneViewerSettings">
+      <Property ID="FileDevice" Value="CNC_PrgDir" />
+      <Property ID="FileNamePrefix" Value="PlaceRegister_" />
+        </Group>
+    <Selector ID="Alarms" Value="None" />
+  </Element>
+</Configuration>

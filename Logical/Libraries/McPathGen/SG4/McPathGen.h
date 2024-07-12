@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McPathGen 5.26.1 */
+/* McPathGen 5.24.1 */
 
 #ifndef _MCPATHGEN_
 #define _MCPATHGEN_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McPathGen_VERSION
-#define _McPathGen_VERSION 5.26.1
+#define _McPathGen_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>
@@ -154,11 +154,6 @@ typedef enum McAGPGTPBBarrParEnum
 	mcAGPGTPBBP_TCP_COOR = 1
 } McAGPGTPBBarrParEnum;
 
-typedef enum McAGPGTPBTrqLimConsEnum
-{	mcAGPGTPBTLC_EX = 0,
-	mcAGPGTPBTLC_APPX = 1
-} McAGPGTPBTrqLimConsEnum;
-
 typedef enum McAGPGMiscNonMoveLimEnum
 {	mcAGPGMNML_NOT_USE = 0,
 	mcAGPGMNML_USE = 1
@@ -173,16 +168,6 @@ typedef enum McAGPGMTSOJerkSupEnum
 	mcAGPGMTSOJS_BASIC = 1,
 	mcAGPGMTSOJS_AUT = 2
 } McAGPGMTSOJerkSupEnum;
-
-typedef enum McAGSRAEAREnum
-{	mcAGSRAEAR_STD = 0,
-	mcAGSRAEAR_DYN_STOP = 1
-} McAGSRAEAREnum;
-
-typedef enum McAGSRAEARDynStopModEnum
-{	mcAGSRAEARDSM_COMP_AND_TRANS = 0,
-	mcAGSRAEARDSM_COMP = 1
-} McAGSRAEARDynStopModEnum;
 
 typedef enum McAGFPRGIPSIntrplTypEnum
 {	mcAGFPRGIPSIT_RPD_LIN = 0,
@@ -219,12 +204,6 @@ typedef enum McAGFPRGIPSCtrCxnChChSpecEnum
 {	mcAGFPRGIPSCCCCS_CH_LEN = 0,
 	mcAGFPRGIPSCCCCS_SHORT_PATH = 1
 } McAGFPRGIPSCtrCxnChChSpecEnum;
-
-typedef enum McAGFPRGIPSAccHoldDlyEnum
-{	mcAGFPRGIPSAHD_NONE = 0,
-	mcAGFPRGIPSAHD_AUT = 1,
-	mcAGFPRGIPSAHD_USR_DEF = 2
-} McAGFPRGIPSAccHoldDlyEnum;
 
 typedef enum McAGFPRGIPSPrgUnitEnum
 {	mcAGFPRGIPSPU_USE_AXESGROUP_SET = 0,
@@ -321,18 +300,6 @@ typedef enum McAGFPRGPEPPSRIsPatEnum
 	mcAGFPRGPEPPSRIP_YES = 1
 } McAGFPRGPEPPSRIsPatEnum;
 
-typedef enum McAGFCDCEntryExitModEnum
-{	mcAGFCDCEEM_DIR = 0,
-	mcAGFCDCEEM_TRANS_LIN = 1,
-	mcAGFCDCEEM_CLST_PT = 2
-} McAGFCDCEntryExitModEnum;
-
-typedef enum McAGFCDCBnErrorEnum
-{	mcAGFCDCBE_NOT_USE = 0,
-	mcAGFCDCBE_BLK_LIM = 1,
-	mcAGFCDCBE_DIST_LIM = 2
-} McAGFCDCBnErrorEnum;
-
 typedef enum McAGFFFFwdModEnum
 {	mcAGFFFFM_COMP_AND_TRANS = 0,
 	mcAGFFFFM_DIS = 1,
@@ -384,37 +351,6 @@ typedef enum McAGFMFunInSimEnum
 	mcAGFMFIS_SET = 1
 } McAGFMFunInSimEnum;
 
-typedef enum McAGFMESngElmEnum
-{	mcAGFMESE_CUS = 0,
-	mcAGFMESE_PRG_IDENT = 1,
-	mcAGFMESE_LIN_IDENT = 2,
-	mcAGFMESE_PRG_RUNT = 3,
-	mcAGFMESE_SET_POS = 4,
-	mcAGFMESE_ONL_PATH_INFL = 5,
-	mcAGFMESE_PATH_IDENT = 6,
-	mcAGFMESE_TOOL = 7,
-	mcAGFMESE_IP = 8,
-	mcAGFMESE_LIM = 9,
-	mcAGFMESE_TORQ = 10,
-	mcAGFMESE_F_SET = 11,
-	mcAGFMESE_PATH_INFO = 12,
-	mcAGFMESE_GB_TORQ = 13,
-	mcAGFMESE_CROSS_SEC_LOADS = 14,
-	mcAGFMESE_DYN_DEC = 15,
-	mcAGFMESE_ORIENT_COMP = 16,
-	mcAGFMESE_SKIP_BLK = 17
-} McAGFMESngElmEnum;
-
-typedef enum McAGFMLLocEnum
-{	mcAGFMLL_DEF = 0,
-	mcAGFMLL_USR = 1
-} McAGFMLLocEnum;
-
-typedef enum McAGFMLAdvParEnum
-{	mcAGFMLAP_NOT_USE = 0,
-	mcAGFMLAP_USE = 1
-} McAGFMLAdvParEnum;
-
 typedef enum McAGFPDPathTypEnum
 {	mcAGFPDPT_CART_PATH = 0,
 	mcAGFPDPT_ORIENT_PATH = 1,
@@ -452,16 +388,6 @@ typedef enum McAGFPDPathLimIntJerkEnum
 {	mcAGFPDPLIJ_NOT_USE = 0,
 	mcAGFPDPLIJ_BASIC = 1
 } McAGFPDPathLimIntJerkEnum;
-
-typedef enum McAGFPSCondStopEnum
-{	mcAGFPSCS_NOT_USE = 0,
-	mcAGFPSCS_STOP = 1
-} McAGFPSCondStopEnum;
-
-typedef enum McAGFPSAdvParEnum
-{	mcAGFPSAP_NOT_USE = 0,
-	mcAGFPSAP_USE = 1
-} McAGFPSAdvParEnum;
 
 typedef enum McAGFTToolEnum
 {	mcAGFTT_TOOL_TBL = 0,
@@ -520,8 +446,7 @@ typedef enum McAGFSIGAxDlyEnum
 
 typedef enum McAGFSIGSigMissedSigBxEnum
 {	mcAGFSIGSMSB_NO_OUT_ERR = 0,
-	mcAGFSIGSMSB_DELAYED_OUT_WAR = 1,
-	mcAGFSIGSMSB_DELAYED_OUT_NO_WAR = 2
+	mcAGFSIGSMSB_DELAYED_OUT_WAR = 1
 } McAGFSIGSigMissedSigBxEnum;
 
 typedef enum McAGFSIGSigActEnum
@@ -669,6 +594,11 @@ typedef enum McAGFTTTPCTEReacEnum
 typedef enum McAGFTrkSyncGeomEnum
 {	mcAGFTRKSG_BASIC = 0
 } McAGFTrkSyncGeomEnum;
+
+typedef enum McAGFTrkTrqLimConsEnum
+{	mcAGFTRKTLC_EX = 0,
+	mcAGFTRKTLC_APPX = 1
+} McAGFTrkTrqLimConsEnum;
 
 typedef enum McAGFPCXCoorEnum
 {	mcAGFPCXC_NOT_USE = 0,
@@ -933,8 +863,7 @@ typedef enum McMS2ADBSceneViewerObjEnum
 	mcMS2ADBSVO_CODIAN_D2500S020 = 2,
 	mcMS2ADBSVO_CODIAN_D2800S020 = 3,
 	mcMS2ADBSVO_CODIAN_D21000S030 = 4,
-	mcMS2ADBSVO_CODIAN_D21500S030 = 5,
-	mcMS2ADBSVO_D21500TW06X = 6
+	mcMS2ADBSVO_CODIAN_D21500S030 = 5
 } McMS2ADBSceneViewerObjEnum;
 
 typedef enum McMS2ADBDescEnum
@@ -982,24 +911,7 @@ typedef enum McMS2ADBMonPtEnum
 
 typedef enum McMS3ADASceneViewerObjEnum
 {	mcMS3ADASVO_NOT_USE = 0,
-	mcMS3ADASVO_GEN = 1,
-	mcMS3ADASVO_D40500S01X = 2,
-	mcMS3ADASVO_D40650S02X = 3,
-	mcMS3ADASVO_D40800S02X = 4,
-	mcMS3ADASVO_D41100S02X = 5,
-	mcMS3ADASVO_D41300S02X = 6,
-	mcMS3ADASVO_D41600S02X = 7,
-	mcMS3ADASVO_D41600S05X = 8,
-	mcMS3ADASVO_TD40500S01X = 9,
-	mcMS3ADASVO_TD40650S02X = 10,
-	mcMS3ADASVO_D40650HD02X = 11,
-	mcMS3ADASVO_D40800HD02X = 12,
-	mcMS3ADASVO_D41100HD02X = 13,
-	mcMS3ADASVO_D41100HD04X = 14,
-	mcMS3ADASVO_D41300HD02X = 15,
-	mcMS3ADASVO_D41300HD04X = 16,
-	mcMS3ADASVO_D41600HD02X = 17,
-	mcMS3ADASVO_D41600HD04X = 18
+	mcMS3ADASVO_GEN = 1
 } McMS3ADASceneViewerObjEnum;
 
 typedef enum McMS3ADADescEnum
@@ -1049,9 +961,7 @@ typedef enum McMS3ADBWFrmMdlEnum
 typedef enum McMS3ADXZCSceneViewerObjEnum
 {	mcMS3ADXZCSVO_NOT_USE = 0,
 	mcMS3ADXZCSVO_GEN = 1,
-	mcMS3ADXZCSVO_D2500S02XR100 = 3,
-	mcMS3ADXZCSVO_D2800S02XR100 = 2,
-	mcMS3ADXZCSVO_D21000S03XDR8X = 4
+	mcMS3ADXZCSVO_D2800S02XR100 = 2
 } McMS3ADXZCSceneViewerObjEnum;
 
 typedef enum McMS3ADXZCDescEnum
@@ -1069,28 +979,7 @@ typedef enum McMS3ADXZCMonPtEnum
 
 typedef enum McMS4ADASceneViewerObjEnum
 {	mcMS4ADASVO_NOT_USE = 0,
-	mcMS4ADASVO_GEN = 1,
-	mcMS4ADASVO_D40650S02XR10X = 2,
-	mcMS4ADASVO_D40800S02XR10X = 3,
-	mcMS4ADASVO_D41100S02XR20X = 4,
-	mcMS4ADASVO_D41300S02XR20X = 5,
-	mcMS4ADASVO_D41600S02XR10X = 6,
-	mcMS4ADASVO_D41600S04XR20X = 7,
-	mcMS4ADASVO_D41600S05XR30X = 8,
-	mcMS4ADASVO_D42100S05XR75X = 9,
-	mcMS4ADASVO_TD40800S02XR10X = 10,
-	mcMS4ADASVO_D41100HD02XRH09X = 11,
-	mcMS4ADASVO_D41100HD02XRH10X = 12,
-	mcMS4ADASVO_D41100HD04XRH21X = 13,
-	mcMS4ADASVO_D40650HD02XRH10X = 14,
-	mcMS4ADASVO_D40800HD02XRH10X = 15,
-	mcMS4ADASVO_D41100HD02XRH21X = 16,
-	mcMS4ADASVO_D41300HD02XRH10X = 17,
-	mcMS4ADASVO_D41300HD02XRH21X = 18,
-	mcMS4ADASVO_D41300HD04XRH21X = 19,
-	mcMS4ADASVO_D41600HD02XRH10X = 20,
-	mcMS4ADASVO_D41600HD02XRH21X = 21,
-	mcMS4ADASVO_D41600HD04XRH21X = 22
+	mcMS4ADASVO_GEN = 1
 } McMS4ADASceneViewerObjEnum;
 
 typedef enum McMS4ADADescEnum
@@ -1134,8 +1023,7 @@ typedef enum McMS4ADCWFrmMdlEnum
 
 typedef enum McMS5ADASceneViewerObjEnum
 {	mcMS5ADASVO_NOT_USE = 0,
-	mcMS5ADASVO_GEN = 1,
-	mcMS5ADASVO_D51100S02XR10X = 2
+	mcMS5ADASVO_GEN = 1
 } McMS5ADASceneViewerObjEnum;
 
 typedef enum McMS5ADADescEnum
@@ -1672,20 +1560,10 @@ typedef struct McAGPGTPBBarrParType
 {	enum McAGPGTPBBarrParEnum Type;
 } McAGPGTPBBarrParType;
 
-typedef struct McAGPGTPBTrqLimConsAppxType
-{	double StepSize;
-} McAGPGTPBTrqLimConsAppxType;
-
-typedef struct McAGPGTPBTrqLimConsType
-{	enum McAGPGTPBTrqLimConsEnum Type;
-	struct McAGPGTPBTrqLimConsAppxType Approximation;
-} McAGPGTPBTrqLimConsType;
-
 typedef struct McAGPGTPBType
 {	struct McAGPGTPBLimCkResType LimitCheckResolution;
 	struct McAGPGTPBBuffTimeType BufferTime;
 	struct McAGPGTPBBarrParType BarrierParametrization;
-	struct McAGPGTPBTrqLimConsType TorqueLimitConsideration;
 } McAGPGTPBType;
 
 typedef struct McAGPGTrajPlanType
@@ -1732,22 +1610,8 @@ typedef struct McAGPGBSType
 	struct McAGPGMiscType Miscellaneous;
 } McAGPGBSType;
 
-typedef struct McAGSRAEARDynStopType
-{	enum McAGSRAEARDynStopModEnum Mode;
-} McAGSRAEARDynStopType;
-
-typedef struct McAGSRAEARType
-{	enum McAGSRAEAREnum Type;
-	struct McAGSRAEARDynStopType DynamicStop;
-} McAGSRAEARType;
-
-typedef struct McAGPGSRAEType
-{	struct McAGSRAEARType AxisReaction;
-} McAGPGSRAEType;
-
 typedef struct McAGPGSRType
-{	struct McAGPGSRAEType AxisError;
-	struct McAGSRQSType Quickstop;
+{	struct McAGSRQSType Quickstop;
 } McAGPGSRType;
 
 typedef struct McCfgAxGrpPathGenType
@@ -1800,21 +1664,6 @@ typedef struct McAGFPRGIPSCtrCxnType
 	struct McAGFPRGIPSCtrCxnChType Chamfers;
 } McAGFPRGIPSCtrCxnType;
 
-typedef struct McAGFPRGIPSAccHoldDlyAutType
-{	double AdditionalUserDelay;
-} McAGFPRGIPSAccHoldDlyAutType;
-
-typedef struct McAGFPRGIPSAccHoldDlyUsrDefType
-{	double UserDefinedAxesDelay;
-	double AdditionalUserDelay;
-} McAGFPRGIPSAccHoldDlyUsrDefType;
-
-typedef struct McAGFPRGIPSAccHoldDlyType
-{	enum McAGFPRGIPSAccHoldDlyEnum Type;
-	struct McAGFPRGIPSAccHoldDlyAutType Automatic;
-	struct McAGFPRGIPSAccHoldDlyUsrDefType UserDefined;
-} McAGFPRGIPSAccHoldDlyType;
-
 typedef struct McAGFPRGIPSPrgUnitType
 {	enum McAGFPRGIPSPrgUnitEnum Type;
 } McAGFPRGIPSPrgUnitType;
@@ -1863,7 +1712,6 @@ typedef struct McAGFPRGIPSType
 	struct McAGFPRGIPSAbsRelCirCoorType AbsRelCircleCoordinates;
 	struct McAGFPRGIPSJACSACSPrgType JACSACSProgramming;
 	struct McAGFPRGIPSCtrCxnType ContourConnection;
-	struct McAGFPRGIPSAccHoldDlyType AccuracyHoldDelay;
 	struct McAGFPRGIPSPrgUnitType ProgrammingUnits;
 	struct McAGFPRGIPSFSetType FeedSettings;
 } McAGFPRGIPSType;
@@ -2027,40 +1875,6 @@ typedef struct McCfgAxGrpFeatPrgType
 	struct McAGFPRGPEType ProgramElements;
 } McCfgAxGrpFeatPrgType;
 
-typedef struct McCfgAxGrpFeatCompType
-{	struct McAGFModalDatBxType ModalDataBehaviour;
-	double MaxCartesianDeviation;
-	double MaxNonCartesianDeviation;
-	double MaxCartesianTransitionAngle;
-	double MaxNonCartesianTransitionAngle;
-	double MaxCartesianLength;
-} McCfgAxGrpFeatCompType;
-
-typedef struct McAGFCDCEntryExitModType
-{	enum McAGFCDCEntryExitModEnum Type;
-} McAGFCDCEntryExitModType;
-
-typedef struct McAGFCDCBnErrorBlkLimType
-{	signed short BlockLimit;
-} McAGFCDCBnErrorBlkLimType;
-
-typedef struct McAGFCDCBnErrorDistLimType
-{	double DistanceLimit;
-} McAGFCDCBnErrorDistLimType;
-
-typedef struct McAGFCDCBnErrorType
-{	enum McAGFCDCBnErrorEnum Type;
-	struct McAGFCDCBnErrorBlkLimType BlockLimit;
-	struct McAGFCDCBnErrorDistLimType DistanceLimit;
-} McAGFCDCBnErrorType;
-
-typedef struct McCfgAxGrpFeatCdcType
-{	struct McAGFModalDatBxType ModalDataBehaviour;
-	struct McAGFCDCEntryExitModType EntryExitMode;
-	unsigned short Lookahead;
-	struct McAGFCDCBnErrorType BottleneckError;
-} McCfgAxGrpFeatCdcType;
-
 typedef struct McAGFFFFwdModType
 {	enum McAGFFFFwdModEnum Type;
 } McAGFFFFwdModType;
@@ -2207,18 +2021,6 @@ typedef struct McCfgAxGrpFeatFrmHierCusType
 	struct McAGFFHCType CustomFrameHierarchy;
 } McCfgAxGrpFeatFrmHierCusType;
 
-typedef struct McCfgAxGrpFeatJogType
-{	unsigned char Reserve;
-} McCfgAxGrpFeatJogType;
-
-typedef struct McAGFLCrossSlideType
-{	plcstring CoordinateName[251];
-} McAGFLCrossSlideType;
-
-typedef struct McCfgAxGrpFeatLahType
-{	struct McAGFLCrossSlideType CrossSlide;
-} McCfgAxGrpFeatLahType;
-
 typedef struct McAGFMFunIdxTypSngType
 {	unsigned short Index;
 } McAGFMFunIdxTypSngType;
@@ -2259,191 +2061,6 @@ typedef struct McCfgAxGrpFeatMFunType
 {	struct McAGFModalDatBxType ModalDataBehaviour;
 	struct McCfgUnboundedArrayType MFunction;
 } McCfgAxGrpFeatMFunType;
-
-typedef struct McAGFMECmbElmType
-{	plcstring BasicMonitor[251];
-} McAGFMECmbElmType;
-
-typedef struct McAGFMESngElmCusType
-{	plcstring ConnectionPoint[251];
-} McAGFMESngElmCusType;
-
-typedef struct McAGFMESngElmPrgIdentType
-{	plcstring MainProgram[251];
-	plcstring InitProgram[251];
-	plcstring CurrentProgram[251];
-	plcstring ProgramSequence[251];
-} McAGFMESngElmPrgIdentType;
-
-typedef struct McAGFMESngElmLinIdentType
-{	plcstring LineNumber[251];
-	plcstring BlockNumber[251];
-	plcstring BlockMonitor[251];
-	plcstring ByteOffset[251];
-	plcstring JointAxesRemainingDistance[251];
-	plcstring TCPRemainingDistanceInMCS[251];
-	plcstring SlaveAxesRemainingDistance[251];
-} McAGFMESngElmLinIdentType;
-
-typedef struct McAGFMESngElmPrgRunTType
-{	plcstring OverallRuntime[251];
-	plcstring MovementRuntime[251];
-	plcstring OverallDwellTime[251];
-	plcstring DwellTime[251];
-	plcstring DwellTimeRemaining[251];
-} McAGFMESngElmPrgRunTType;
-
-typedef struct McAGFMESngElmSetPosType
-{	plcstring JointAxesSetPositions[251];
-	plcstring AxesSetPositions[251];
-	plcstring TCPSetPositionsInMCS[251];
-	plcstring TCPSetPositionsInPCS[251];
-	plcstring SlaveAxesSetPositions[251];
-} McAGFMESngElmSetPosType;
-
-typedef struct McAGFMESngElmOPIPrgSetPosType
-{	plcstring JointAxesSetPositions[251];
-	plcstring AxesSetPositions[251];
-	plcstring TCPSetPositionsInMCS[251];
-	plcstring TCPSetPositionsInPCS[251];
-	plcstring SlaveAxesSetPositions[251];
-} McAGFMESngElmOPIPrgSetPosType;
-
-typedef struct McAGFMESngElmOPIInflSetPosType
-{	plcstring JointAxesSetPositions[251];
-	plcstring AxesSetPositions[251];
-	plcstring TCPSetPositionsInMCS[251];
-	plcstring TCPSetPositionsInPCS[251];
-	plcstring SlaveAxesSetPositions[251];
-} McAGFMESngElmOPIInflSetPosType;
-
-typedef struct McAGFMESngElmOPIType
-{	struct McAGFMESngElmOPIPrgSetPosType ProgrammedSetPositions;
-	struct McAGFMESngElmOPIInflSetPosType InfluencedSetPositions;
-} McAGFMESngElmOPIType;
-
-typedef struct McAGFMESngElmPathIdentType
-{	plcstring CurrentPathSpeed[251];
-	plcstring ProgrammedSpeedOfPath[251];
-	plcstring PathPosition[251];
-	plcstring CurrentLength[251];
-	plcstring RemainingDistance[251];
-} McAGFMESngElmPathIdentType;
-
-typedef struct McAGFMESngElmToolType
-{	plcstring ToolIndex[251];
-	plcstring ToolIdentifier[251];
-	plcstring ToolDescription[251];
-} McAGFMESngElmToolType;
-
-typedef struct McAGFMESngElmIpType
-{	plcstring IPMonitor[251];
-	plcstring FileMonitor[251];
-} McAGFMESngElmIpType;
-
-typedef struct McAGFMESngElmLimType
-{	signed long ACSAxisIndex;
-	plcstring ACSAxisLimits[251];
-} McAGFMESngElmLimType;
-
-typedef struct McAGFMESngElmTorqType
-{	plcstring Computed[251];
-	plcstring Transmitted[251];
-	plcstring Unfiltered[251];
-} McAGFMESngElmTorqType;
-
-typedef struct McAGFMESngElmFSetType
-{	plcstring CurrentSettings[251];
-} McAGFMESngElmFSetType;
-
-typedef struct McAGFMESngElmPathInfoType
-{	plcstring PathName[251];
-	plcstring SelectedPathInfo[251];
-} McAGFMESngElmPathInfoType;
-
-typedef struct McAGFMESngElmGBTorqType
-{	plcstring Torques[251];
-	plcstring Unfiltered[251];
-} McAGFMESngElmGBTorqType;
-
-typedef struct McAGFMESngElmCrossSecLoadsType
-{	plcstring Loads[251];
-	plcstring Unfiltered[251];
-} McAGFMESngElmCrossSecLoadsType;
-
-typedef struct McAGFMESngElmDynDecType
-{	plcstring Decelerations[251];
-} McAGFMESngElmDynDecType;
-
-typedef struct McAGFMESngElmOrientCompType
-{	plcstring ProgrammedTCPSetPositionsInMCS[251];
-	plcstring ProgrammedTCPSetPositionsInPCS[251];
-	plcstring OrientationError[251];
-} McAGFMESngElmOrientCompType;
-
-typedef struct McAGFMESngElmSkipBlkType
-{	plcstring SkipLevels[251];
-} McAGFMESngElmSkipBlkType;
-
-typedef struct McAGFMESngElmType
-{	enum McAGFMESngElmEnum Type;
-	struct McAGFMESngElmCusType Custom;
-	struct McAGFMESngElmPrgIdentType ProgramIdentification;
-	struct McAGFMESngElmLinIdentType LineIdentification;
-	struct McAGFMESngElmPrgRunTType ProgramRuntime;
-	struct McAGFMESngElmSetPosType SetPositions;
-	struct McAGFMESngElmOPIType OnlinePathInfluence;
-	struct McAGFMESngElmPathIdentType PathIdentification;
-	struct McAGFMESngElmToolType Tool;
-	struct McAGFMESngElmIpType Interpreter;
-	struct McAGFMESngElmLimType Limits;
-	struct McAGFMESngElmTorqType Torques;
-	struct McAGFMESngElmFSetType FeedSettings;
-	struct McAGFMESngElmPathInfoType PathInformation;
-	struct McAGFMESngElmGBTorqType GearboxTorques;
-	struct McAGFMESngElmCrossSecLoadsType CrossSectionLoads;
-	struct McAGFMESngElmDynDecType DynamicDecelerations;
-	struct McAGFMESngElmOrientCompType OrientationCompliance;
-	struct McAGFMESngElmSkipBlkType SkipBlock;
-} McAGFMESngElmType;
-
-typedef struct McAGFMESngElmsType
-{	struct McCfgUnboundedArrayType SingleElement;
-} McAGFMESngElmsType;
-
-typedef struct McCfgAxGrpFeatMonElemType
-{	struct McAGFMECmbElmType CombinedElements;
-	struct McAGFMESngElmsType SingleElements;
-} McCfgAxGrpFeatMonElemType;
-
-typedef struct McAGFMLLocDefType
-{	plcstring FileDevice[251];
-} McAGFMLLocDefType;
-
-typedef struct McAGFMLLocUsrType
-{	plcstring FileDevice[251];
-} McAGFMLLocUsrType;
-
-typedef struct McAGFMLLocType
-{	enum McAGFMLLocEnum Type;
-	struct McAGFMLLocDefType Default;
-	struct McAGFMLLocUsrType User;
-} McAGFMLLocType;
-
-typedef struct McAGFMLAdvParUseType
-{	signed long FileSize;
-	signed long FilesCount;
-} McAGFMLAdvParUseType;
-
-typedef struct McAGFMLAdvParType
-{	enum McAGFMLAdvParEnum Type;
-	struct McAGFMLAdvParUseType Used;
-} McAGFMLAdvParType;
-
-typedef struct McCfgAxGrpFeatMpLogType
-{	struct McAGFMLLocType Location;
-	struct McAGFMLAdvParType AdvancedParameters;
-} McCfgAxGrpFeatMpLogType;
 
 typedef struct McAGFPDCalcInSelByNameType
 {	plcstring FrameName[251];
@@ -2516,26 +2133,6 @@ typedef struct McCfgAxGrpFeatPathDefType
 {	struct McAGFModalDatBxType ModalDataBehaviour;
 	struct McCfgUnboundedArrayType Path;
 } McCfgAxGrpFeatPathDefType;
-
-typedef struct McAGFPSCondStopType
-{	enum McAGFPSCondStopEnum Type;
-} McAGFPSCondStopType;
-
-typedef struct McAGFPSAdvParUseType
-{	unsigned short PathDistRestartBufferSize;
-	unsigned long ProgIntRestartBufferInitSize;
-} McAGFPSAdvParUseType;
-
-typedef struct McAGFPSAdvParType
-{	enum McAGFPSAdvParEnum Type;
-	struct McAGFPSAdvParUseType Used;
-} McAGFPSAdvParType;
-
-typedef struct McCfgAxGrpFeatPrgSimType
-{	struct McAGFPSCondStopType ConditionalStop;
-	struct McAGFPSAdvParType AdvancedParameters;
-	plcstring RestartDataLocation[251];
-} McCfgAxGrpFeatPrgSimType;
 
 typedef struct McAGFSSpdlType
 {	plcstring SlaveAxisName[251];
@@ -3073,10 +2670,6 @@ typedef struct McCfgAxGrpFeatTanToolType
 	struct McAGFTTTPType ToolProtection;
 } McCfgAxGrpFeatTanToolType;
 
-typedef struct McCfgAxGrpFeatRevMoveType
-{	double Distance;
-} McCfgAxGrpFeatRevMoveType;
-
 typedef struct McAGFTrkSyncGeomBasicType
 {	double CartesianRadius;
 } McAGFTrkSyncGeomBasicType;
@@ -3086,9 +2679,19 @@ typedef struct McAGFTrkSyncGeomType
 	struct McAGFTrkSyncGeomBasicType Basic;
 } McAGFTrkSyncGeomType;
 
+typedef struct McAGFTrkTrqLimConsAppxType
+{	double StepSize;
+} McAGFTrkTrqLimConsAppxType;
+
+typedef struct McAGFTrkTrqLimConsType
+{	enum McAGFTrkTrqLimConsEnum Type;
+	struct McAGFTrkTrqLimConsAppxType Approximation;
+} McAGFTrkTrqLimConsType;
+
 typedef struct McCfgAxGrpFeatTrkType
 {	struct McAGFModalDatBxType ModalDataBehaviour;
 	struct McAGFTrkSyncGeomType SynchronisationGeometry;
+	struct McAGFTrkTrqLimConsType TorqueLimitConsideration;
 } McCfgAxGrpFeatTrkType;
 
 typedef struct McAGFPCXCoorUseType

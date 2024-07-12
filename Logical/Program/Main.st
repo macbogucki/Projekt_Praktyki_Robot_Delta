@@ -8,7 +8,7 @@ DeltaParameters.ProgramName := 'Robotic.st';    //File stored on FileDevice
 END_PROGRAM
 
 PROGRAM _CYCLIC
-gAxisQ4;    
+    
 MpDelta4Axis_0.MpLink := ADR(g4AxDeltaA);
 MpDelta4Axis_0.Parameters := ADR(DeltaParameters); 
 MpDelta4Axis_0();

@@ -135,23 +135,10 @@ TYPE
 	McAGPGTPBBarrParType : STRUCT (*Define the parameter over which the barrier should be scaled*)
 		Type : McAGPGTPBBarrParEnum; (*Barrier parametrization selector setting*)
 	END_STRUCT;
-	McAGPGTPBTrqLimConsEnum :
-		( (*Torque limit consideration selector setting*)
-		mcAGPGTPBTLC_EX := 0, (*Exact -*)
-		mcAGPGTPBTLC_APPX := 1 (*Approximation -*)
-		);
-	McAGPGTPBTrqLimConsAppxType : STRUCT (*Type mcAGPGTPBTLC_APPX settings*)
-		StepSize : LREAL; (*Step size for approximation [Factor]*)
-	END_STRUCT;
-	McAGPGTPBTrqLimConsType : STRUCT (*Defines the type of torque limit consideration*)
-		Type : McAGPGTPBTrqLimConsEnum; (*Torque limit consideration selector setting*)
-		Approximation : McAGPGTPBTrqLimConsAppxType; (*Type mcAGPGTPBTLC_APPX settings*)
-	END_STRUCT;
 	McAGPGTPBType : STRUCT (*Type mcAGPGTP_BASIC settings*)
 		LimitCheckResolution : McAGPGTPBLimCkResType; (*Time resolution of the trajectory planner in which the limits are checked*)
 		BufferTime : McAGPGTPBBuffTimeType; (*Maximum buffered timespan which is precomputed*)
 		BarrierParametrization : McAGPGTPBBarrParType; (*Define the parameter over which the barrier should be scaled*)
-		TorqueLimitConsideration : McAGPGTPBTrqLimConsType; (*Defines the type of torque limit consideration*)
 	END_STRUCT;
 	McAGPGTrajPlanType : STRUCT
 		Type : McAGPGTrajPlanEnum; (*Trajectory planning selector setting*)
@@ -203,28 +190,7 @@ TYPE
 		TrajectoryPlanning : McAGPGTrajPlanType;
 		Miscellaneous : McAGPGMiscType;
 	END_STRUCT;
-	McAGSRAEAREnum :
-		( (*Axis reaction selector setting*)
-		mcAGSRAEAR_STD := 0, (*Standard - Use standard stop parameter for stop ramp*)
-		mcAGSRAEAR_DYN_STOP := 1 (*Dynamic stop - Use dynamic stop deceleration parameter for stop ramp*)
-		);
-	McAGSRAEARDynStopModEnum :
-		( (*Defines if dynamic stop decelerations are only computed or computed and transmitted*)
-		mcAGSRAEARDSM_COMP_AND_TRANS := 0, (*Compute and transmit - Compute dynamic stop decelerations and transmit to drives*)
-		mcAGSRAEARDSM_COMP := 1 (*Compute - Compute dynamic stop decelerations*)
-		);
-	McAGSRAEARDynStopType : STRUCT (*Type mcAGSRAEAR_DYN_STOP settings*)
-		Mode : McAGSRAEARDynStopModEnum; (*Defines if dynamic stop decelerations are only computed or computed and transmitted*)
-	END_STRUCT;
-	McAGSRAEARType : STRUCT (*Defines the stop reaction of an axis in case of an error*)
-		Type : McAGSRAEAREnum; (*Axis reaction selector setting*)
-		DynamicStop : McAGSRAEARDynStopType; (*Type mcAGSRAEAR_DYN_STOP settings*)
-	END_STRUCT;
-	McAGPGSRAEType : STRUCT (*Defines the stop reaction of the axis group in case of an axis error*)
-		AxisReaction : McAGSRAEARType; (*Defines the stop reaction of an axis in case of an error*)
-	END_STRUCT;
 	McAGPGSRType : STRUCT (*Stop reaction definitions for the axis group*)
-		AxisError : McAGPGSRAEType; (*Defines the stop reaction of the axis group in case of an axis error*)
 		Quickstop : McAGSRQSType; (*Enables Quickstop functionality for the axis group*)
 	END_STRUCT;
 	McCfgAxGrpPathGenType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_PATHGEN*)
@@ -303,24 +269,6 @@ TYPE
 		TangentialArcs : McAGFPRGIPSCtrCxnTanArcType; (*Type mcAGFPRGIPSCC_TAN_ARC settings*)
 		Chamfers : McAGFPRGIPSCtrCxnChType; (*Type mcAGFPRGIPSCC_CH settings*)
 	END_STRUCT;
-	McAGFPRGIPSAccHoldDlyEnum :
-		( (*Accuracy Hold delay selector setting*)
-		mcAGFPRGIPSAHD_NONE := 0, (*None - No delay at accuracy hold*)
-		mcAGFPRGIPSAHD_AUT := 1, (*Automatic - Automatically compensate for axis jerk filters*)
-		mcAGFPRGIPSAHD_USR_DEF := 2 (*User defined - User defined axis delay*)
-		);
-	McAGFPRGIPSAccHoldDlyAutType : STRUCT (*Type mcAGFPRGIPSAHD_AUT settings*)
-		AdditionalUserDelay : LREAL; (*Additional user delay [s]*)
-	END_STRUCT;
-	McAGFPRGIPSAccHoldDlyUsrDefType : STRUCT (*Type mcAGFPRGIPSAHD_USR_DEF settings*)
-		UserDefinedAxesDelay : LREAL; (*User defined axes delay [s]*)
-		AdditionalUserDelay : LREAL; (*Additional user delay [s]*)
-	END_STRUCT;
-	McAGFPRGIPSAccHoldDlyType : STRUCT (*Defines the delays inserted at each accuracy hold*)
-		Type : McAGFPRGIPSAccHoldDlyEnum; (*Accuracy Hold delay selector setting*)
-		Automatic : McAGFPRGIPSAccHoldDlyAutType; (*Type mcAGFPRGIPSAHD_AUT settings*)
-		UserDefined : McAGFPRGIPSAccHoldDlyUsrDefType; (*Type mcAGFPRGIPSAHD_USR_DEF settings*)
-	END_STRUCT;
 	McAGFPRGIPSPrgUnitEnum :
 		( (*Programming units selector setting*)
 		mcAGFPRGIPSPU_USE_AXESGROUP_SET := 0, (*Use AxesGroup settings - The measurement units from AxesGroup settings are used*)
@@ -388,7 +336,6 @@ TYPE
 		AbsRelCircleCoordinates : McAGFPRGIPSAbsRelCirCoorType; (*Defines the absolute or relative circle coordinates*)
 		JACSACSProgramming : McAGFPRGIPSJACSACSPrgType; (*Switches between programming in JACS and ACS*)
 		ContourConnection : McAGFPRGIPSCtrCxnType; (*Defines automatic insertion of connecting element between two contours*)
-		AccuracyHoldDelay : McAGFPRGIPSAccHoldDlyType; (*Defines the delays inserted at each accuracy hold*)
 		ProgrammingUnits : McAGFPRGIPSPrgUnitType; (*Specifies the units of programmed values*)
 		FeedSettings : McAGFPRGIPSFSetType; (*Defines initial settings of feeds*)
 	END_STRUCT;
@@ -587,46 +534,6 @@ TYPE
 		Location : McAGFPRGLType; (*Program location*)
 		ProgramElements : McAGFPRGPEType; (*Program elements*)
 	END_STRUCT;
-	McCfgAxGrpFeatCompType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_COMP*)
-		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
-		MaxCartesianDeviation : LREAL; (*Defines the maximum allowable deviation of Cartesian path [measurement units]*)
-		MaxNonCartesianDeviation : LREAL; (*Defines the maximum allowable deviation of non-Cartesian axes [measurement units]*)
-		MaxCartesianTransitionAngle : LREAL; (*Cartesian path transitions with greater angle than 'Max Cartesian Transition Angle' are not compressed [degree]*)
-		MaxNonCartesianTransitionAngle : LREAL; (*Non-Cartesian path transitions with greater angle than 'Max Non-Cartesian Transition Angle' are not compressed [degree]*)
-		MaxCartesianLength : LREAL; (*Points with greater distance than 'Max Cartesian Length' are not compressed [measurement units]*)
-	END_STRUCT;
-	McAGFCDCEntryExitModEnum :
-		( (*Entry/Exit mode selector setting*)
-		mcAGFCDCEEM_DIR := 0, (*Direct - The corrected contour is entered/exited directly.*)
-		mcAGFCDCEEM_TRANS_LIN := 1, (*Transition line - A transition block perpendicular to the contour is added.*)
-		mcAGFCDCEEM_CLST_PT := 2 (*Closest point - A transition movement to the closest positions after bottlenecks is added.*)
-		);
-	McAGFCDCEntryExitModType : STRUCT (*Defines how the corrected contour is entered/exited*)
-		Type : McAGFCDCEntryExitModEnum; (*Entry/Exit mode selector setting*)
-	END_STRUCT;
-	McAGFCDCBnErrorEnum :
-		( (*Bottleneck error selector setting*)
-		mcAGFCDCBE_NOT_USE := 0, (*Not used - Bottleneck error not used*)
-		mcAGFCDCBE_BLK_LIM := 1, (*Block limit - Maximum number of blocks allowed in bottleneck*)
-		mcAGFCDCBE_DIST_LIM := 2 (*Distance limit - Maximum allowed distance from bottleneck intersection*)
-		);
-	McAGFCDCBnErrorBlkLimType : STRUCT (*Type mcAGFCDCBE_BLK_LIM settings*)
-		BlockLimit : INT; (*Maximum number of blocks allowed in bottleneck [movement blocks]*)
-	END_STRUCT;
-	McAGFCDCBnErrorDistLimType : STRUCT (*Type mcAGFCDCBE_DIST_LIM settings*)
-		DistanceLimit : LREAL; (*Maximum allowed distance from bottleneck intersection [measurement units]*)
-	END_STRUCT;
-	McAGFCDCBnErrorType : STRUCT (*Defines error behaviour when bottleneck is encoutered*)
-		Type : McAGFCDCBnErrorEnum; (*Bottleneck error selector setting*)
-		BlockLimit : McAGFCDCBnErrorBlkLimType; (*Type mcAGFCDCBE_BLK_LIM settings*)
-		DistanceLimit : McAGFCDCBnErrorDistLimType; (*Type mcAGFCDCBE_DIST_LIM settings*)
-	END_STRUCT;
-	McCfgAxGrpFeatCdcType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_CDC*)
-		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
-		EntryExitMode : McAGFCDCEntryExitModType; (*Defines how the corrected contour is entered/exited*)
-		Lookahead : UINT; (*Defines the size of the lookahead buffer [movement blocks]*)
-		BottleneckError : McAGFCDCBnErrorType; (*Defines error behaviour when bottleneck is encoutered*)
-	END_STRUCT;
 	McAGFFFFwdModEnum :
 		( (*Feed-forward mode selector setting*)
 		mcAGFFFFM_COMP_AND_TRANS := 0, (*Compute and transmit - Compute feed-forward torques and transmit to drives*)
@@ -777,15 +684,6 @@ TYPE
 		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
 		CustomFrameHierarchy : McAGFFHCType; (*Custom frame-hierarchy of an axes group*)
 	END_STRUCT;
-	McCfgAxGrpFeatJogType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_JOG*)
-		Reserve : USINT;
-	END_STRUCT;
-	McAGFLCrossSlideType : STRUCT
-		CoordinateName : STRING[250];
-	END_STRUCT;
-	McCfgAxGrpFeatLahType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_LAH*)
-		CrossSlide : McAGFLCrossSlideType;
-	END_STRUCT;
 	McAGFMFunIdxTypEnum :
 		( (*Index type selector setting*)
 		mcAGFMFIT_SNG := 0, (*Single - Single M-Function*)
@@ -838,192 +736,6 @@ TYPE
 	McCfgAxGrpFeatMFunType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_MFUN*)
 		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
 		MFunction : McCfgUnboundedArrayType;
-	END_STRUCT;
-	McAGFMECmbElmType : STRUCT (*Defines the combined monitoring elements*)
-		BasicMonitor : STRING[250]; (*Basic monitor*)
-	END_STRUCT;
-	McAGFMESngElmEnum :
-		( (*Single element selector setting*)
-		mcAGFMESE_CUS := 0, (*Custom - Custom monitoring element*)
-		mcAGFMESE_PRG_IDENT := 1, (*Program identification - Program identification*)
-		mcAGFMESE_LIN_IDENT := 2, (*Line identification - Line identification*)
-		mcAGFMESE_PRG_RUNT := 3, (*Program runtime - Program runtime*)
-		mcAGFMESE_SET_POS := 4, (*Set positions - Set positions*)
-		mcAGFMESE_ONL_PATH_INFL := 5, (*Online path influence - Online path influence*)
-		mcAGFMESE_PATH_IDENT := 6, (*Path identification - Path identification*)
-		mcAGFMESE_TOOL := 7, (*Tool - Tool*)
-		mcAGFMESE_IP := 8, (*Interpreter - Interpreter*)
-		mcAGFMESE_LIM := 9, (*Limits - Limits*)
-		mcAGFMESE_TORQ := 10, (*Torques - Torques*)
-		mcAGFMESE_F_SET := 11, (*Feed settings - FeedSettings*)
-		mcAGFMESE_PATH_INFO := 12, (*Path information - PathInformation*)
-		mcAGFMESE_GB_TORQ := 13, (*Gearbox torques - Gearbox torques*)
-		mcAGFMESE_CROSS_SEC_LOADS := 14, (*Cross section loads - Cross section loads*)
-		mcAGFMESE_DYN_DEC := 15, (*Dynamic decelerations - Dynamic decelerations*)
-		mcAGFMESE_ORIENT_COMP := 16, (*Orientation compliance - Orientation compliance*)
-		mcAGFMESE_SKIP_BLK := 17 (*Skip block - Skip block*)
-		);
-	McAGFMESngElmCusType : STRUCT (*Type mcAGFMESE_CUS settings*)
-		ConnectionPoint : STRING[250]; (*Connection point to a custom monitoring element*)
-	END_STRUCT;
-	McAGFMESngElmPrgIdentType : STRUCT (*Type mcAGFMESE_PRG_IDENT settings*)
-		MainProgram : STRING[250]; (*Information about the current main routine*)
-		InitProgram : STRING[250]; (*Information about the current init program*)
-		CurrentProgram : STRING[250]; (*Information about the current core subroutine*)
-		ProgramSequence : STRING[250]; (*Full sequence of routines/subroutines, from the main routine to the current core subroutine*)
-	END_STRUCT;
-	McAGFMESngElmLinIdentType : STRUCT (*Type mcAGFMESE_LIN_IDENT settings*)
-		LineNumber : STRING[250]; (*Current line number*)
-		BlockNumber : STRING[250]; (*Current block number*)
-		BlockMonitor : STRING[250]; (*Block monitor (current NC block, last 2 NC blocks and next 2 NC blocks)*)
-		ByteOffset : STRING[250]; (*Current byte offset*)
-		JointAxesRemainingDistance : STRING[250]; (*Joint axes remaining distance until the block end*)
-		TCPRemainingDistanceInMCS : STRING[250]; (*TCP remaining distance until the block end (MCS)*)
-		SlaveAxesRemainingDistance : STRING[250]; (*Slave axes remaining distance until the block end*)
-	END_STRUCT;
-	McAGFMESngElmPrgRunTType : STRUCT (*Type mcAGFMESE_PRG_RUNT settings*)
-		OverallRuntime : STRING[250]; (*Time elapsed since the current program started*)
-		MovementRuntime : STRING[250]; (*Movement time in the current program*)
-		OverallDwellTime : STRING[250]; (*Dwell time since the current program started*)
-		DwellTime : STRING[250]; (*Current dwell time*)
-		DwellTimeRemaining : STRING[250]; (*Current dwell time left*)
-	END_STRUCT;
-	McAGFMESngElmSetPosType : STRUCT (*Type mcAGFMESE_SET_POS settings*)
-		JointAxesSetPositions : STRING[250]; (*Position setpoints for joint axes*)
-		AxesSetPositions : STRING[250]; (*Position setpoints for axes*)
-		TCPSetPositionsInMCS : STRING[250]; (*TCP position setpoints in the machine coordinate system*)
-		TCPSetPositionsInPCS : STRING[250]; (*TCP position setpoints in the product coordinate system*)
-		SlaveAxesSetPositions : STRING[250]; (*Position setpoints for slave axes*)
-	END_STRUCT;
-	McAGFMESngElmOPIPrgSetPosType : STRUCT (*Programmed position setpoints*)
-		JointAxesSetPositions : STRING[250]; (*Programmed position setpoints for joint axes*)
-		AxesSetPositions : STRING[250]; (*Programmed position setpoints for axes*)
-		TCPSetPositionsInMCS : STRING[250]; (*Programmed TCP position setpoints in the machine coordinate system*)
-		TCPSetPositionsInPCS : STRING[250]; (*Programmed TCP position setpoints in the product coordinate system*)
-		SlaveAxesSetPositions : STRING[250]; (*Programmed position setpoints for slave axes*)
-	END_STRUCT;
-	McAGFMESngElmOPIInflSetPosType : STRUCT (*Influenced position setpoints (programmed set positions with configured online path influences)*)
-		JointAxesSetPositions : STRING[250]; (*Influenced position setpoints for joint axes*)
-		AxesSetPositions : STRING[250]; (*Influenced position setpoints for axes*)
-		TCPSetPositionsInMCS : STRING[250]; (*Influenced TCP position setpoints in the machine coordinate system*)
-		TCPSetPositionsInPCS : STRING[250]; (*Influenced TCP position setpoints in the product coordinate system*)
-		SlaveAxesSetPositions : STRING[250]; (*Influenced position setpoints for slave axes*)
-	END_STRUCT;
-	McAGFMESngElmOPIType : STRUCT (*Type mcAGFMESE_ONL_PATH_INFL settings*)
-		ProgrammedSetPositions : McAGFMESngElmOPIPrgSetPosType; (*Programmed position setpoints*)
-		InfluencedSetPositions : McAGFMESngElmOPIInflSetPosType; (*Influenced position setpoints (programmed set positions with configured online path influences)*)
-	END_STRUCT;
-	McAGFMESngElmPathIdentType : STRUCT (*Type mcAGFMESE_PATH_IDENT settings*)
-		CurrentPathSpeed : STRING[250]; (*Current speed of path*)
-		ProgrammedSpeedOfPath : STRING[250]; (*Programmed path speed*)
-		PathPosition : STRING[250]; (*Position of the path*)
-		CurrentLength : STRING[250]; (*Path length of currently executed block*)
-		RemainingDistance : STRING[250]; (*Remaining path distance to the end of currently executed block*)
-	END_STRUCT;
-	McAGFMESngElmToolType : STRUCT (*Type mcAGFMESE_TOOL settings*)
-		ToolIndex : STRING[250]; (*Current tool index*)
-		ToolIdentifier : STRING[250]; (*Current tool identifier*)
-		ToolDescription : STRING[250]; (*Current tool data*)
-	END_STRUCT;
-	McAGFMESngElmIpType : STRUCT (*Type mcAGFMESE_IP settings*)
-		IPMonitor : STRING[250]; (*Interpreter monitor*)
-		FileMonitor : STRING[250]; (*File monitor*)
-	END_STRUCT;
-	McAGFMESngElmLimType : STRUCT (*Type mcAGFMESE_LIM settings*)
-		ACSAxisIndex : DINT; (*Index of the axis*)
-		ACSAxisLimits : STRING[250]; (*Limit values for the axis*)
-	END_STRUCT;
-	McAGFMESngElmTorqType : STRUCT (*Type mcAGFMESE_TORQ settings*)
-		Computed : STRING[250]; (*Calculated feed-forward torque*)
-		Transmitted : STRING[250]; (*Transmitted feed-forward torque*)
-		Unfiltered : STRING[250]; (*Calculated, unfiltered feed-forward torque*)
-	END_STRUCT;
-	McAGFMESngElmFSetType : STRUCT (*Type mcAGFMESE_F_SET settings*)
-		CurrentSettings : STRING[250]; (*Currently active feed settings*)
-	END_STRUCT;
-	McAGFMESngElmPathInfoType : STRUCT (*Type mcAGFMESE_PATH_INFO settings*)
-		PathName : STRING[250]; (*Name of the path in a NC program*)
-		SelectedPathInfo : STRING[250]; (*Shows info about path specified by name*)
-	END_STRUCT;
-	McAGFMESngElmGBTorqType : STRUCT (*Type mcAGFMESE_GB_TORQ settings*)
-		Torques : STRING[250]; (*Gearbox torques*)
-		Unfiltered : STRING[250]; (*Unfiltered gearbox torques*)
-	END_STRUCT;
-	McAGFMESngElmCrossSecLoadsType : STRUCT (*Type mcAGFMESE_CROSS_SEC_LOADS settings*)
-		Loads : STRING[250]; (*Cross section loads*)
-		Unfiltered : STRING[250]; (*Unfiltered cross section loads*)
-	END_STRUCT;
-	McAGFMESngElmDynDecType : STRUCT (*Type mcAGFMESE_DYN_DEC settings*)
-		Decelerations : STRING[250]; (*Dynamic decelerations*)
-	END_STRUCT;
-	McAGFMESngElmOrientCompType : STRUCT (*Type mcAGFMESE_ORIENT_COMP settings*)
-		ProgrammedTCPSetPositionsInMCS : STRING[250]; (*Programmed TCP position setpoints in the machine coordinate system*)
-		ProgrammedTCPSetPositionsInPCS : STRING[250]; (*Programmed TCP position setpoints in the product coordinate system*)
-		OrientationError : STRING[250]; (*Orientation error*)
-	END_STRUCT;
-	McAGFMESngElmSkipBlkType : STRUCT (*Type mcAGFMESE_SKIP_BLK settings*)
-		SkipLevels : STRING[250]; (*Current states of skip block levels*)
-	END_STRUCT;
-	McAGFMESngElmType : STRUCT (*Defines the single monitoring element*)
-		Type : McAGFMESngElmEnum; (*Single element selector setting*)
-		Custom : McAGFMESngElmCusType; (*Type mcAGFMESE_CUS settings*)
-		ProgramIdentification : McAGFMESngElmPrgIdentType; (*Type mcAGFMESE_PRG_IDENT settings*)
-		LineIdentification : McAGFMESngElmLinIdentType; (*Type mcAGFMESE_LIN_IDENT settings*)
-		ProgramRuntime : McAGFMESngElmPrgRunTType; (*Type mcAGFMESE_PRG_RUNT settings*)
-		SetPositions : McAGFMESngElmSetPosType; (*Type mcAGFMESE_SET_POS settings*)
-		OnlinePathInfluence : McAGFMESngElmOPIType; (*Type mcAGFMESE_ONL_PATH_INFL settings*)
-		PathIdentification : McAGFMESngElmPathIdentType; (*Type mcAGFMESE_PATH_IDENT settings*)
-		Tool : McAGFMESngElmToolType; (*Type mcAGFMESE_TOOL settings*)
-		Interpreter : McAGFMESngElmIpType; (*Type mcAGFMESE_IP settings*)
-		Limits : McAGFMESngElmLimType; (*Type mcAGFMESE_LIM settings*)
-		Torques : McAGFMESngElmTorqType; (*Type mcAGFMESE_TORQ settings*)
-		FeedSettings : McAGFMESngElmFSetType; (*Type mcAGFMESE_F_SET settings*)
-		PathInformation : McAGFMESngElmPathInfoType; (*Type mcAGFMESE_PATH_INFO settings*)
-		GearboxTorques : McAGFMESngElmGBTorqType; (*Type mcAGFMESE_GB_TORQ settings*)
-		CrossSectionLoads : McAGFMESngElmCrossSecLoadsType; (*Type mcAGFMESE_CROSS_SEC_LOADS settings*)
-		DynamicDecelerations : McAGFMESngElmDynDecType; (*Type mcAGFMESE_DYN_DEC settings*)
-		OrientationCompliance : McAGFMESngElmOrientCompType; (*Type mcAGFMESE_ORIENT_COMP settings*)
-		SkipBlock : McAGFMESngElmSkipBlkType; (*Type mcAGFMESE_SKIP_BLK settings*)
-	END_STRUCT;
-	McAGFMESngElmsType : STRUCT (*Defines the single monitoring elements*)
-		SingleElement : McCfgUnboundedArrayType; (*Defines the single monitoring element*)
-	END_STRUCT;
-	McCfgAxGrpFeatMonElemType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_MON_ELEM*)
-		CombinedElements : McAGFMECmbElmType; (*Defines the combined monitoring elements*)
-		SingleElements : McAGFMESngElmsType; (*Defines the single monitoring elements*)
-	END_STRUCT;
-	McAGFMLLocEnum :
-		( (*Location selector setting*)
-		mcAGFMLL_DEF := 0, (*Default - Default location*)
-		mcAGFMLL_USR := 1 (*User - User location*)
-		);
-	McAGFMLLocDefType : STRUCT (*Type mcAGFMLL_DEF settings*)
-		FileDevice : STRING[250]; (*Motion packet log file device*)
-	END_STRUCT;
-	McAGFMLLocUsrType : STRUCT (*Type mcAGFMLL_USR settings*)
-		FileDevice : STRING[250]; (*Motion packet log file device*)
-	END_STRUCT;
-	McAGFMLLocType : STRUCT (*Location of motion packet log files*)
-		Type : McAGFMLLocEnum; (*Location selector setting*)
-		Default : McAGFMLLocDefType; (*Type mcAGFMLL_DEF settings*)
-		User : McAGFMLLocUsrType; (*Type mcAGFMLL_USR settings*)
-	END_STRUCT;
-	McAGFMLAdvParEnum :
-		( (*Advanced parameters selector setting*)
-		mcAGFMLAP_NOT_USE := 0, (*Not used -*)
-		mcAGFMLAP_USE := 1 (*Used -*)
-		);
-	McAGFMLAdvParUseType : STRUCT (*Type mcAGFMLAP_USE settings*)
-		FileSize : DINT; (*Motion packet log file size [B]*)
-		FilesCount : DINT; (*Number of kept motion packet log files*)
-	END_STRUCT;
-	McAGFMLAdvParType : STRUCT (*Advanced parameters of motion packet log*)
-		Type : McAGFMLAdvParEnum; (*Advanced parameters selector setting*)
-		Used : McAGFMLAdvParUseType; (*Type mcAGFMLAP_USE settings*)
-	END_STRUCT;
-	McCfgAxGrpFeatMpLogType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_MP_LOG*)
-		Location : McAGFMLLocType; (*Location of motion packet log files*)
-		AdvancedParameters : McAGFMLAdvParType; (*Advanced parameters of motion packet log*)
 	END_STRUCT;
 	McAGFPDPathTypEnum :
 		( (*Type selector setting*)
@@ -1120,32 +832,6 @@ TYPE
 	McCfgAxGrpFeatPathDefType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_PATH_DEF*)
 		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
 		Path : McCfgUnboundedArrayType; (*Predefined path definitions can be used*)
-	END_STRUCT;
-	McAGFPSCondStopEnum :
-		( (*Conditional stop selector setting*)
-		mcAGFPSCS_NOT_USE := 0, (*Not used - No stop during simulation run*)
-		mcAGFPSCS_STOP := 1 (*Stop - Stop on active conditional stop during simulation run*)
-		);
-	McAGFPSCondStopType : STRUCT (*Behaviour of conditional stops during simulation run*)
-		Type : McAGFPSCondStopEnum; (*Conditional stop selector setting*)
-	END_STRUCT;
-	McAGFPSAdvParEnum :
-		( (*Advanced parameters selector setting*)
-		mcAGFPSAP_NOT_USE := 0, (*Not used -*)
-		mcAGFPSAP_USE := 1 (*Used -*)
-		);
-	McAGFPSAdvParUseType : STRUCT (*Type mcAGFPSAP_USE settings*)
-		PathDistRestartBufferSize : UINT; (*Number of blocks saved before the program abort [blocks]*)
-		ProgIntRestartBufferInitSize : UDINT; (*Initial size of Interpreter restart buffers (separately for path and Interpreter synchronous jobs) [B]*)
-	END_STRUCT;
-	McAGFPSAdvParType : STRUCT (*Advanced parameters*)
-		Type : McAGFPSAdvParEnum; (*Advanced parameters selector setting*)
-		Used : McAGFPSAdvParUseType; (*Type mcAGFPSAP_USE settings*)
-	END_STRUCT;
-	McCfgAxGrpFeatPrgSimType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_PRG_SIM*)
-		ConditionalStop : McAGFPSCondStopType; (*Behaviour of conditional stops during simulation run*)
-		AdvancedParameters : McAGFPSAdvParType; (*Advanced parameters*)
-		RestartDataLocation : STRING[250]; (*File device to save or load restart data*)
 	END_STRUCT;
 	McAGFSSpdlType : STRUCT
 		SlaveAxisName : STRING[250]; (*Name of the slave axis coordinate defined inside the AxesGroup (e.g. U, V, etc.)*)
@@ -1330,8 +1016,7 @@ TYPE
 	McAGFSIGSigMissedSigBxEnum :
 		( (*Missed signal behaviour selector setting*)
 		mcAGFSIGSMSB_NO_OUT_ERR := 0, (*No output error - The missed signal is not output and the program is terminated with an error*)
-		mcAGFSIGSMSB_DELAYED_OUT_WAR := 1, (*Delayed output warning - The missed signal is output as quickly as possible and a warning is entered in the logger*)
-		mcAGFSIGSMSB_DELAYED_OUT_NO_WAR := 2 (*Delayed output no warning - The missed signal is output as quickly as possible and no warning is entered in the logger*)
+		mcAGFSIGSMSB_DELAYED_OUT_WAR := 1 (*Delayed output warning - The missed signal is output as quickly as possible and a warning is entered in the logger*)
 		);
 	McAGFSIGSigMissedSigBxType : STRUCT (*Behaviour of signal in case it can not be output on intended position*)
 		Type : McAGFSIGSigMissedSigBxEnum; (*Missed signal behaviour selector setting*)
@@ -1783,9 +1468,6 @@ TYPE
 		Offset : LREAL; (*Angular offset between the path tangent and the tool orientation [degree]*)
 		ToolProtection : McAGFTTTPType; (*Events that trigger the protection of the tool*)
 	END_STRUCT;
-	McCfgAxGrpFeatRevMoveType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_REV_MOVE*)
-		Distance : LREAL; (*Guaranteed minimum distance available for reverse movement [measurement units]*)
-	END_STRUCT;
 	McAGFTrkSyncGeomEnum :
 		( (*Synchronisation geometry selector setting*)
 		mcAGFTRKSG_BASIC := 0 (*Basic -*)
@@ -1797,9 +1479,22 @@ TYPE
 		Type : McAGFTrkSyncGeomEnum; (*Synchronisation geometry selector setting*)
 		Basic : McAGFTrkSyncGeomBasicType; (*Type mcAGFTRKSG_BASIC settings*)
 	END_STRUCT;
+	McAGFTrkTrqLimConsEnum :
+		( (*Torque limit consideration selector setting*)
+		mcAGFTRKTLC_EX := 0, (*Exact -*)
+		mcAGFTRKTLC_APPX := 1 (*Approximation -*)
+		);
+	McAGFTrkTrqLimConsAppxType : STRUCT (*Type mcAGFTRKTLC_APPX settings*)
+		StepSize : LREAL; (*Step size for approximation [Factor]*)
+	END_STRUCT;
+	McAGFTrkTrqLimConsType : STRUCT (*Defines the type of torque limit consideration*)
+		Type : McAGFTrkTrqLimConsEnum; (*Torque limit consideration selector setting*)
+		Approximation : McAGFTrkTrqLimConsAppxType; (*Type mcAGFTRKTLC_APPX settings*)
+	END_STRUCT;
 	McCfgAxGrpFeatTrkType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AXGRP_FEAT_TRK*)
 		ModalDataBehaviour : McAGFModalDatBxType; (*Defines the modal data behaviour of the feature*)
 		SynchronisationGeometry : McAGFTrkSyncGeomType; (*Defines the shape of the synchronisation geometries*)
+		TorqueLimitConsideration : McAGFTrkTrqLimConsType; (*Defines the type of torque limit consideration*)
 	END_STRUCT;
 	McAGFPCXCoorEnum :
 		( (*X coordinate selector setting*)
@@ -2838,8 +2533,7 @@ TYPE
 		mcMS2ADBSVO_CODIAN_D2500S020 := 2, (*CODIAN D2-500-S020*)
 		mcMS2ADBSVO_CODIAN_D2800S020 := 3, (*CODIAN D2-800-S020*)
 		mcMS2ADBSVO_CODIAN_D21000S030 := 4, (*CODIAN D2-1000-S030*)
-		mcMS2ADBSVO_CODIAN_D21500S030 := 5, (*CODIAN D2-1500-S030*)
-		mcMS2ADBSVO_D21500TW06X := 6 (*D2-1500-TW06x*)
+		mcMS2ADBSVO_CODIAN_D21500S030 := 5 (*CODIAN D2-1500-S030*)
 		);
 	McMS2ADBDescEnum :
 		( (*Description selector setting*)
@@ -3010,24 +2704,7 @@ TYPE
 	McMS3ADASceneViewerObjEnum :
 		( (*Defines if and which Scene Viewer Object should be used*)
 		mcMS3ADASVO_NOT_USE := 0, (*Not used*)
-		mcMS3ADASVO_GEN := 1, (*Generic*)
-		mcMS3ADASVO_D40500S01X := 2, (*D4-0500-S01x*)
-		mcMS3ADASVO_D40650S02X := 3, (*D4-0650-S02x*)
-		mcMS3ADASVO_D40800S02X := 4, (*D4-0800-S02x*)
-		mcMS3ADASVO_D41100S02X := 5, (*D4-1100-S02x*)
-		mcMS3ADASVO_D41300S02X := 6, (*D4-1300-S02x*)
-		mcMS3ADASVO_D41600S02X := 7, (*D4-1600-S02x*)
-		mcMS3ADASVO_D41600S05X := 8, (*D4-1600-S05x*)
-		mcMS3ADASVO_TD40500S01X := 9, (*TD4-0500-S01x*)
-		mcMS3ADASVO_TD40650S02X := 10, (*TD4-0650-S02x*)
-		mcMS3ADASVO_D40650HD02X := 11, (*D4-0650-HD02x*)
-		mcMS3ADASVO_D40800HD02X := 12, (*D4-0800-HD02x*)
-		mcMS3ADASVO_D41100HD02X := 13, (*D4-1100-HD02x*)
-		mcMS3ADASVO_D41100HD04X := 14, (*D4-1100-HD04x*)
-		mcMS3ADASVO_D41300HD02X := 15, (*D4-1300-HD02x*)
-		mcMS3ADASVO_D41300HD04X := 16, (*D4-1300-HD04x*)
-		mcMS3ADASVO_D41600HD02X := 17, (*D4-1600-HD02x*)
-		mcMS3ADASVO_D41600HD04X := 18 (*D4-1600-HD04x*)
+		mcMS3ADASVO_GEN := 1 (*Generic*)
 		);
 	McMS3ADADescEnum :
 		( (*Description selector setting*)
@@ -3286,9 +2963,7 @@ TYPE
 		( (*Defines if and which Scene Viewer Object should be used*)
 		mcMS3ADXZCSVO_NOT_USE := 0, (*Not used*)
 		mcMS3ADXZCSVO_GEN := 1, (*Generic*)
-		mcMS3ADXZCSVO_D2500S02XR100 := 3, (*D2-500-S02x-R100*)
-		mcMS3ADXZCSVO_D2800S02XR100 := 2, (*D2-800-S02x-R100*)
-		mcMS3ADXZCSVO_D21000S03XDR8X := 4 (*D2-1000-S03x-DR8x*)
+		mcMS3ADXZCSVO_D2800S02XR100 := 2 (*D2-800-S02x-R100*)
 		);
 	McMS3ADXZCDescEnum :
 		( (*Description selector setting*)
@@ -3368,28 +3043,7 @@ TYPE
 	McMS4ADASceneViewerObjEnum :
 		( (*Defines if and which Scene Viewer Object should be used*)
 		mcMS4ADASVO_NOT_USE := 0, (*Not used*)
-		mcMS4ADASVO_GEN := 1, (*Generic*)
-		mcMS4ADASVO_D40650S02XR10X := 2, (*D4-0650-S02x-R10x*)
-		mcMS4ADASVO_D40800S02XR10X := 3, (*D4-0800-S02x-R10x*)
-		mcMS4ADASVO_D41100S02XR20X := 4, (*D4-1100-S02x-R20x*)
-		mcMS4ADASVO_D41300S02XR20X := 5, (*D4-1300-S02x-R20x*)
-		mcMS4ADASVO_D41600S02XR10X := 6, (*D4-1600-S02x-R10x*)
-		mcMS4ADASVO_D41600S04XR20X := 7, (*D4-1600-S04x-R20x*)
-		mcMS4ADASVO_D41600S05XR30X := 8, (*D4-1600-S05x-R30x*)
-		mcMS4ADASVO_D42100S05XR75X := 9, (*D4-2100-S05x-R75x*)
-		mcMS4ADASVO_TD40800S02XR10X := 10, (*TD4-0800-S02x-R10x*)
-		mcMS4ADASVO_D41100HD02XRH09X := 11, (*D4-1100-HD02x-RH09x*)
-		mcMS4ADASVO_D41100HD02XRH10X := 12, (*D4-1100-HD02x-RH10x*)
-		mcMS4ADASVO_D41100HD04XRH21X := 13, (*D4-1100-HD04x-RH21x*)
-		mcMS4ADASVO_D40650HD02XRH10X := 14, (*D4-0650-HD02x-RH10x*)
-		mcMS4ADASVO_D40800HD02XRH10X := 15, (*D4-0800-HD02x-RH10x*)
-		mcMS4ADASVO_D41100HD02XRH21X := 16, (*D4-1100-HD02x-RH21x*)
-		mcMS4ADASVO_D41300HD02XRH10X := 17, (*D4-1300-HD02x-RH10x*)
-		mcMS4ADASVO_D41300HD02XRH21X := 18, (*D4-1300-HD02x-RH21x*)
-		mcMS4ADASVO_D41300HD04XRH21X := 19, (*D4-1300-HD04x-RH21x*)
-		mcMS4ADASVO_D41600HD02XRH10X := 20, (*D4-1600-HD02x-RH10x*)
-		mcMS4ADASVO_D41600HD02XRH21X := 21, (*D4-1600-HD02x-RH21x*)
-		mcMS4ADASVO_D41600HD04XRH21X := 22 (*D4-1600-HD04x-RH21x*)
+		mcMS4ADASVO_GEN := 1 (*Generic*)
 		);
 	McMS4ADADescEnum :
 		( (*Description selector setting*)
@@ -3652,8 +3306,7 @@ TYPE
 	McMS5ADASceneViewerObjEnum :
 		( (*Defines if and which Scene Viewer Object should be used*)
 		mcMS5ADASVO_NOT_USE := 0, (*Not used*)
-		mcMS5ADASVO_GEN := 1, (*Generic*)
-		mcMS5ADASVO_D51100S02XR10X := 2 (*D5-1100-S02x-R10x*)
+		mcMS5ADASVO_GEN := 1 (*Generic*)
 		);
 	McMS5ADADescEnum :
 		( (*Description selector setting*)

@@ -31,45 +31,4 @@
   <Element ID="Feature_Jogging" Type="axesgroupfeature">
     <Selector ID="Type" Value="Jogging" />
   </Element>
-  <Element ID="Feature_Tracking" Type="axesgroupfeature">
-    <Selector ID="Type" Value="Tracking">
-      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
-      <Selector ID="SynchronisationGeometry" Value="Basic">
-        <Property ID="CartesianRadius" Value="20" />
-      </Selector>
-    </Selector>
-  </Element>
-  <Element ID="Feature_FrameHierarchy" Type="axesgroupfeature">
-    <Selector ID="Type" Value="FrameHierarchy">
-      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
-      <Selector ID="FrameHierarchy" Value="Custom">
-        <Group ID="FramePropertyMapping">
-          <Property ID="BCS" Value="MachineFrame" />
-          <Property ID="PCS" Value="MachineFrame" />
-          <Property ID="SCS1" />
-          <Property ID="SCS2" />
-          <Property ID="SCS3" />
-          <Property ID="SCS4" />
-          <Property ID="SCS5" />
-        </Group>
-      </Selector>
-    </Selector>
-  </Element>
-  <Element ID="Feature_PatchDefinition" Type="axesgroupfeature">
-    <Selector ID="Type" Value="PathDefinitions">
-      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
-      <Group ID="PathDefinition[1]">
-        <Property ID="Name" Value="Path1" />
-        <Selector ID="Type" Value="CartesianPath">
-          <Selector ID="CalculatedIn" Value="PCS" />
-        </Selector>
-        <Selector ID="Limit" Value="Internal">
-          <Selector ID="Velocity" Value="NotUsed" />
-          <Selector ID="Acceleration" Value="NotUsed" />
-          <Selector ID="Deceleration" Value="NotUsed" />
-          <Selector ID="Jerk" Value="NotUsed" />
-        </Selector>
-      </Group>
-    </Selector>
-  </Element>
 </Configuration>

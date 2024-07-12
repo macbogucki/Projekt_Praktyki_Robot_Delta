@@ -146,7 +146,6 @@
             <Property ID="Distance" Value="0.0" />
           </Selector>
         </Selector>
-        <Property ID="DynamicModelIsReadOnly" Value="0" />
         <Selector ID="DynamicModel" Value="DynParTable">
           <Property ID="TableRef" />
         </Selector>
@@ -157,8 +156,6 @@
           <Property ID="CrossSectionLimitsTableRef" />
         </Selector>
         <Selector ID="InternalDynamicLimits" Value="NotUsed" />
-        <Property ID="LoadDependentJerkLimitsIsReadOnly" Value="0" />
-        <Selector ID="LoadDependentJerkLimits" Value="NotUsed" />
         <Property ID="CouplingsIsInvisible" Value="0" />
         <Group ID="JointAxesPositionLimits">
           <Property ID="JointAxisIsReadOnly" Value="0" />

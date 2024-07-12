@@ -76,11 +76,11 @@
         </Group>
       </Group>
       <Group ID="AxesGroupFeatures">
-        <Property ID="FeatureRef[1]" Value="Feature_Programs" />
+        <Property ID="FeatureRef[1]" Value="Feature_FrameHierarchy" />
         <Property ID="FeatureRef[2]" Value="Feature_Jogging" />
-        <Property ID="FeatureRef[3]" Value="Feature_FrameHierarchy" />
-        <Property ID="FeatureRef[4]" Value="Feature_Tracking" />
-        <Property ID="FeatureRef[5]" Value="Feature_PatchDefinition" />
+        <Property ID="FeatureRef[3]" Value="Feature_PathDefinition" />
+        <Property ID="FeatureRef[4]" Value="Feature_Programs" />
+        <Property ID="FeatureRef[5]" Value="Feature_Tracking" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="None" />

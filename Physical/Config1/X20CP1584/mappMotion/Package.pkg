@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">Hierarchy.objecthierarchy</Object>
     <Object Type="Package">4AxesDeltaA</Object>
+    <Object Type="Package">PnP_AddOn</Object>
+    <Object Type="File">Config_10.purevaxcfg</Object>
   </Objects>
 </Package>

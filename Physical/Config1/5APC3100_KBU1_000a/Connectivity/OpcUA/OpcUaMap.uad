@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="J4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="g4AxDeltaA" RecursiveEnable="2" />
+        <Variable Name="CmdStart" />
+        <Variable Name="DeltaParameters" RecursiveEnable="2" />
+        <Variable Name="gAxisQ1" RecursiveEnable="2" />
+        <Variable Name="gAxisQ2" RecursiveEnable="2" />
+        <Variable Name="gAxisQ3" RecursiveEnable="2" />
+        <Variable Name="gAxisQ4" RecursiveEnable="2" />
+        <Variable Name="MpDelta4Axis_0" RecursiveEnable="2" />
+        <Variable Name="P0" RecursiveEnable="2" />
+        <Variable Name="P1" RecursiveEnable="2" />
+        <Variable Name="P2" RecursiveEnable="2" />
+        <Variable Name="P3" RecursiveEnable="2" />
+        <Variable Name="PickConveyorLength" />
+        <Variable Name="PickConveyorPosition" />
+        <Variable Name="PlaceConveyorLength" />
+        <Variable Name="PlaceConveyorPosition" />
+        <Variable Name="ReadyMechanics" />
+        <Variable Name="ReadyPickCore" />
+        <Variable Name="ReadyPickReg" />
+        <Variable Name="ReadyPlaceReg" />
+        <Variable Name="ReadyToStart" />
+      </GlobalVariables>
+      <Task Name="Program" />
+    </Module>
+  </DefaultView>
+</OpcUaSource>

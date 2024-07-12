@@ -1,0 +1,7 @@
+VAR
+	MpPickCore_0 : MpPickCore;
+	LastStep : PickCoreStepEnum;
+	PC_Step : PickCoreStepEnum;
+	Error : BOOL;
+	Gripper : BOOL;
+END_VAR

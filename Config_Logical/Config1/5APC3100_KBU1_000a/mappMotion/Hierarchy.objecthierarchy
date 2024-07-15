@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="ObjectHierarchy" Type="objecthierarchy">
+    <Group ID="MeasurementUnits">
+      <Property ID="LengthMeasurementUnit" Value="5066068" />
+      <Property ID="AngleMeasurementUnit" Value="17476" />
+    </Group>
+    <Selector ID="RotationDescription" Value="Cardan" />
+    <Group ID="FrameTransformations">
+      <Property ID="RotationTolerance" Value="0.0" />
+    </Group>
+    <Group ID="SceneViewer">
+      <Property ID="FileDevice" Value="CNC_PrgDir" />
+    </Group>
+    <Group ID="GlobalCoordinateSystem">
+      <Group ID="Object[1]" Description="Pick the objects">
+        <Selector ID="Type" Value="StandardFrame">
+          <Property ID="Name" Value="ConveyorPick" />
+          <Group ID="Translation">
+            <Property ID="X" Value="0.0" />
+            <Property ID="Y" Value="400" />
+            <Property ID="Z" Value="0.0" />
+          </Group>
+          <Group ID="Orientation">
+            <Property ID="Angle1" Value="0.0" />
+            <Property ID="Angle2" Value="0.0" />
+            <Property ID="Angle3" Value="0.0" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="Object[2]" Description="Place the objects">
+        <Selector ID="Type" Value="StandardFrame">
+          <Property ID="Name" Value="ConveyorPlace" />
+          <Group ID="Translation">
+            <Property ID="X" Value="0.0" />
+            <Property ID="Y" Value="-400" />
+            <Property ID="Z" Value="0.0" />
+          </Group>
+          <Group ID="Orientation">
+            <Property ID="Angle1" Value="0.0" />
+            <Property ID="Angle2" Value="0.0" />
+            <Property ID="Angle3" Value="0.0" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="Object[3]">
+        <Selector ID="Type" Value="StandardFrame">
+          <Property ID="Name" Value="PnPWaitingPosition" />
+          <Group ID="Translation">
+            <Property ID="X" Value="1000" />
+            <Property ID="Y" Value="400" />
+            <Property ID="Z" Value="200" />
+          </Group>
+          <Group ID="Orientation">
+            <Property ID="Angle1" Value="0.0" />
+            <Property ID="Angle2" Value="0.0" />
+            <Property ID="Angle3" Value="0.0" />
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="Object[4]">
+        <Selector ID="Type" Value="AxesGroup">
+          <Property ID="AxesGroupRef" Value="g4AxDeltaA" />
+          <Group ID="Translation">
+            <Property ID="X" Value="1000" />
+            <Property ID="Y" Value="0.0" />
+            <Property ID="Z" Value="0.0" />
+          </Group>
+          <Group ID="Orientation">
+            <Property ID="Angle1" Value="0.0" />
+            <Property ID="Angle2" Value="0.0" />
+            <Property ID="Angle3" Value="0.0" />
+          </Group>
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

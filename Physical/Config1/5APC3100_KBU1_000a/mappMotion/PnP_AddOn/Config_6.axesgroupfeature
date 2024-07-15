@@ -21,8 +21,8 @@
             <Selector ID="Type" Value="StandardFrame">
               <Group ID="Translation">
                 <Property ID="X" Value="0.0" />
-                <Property ID="Y" Value="0.0" />
-                <Property ID="Z" Value="1000" />
+                <Property ID="Y" Value="0" />
+                <Property ID="Z" Value="490" />
               </Group>
               <Group ID="Orientation">
                 <Property ID="Angle1" Value="0.0" />

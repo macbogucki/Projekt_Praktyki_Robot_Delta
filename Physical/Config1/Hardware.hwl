@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/12/2024 15:37:01" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/15/2024 14:52:52" />
   </TimeStamps>
   <Modules>
     <Module Name="80VD100PD.C000-14" Type="80VD100PD.C000-14" X="452" Y="385" />
@@ -104,9 +104,9 @@
       <Point X="460" Y="219" />
       <Point X="451" Y="219" />
       <Point X="445" Y="219" />
-      <Point X="445" Y="308" />
-      <Point X="522" Y="308" />
-      <Point X="522" Y="258" />
+      <Point X="445" Y="315" />
+      <Point X="515" Y="315" />
+      <Point X="515" Y="258" />
       <Point X="699.5" Y="258" />
       <Point X="699.5" Y="275.1" />
       <Point X="699.5" Y="282.1" />
@@ -118,8 +118,8 @@
       <Point X="451" Y="234" />
       <Point X="438" Y="234" />
       <Point X="438" Y="322" />
-      <Point X="536" Y="322" />
-      <Point X="536" Y="251" />
+      <Point X="522" Y="322" />
+      <Point X="522" Y="251" />
       <Point X="868.5" Y="251" />
       <Point X="868.5" Y="275.1" />
       <Point X="868.5" Y="282.1" />

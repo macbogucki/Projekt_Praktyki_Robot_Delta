@@ -48,7 +48,7 @@
     <Connection Connector="MT2" TargetModule="8LVA23.B1030D200-0c" TargetConnector="MT" />
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposMicroDConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxis_1" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisConv" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[1]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -102,7 +102,6 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
-    <Parameter ID="ExternalEncoderAxis" Location="DriveConfiguration/Channel[1]" Value="NotUsed" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ1" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[2]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
@@ -157,7 +156,6 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
-    <Parameter ID="ExternalEncoderAxis" Location="DriveConfiguration/Channel[2]" Value="NotUsed" />
   </Module>
   <Module Name="80VD100PD.C000-14a" Type="80VD100PD.C000-14" Version="2.5.0.0">
     <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2" NodeNumber="3">

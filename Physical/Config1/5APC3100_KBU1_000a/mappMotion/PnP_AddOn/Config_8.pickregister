@@ -4,13 +4,13 @@
   <Element ID="gPickRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPick" />
-      <Property ID="Length" Value="2000" />
-      <Property ID="Width" Value="250" />
+      <Property ID="Length" Value="610" />
+      <Property ID="Width" Value="12" />
+      <Property ID="Height" Value="1" />
+      <Property ID="MaxItems" Value="4" />
       <Selector ID="MotionSource" Value="Axis">
-        <Property ID="AxisRef" Value="gAxis_1" />
-        <Selector ID="MovementLimits" Value="UseAxisLimits">
-          <Selector ID="Direction" Value="Bidirectional" />
-        </Selector>
+        <Property ID="AxisRef" Value="gAxisConv" />
+        <Selector ID="MovementLimits" Value="UseAxisLimits" />
       </Selector>
     </Selector>
     <Selector ID="SceneViewerObject" Value="Used">
@@ -27,10 +27,19 @@
   <Element ID="gPlaceRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPlace" />
-      <Selector ID="MotionSource">
+      <Property ID="Length" Value="220" />
+      <Property ID="Width" Value="60" />
+      <Property ID="Height" Value="0" />
+      <Property ID="MaxItems" Value="4" />
+      <Selector ID="MotionSource" Value="Axis">
+        <Property ID="AxisRef" Value="gAxisStatic" />
         <Selector ID="MovementLimits" Value="Internal">
-          <Selector ID="Acceleration" Value="Basic" />
-          <Selector ID="Direction" Value="Bidirectional" />
+          <Selector ID="Velocity">
+            <Property ID="Velocity" Value="1" />
+          </Selector>
+          <Selector ID="Acceleration" Value="Basic">
+            <Property ID="Acceleration" Value="1" />
+          </Selector>
         </Selector>
       </Selector>
     </Selector>

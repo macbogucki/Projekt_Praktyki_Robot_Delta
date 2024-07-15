@@ -1,0 +1,14 @@
+VAR
+	P_Step : PlaceStepEnum;
+	LastStep : PlaceStepEnum;
+	Error : BOOL;
+	PlaceHoldersSpacing : LREAL;
+	LastPlaceHolderConveyorPosition : LREAL;
+	ElapsedDistance : LREAL;
+END_VAR
+(*   *)
+(*Functionblocks*)
+VAR
+	MpPickRegister_0 : MpPickRegister;
+	MpPickRegCreatePlaceholder : MpPickRegCreateObject;
+END_VAR

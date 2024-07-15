@@ -58,18 +58,18 @@
   </Binaries>
   <Libraries>
     <LibraryObject Name="UserLib" Source="PickAndPlace.UserLibraries.UserLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="McBase" Source="Libraries1.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MpBase" Source="Libraries1.MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpRobotics" Source="Libraries1.MpRobotics.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McAxGroup" Source="Libraries1.McAxGroup.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McPathGen" Source="Libraries1.McPathGen.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McAxis" Source="Libraries1.McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McProgInt" Source="Libraries1.McProgInt.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McAcpAx" Source="Libraries1.McAcpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="CoTrace" Source="Libraries1.CoTrace.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="AsZip" Source="Libraries1.AsZip.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="FileIO" Source="Libraries1.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="runtime" Source="Libraries1.runtime.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McBase" Source="McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpBase" Source="MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpRobotics" Source="MpRobotics.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McAxGroup" Source="McAxGroup.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McPathGen" Source="McPathGen.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McAxis" Source="McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McProgInt" Source="McProgInt.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McAcpAx" Source="McAcpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="CoTrace" Source="CoTrace.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="AsZip" Source="AsZip.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="FileIO" Source="FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="runtime" Source="runtime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarlog" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -81,16 +81,16 @@
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpAxis" Source="Libraries1.MpAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McAcpPar" Source="Libraries1.McAcpPar.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McTrkPath" Source="Libraries1.McTrkPath.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MpPick" Source="Libraries1.MpPick.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McAcpTrak" Source="Libraries1.McAcpTrak.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MpCnc" Source="Libraries1.MpCnc.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MpTool" Source="Libraries1.MpTool.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="sys_lib" Source="Libraries1.sys_lib.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McDS402Ax" Source="Libraries1.McDS402Ax.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McPureVAx" Source="Libraries1.McPureVAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="McStpAx" Source="Libraries1.McStpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpAxis" Source="MpAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McAcpPar" Source="McAcpPar.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McTrkPath" Source="McTrkPath.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpPick" Source="MpPick.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McAcpTrak" Source="McAcpTrak.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpCnc" Source="MpCnc.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpTool" Source="MpTool.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="sys_lib" Source="sys_lib.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McDS402Ax" Source="McDS402Ax.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McPureVAx" Source="McPureVAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McStpAx" Source="McStpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

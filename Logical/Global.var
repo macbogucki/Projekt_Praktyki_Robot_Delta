@@ -1,12 +1,13 @@
-
 VAR
-	DeltaParameters : MpDelta4AxisParType; 
+	DeltaParameters : MpDelta4AxisParType;
 	MpDelta4Axis_0 : MpDelta4Axis;
 END_VAR
-
 VAR CONSTANT
-	P1 : McPointType := (Pos:=(X:=0, Y:=0, Z:=-650));
-	P2 : McPointType := (Pos:=(X:=-50, Y:=-20, Z:=-600));
-	P0 : McPointType := (Pos:=(X:=0, Y:=0, Z:=-560));
-	P3 : McPointType := (Pos:=(X:=50, Y:=20, Z:=-540));
+	P1 : McPointType := (Pos:=(X:=0,Y:=0,Z:=-650));
+	P2 : McPointType := (Pos:=(X:=-50,Y:=-20,Z:=-600));
+	P0 : McPointType := (Pos:=(X:=0,Y:=0,Z:=-560));
+	P3 : McPointType := (Pos:=(X:=50,Y:=20,Z:=-540));
+END_VAR
+VAR
+	TablePosition : LREAL := 5;
 END_VAR

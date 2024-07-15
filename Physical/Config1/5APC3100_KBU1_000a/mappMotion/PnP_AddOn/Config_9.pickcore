@@ -24,7 +24,7 @@
     <Group ID="OperationMode[1]">
       <Property ID="Name" Value="ConveyorToConveyor" />
       <Group ID="AssignedJob[1]">
-        <Property ID="Name" Value="PickToPlace" />
+        <Property ID="Name" Value="ChaoticToLine" />
         <Selector ID="Processing" Value="FIFO" />
         <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
       </Group>

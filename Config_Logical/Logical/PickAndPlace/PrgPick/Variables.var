@@ -1,0 +1,14 @@
+VAR
+	C_Step : ConvStepEnum;
+	LastStep : ConvStepEnum;
+	Error : BOOL;
+	ProductSpacing : LREAL;
+	LastProductConveyorPosition : LREAL;
+	ElapsedDistance : LREAL;
+END_VAR
+(*  *)
+(*Functionblocks*)
+VAR
+	MpPickRegister_0 : MpPickRegister;
+	MpPickRegCreateProduct : MpPickRegCreateObject;
+END_VAR

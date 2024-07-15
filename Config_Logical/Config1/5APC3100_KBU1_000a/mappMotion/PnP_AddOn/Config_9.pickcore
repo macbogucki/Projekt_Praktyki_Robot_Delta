@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gPickCore_1" Type="pickcore">
+    <Property ID="AxesGroupRef" Value="g4AxDeltaA" />
+    <Selector ID="Gripper" Value="Standard">
+      <Selector ID="Behavior">
+        <Property ID="ProcessVariableName" Value="::PrgPickCor:Gripper" />
+      </Selector>
+    </Selector>
+    <Group ID="Job[1]">
+      <Property ID="JobName" Value="PickToPlace" />
+      <Property ID="Object" Value="MyProduct" />
+      <Property ID="InfeedRegister" Value="gPickRegister" />
+      <Property ID="OutfeedRegister" Value="gPlaceRegister" />
+      <Selector ID="Movement" Value="Basic">
+        <Property ID="PickOffsetZ" Value="50" />
+        <Property ID="PickRounding" Value="30" />
+        <Property ID="PlaceOffsetZ" Value="50" />
+        <Property ID="PlaceRounding" Value="30" />
+      </Selector>
+      <Selector ID="Limits" Value="NotUsed" />
+    </Group>
+    <Group ID="OperationMode[1]">
+      <Property ID="Name" Value="ConveyorToConveyor" />
+      <Group ID="AssignedJob[1]">
+        <Property ID="Name" Value="PickToPlace" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[2]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[3]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[4]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[5]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[6]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[7]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[8]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[9]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Group ID="AssignedJob[10]">
+        <Property ID="Name" />
+        <Selector ID="Processing" Value="FIFO" />
+        <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
+      </Group>
+      <Selector ID="IdleBehavior" Value="StayFixedWaitingPosition">
+        <Selector ID="Position">
+          <Property ID="StandardFrameName" Value="PnPWaitingPosition" />
+          <Group ID="Translation">
+            <Property ID="X" Value="0.0" />
+            <Property ID="Y" Value="0.0" />
+            <Property ID="Z" Value="0.0" />
+          </Group>
+          <Group ID="Orientation">
+            <Property ID="Angle1" Value="0.0" />
+            <Property ID="Angle2" Value="0.0" />
+            <Property ID="Angle3" Value="0.0" />
+          </Group>
+        </Selector>
+      </Selector>
+    </Group>
+    <Selector ID="Alarms" Value="None" />
+  </Element>
+</Configuration>

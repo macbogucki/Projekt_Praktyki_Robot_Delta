@@ -56,7 +56,7 @@ PROGRAM _CYCLIC
 			
         P_WAIT_START_PROCESS: // waits user start command and conveyor moving
             ReadyPlaceReg := TRUE;
-            IF CmdStart AND ReadyToStart AND (PlaceConveyorPosition > 0) THEN
+            IF CmdStart AND ReadyToStart THEN
                 P_Step := P_CREATE_OBJECTS;
             END_IF;
 			
@@ -70,8 +70,8 @@ PROGRAM _CYCLIC
                 MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
                 MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
                 MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
-                MpPickRegCreatePlaceholder.Parameters.Translation.X := 0;
-                MpPickRegCreatePlaceholder.Parameters.Translation.Y := 125; // in the middle of conveyor width
+                MpPickRegCreatePlaceholder.Parameters.Translation.X := 30;
+                MpPickRegCreatePlaceholder.Parameters.Translation.Y := 30; // in the middle of conveyor width
                 MpPickRegCreatePlaceholder.Create := TRUE;
 
                 LastPlaceHolderConveyorPosition := MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position;

@@ -40,7 +40,7 @@
         <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
       </Group>
       <Group ID="AssignedJob[2]">
-        <Property ID="Name" Value="PlaceToPick" />
+        <Property ID="Name" Value="" />
         <Selector ID="Processing" Value="FIFO" />
         <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
       </Group>

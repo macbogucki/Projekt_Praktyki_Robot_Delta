@@ -32,7 +32,6 @@
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
       </GlobalVariables>
-      <Task Name="Program" />
     </Module>
   </DefaultView>
 </OpcUaSource>

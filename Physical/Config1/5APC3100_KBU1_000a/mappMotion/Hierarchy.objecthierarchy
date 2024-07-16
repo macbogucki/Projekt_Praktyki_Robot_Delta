@@ -65,7 +65,7 @@
           <Group ID="Translation">
             <Property ID="X" Value="310" />
             <Property ID="Y" Value="310" />
-            <Property ID="Z" Value="0.0" />
+            <Property ID="Z" Value="0" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />

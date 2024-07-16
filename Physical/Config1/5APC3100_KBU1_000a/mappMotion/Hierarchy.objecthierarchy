@@ -18,7 +18,7 @@
         <Selector ID="Type" Value="StandardFrame">
           <Property ID="Name" Value="ConveyorPick" />
           <Group ID="Translation">
-            <Property ID="X" Value="150" />
+            <Property ID="X" Value="0" />
             <Property ID="Y" Value="250" />
             <Property ID="Z" Value="40" />
           </Group>

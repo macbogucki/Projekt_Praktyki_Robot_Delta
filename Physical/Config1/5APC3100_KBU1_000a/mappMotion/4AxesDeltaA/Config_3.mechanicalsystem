@@ -25,7 +25,7 @@
               </Group>
               <Group ID="Arm2LinkPoint">
                 <Property ID="Angle" Value="0" />
-                <Property ID="Radius" Value="130" />
+                <Property ID="Radius" Value="138" />
                 <Property ID="Z" Value="80" />
               </Group>
               <Group ID="Arm3LinkPoint">
@@ -38,15 +38,15 @@
               <Property ID="ArmIsReadOnly" Value="0" />
               <Group ID="Arm1">
                 <Property ID="UpperArmLength" Value="150" />
-                <Property ID="LowerArmLength" Value="430" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
               <Group ID="Arm2">
                 <Property ID="UpperArmLength" Value="150" />
-                <Property ID="LowerArmLength" Value="430" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
               <Group ID="Arm3">
                 <Property ID="UpperArmLength" Value="150" />
-                <Property ID="LowerArmLength" Value="430" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
               <Property ID="LowerArmPairDistance" Value="90" />
             </Group>

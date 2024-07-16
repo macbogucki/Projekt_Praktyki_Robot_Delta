@@ -18,9 +18,9 @@
         <Selector ID="Type" Value="StandardFrame">
           <Property ID="Name" Value="ConveyorPick" />
           <Group ID="Translation">
-            <Property ID="X" Value="0.0" />
-            <Property ID="Y" Value="40" />
-            <Property ID="Z" Value="0.0" />
+            <Property ID="X" Value="150" />
+            <Property ID="Y" Value="250" />
+            <Property ID="Z" Value="40" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />
@@ -33,9 +33,9 @@
         <Selector ID="Type" Value="StandardFrame">
           <Property ID="Name" Value="ConveyorPlace" />
           <Group ID="Translation">
-            <Property ID="X" Value="0.0" />
-            <Property ID="Y" Value="-20" />
-            <Property ID="Z" Value="0" />
+            <Property ID="X" Value="170" />
+            <Property ID="Y" Value="150" />
+            <Property ID="Z" Value="40" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />
@@ -48,9 +48,9 @@
         <Selector ID="Type" Value="StandardFrame">
           <Property ID="Name" Value="PnPWaitingPosition" />
           <Group ID="Translation">
-            <Property ID="X" Value="1000" />
-            <Property ID="Y" Value="400" />
-            <Property ID="Z" Value="200" />
+            <Property ID="X" Value="310" />
+            <Property ID="Y" Value="310" />
+            <Property ID="Z" Value="60" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />
@@ -64,7 +64,7 @@
           <Property ID="AxesGroupRef" Value="g4AxDeltaA" />
           <Group ID="Translation">
             <Property ID="X" Value="310" />
-            <Property ID="Y" Value="0" />
+            <Property ID="Y" Value="310" />
             <Property ID="Z" Value="0.0" />
           </Group>
           <Group ID="Orientation">

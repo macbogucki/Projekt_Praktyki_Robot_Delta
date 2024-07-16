@@ -19,17 +19,17 @@
               </Group>
               <Property ID="ArmLinkPointIsReadOnly" Value="0" />
               <Group ID="Arm1LinkPoint">
-                <Property ID="Angle" Value="90" />
+                <Property ID="Angle" Value="-90" />
                 <Property ID="Radius" Value="150" />
                 <Property ID="Z" Value="0.0" />
               </Group>
               <Group ID="Arm2LinkPoint">
-                <Property ID="Angle" Value="180" />
+                <Property ID="Angle" Value="0" />
                 <Property ID="Radius" Value="130" />
                 <Property ID="Z" Value="80" />
               </Group>
               <Group ID="Arm3LinkPoint">
-                <Property ID="Angle" Value="270" />
+                <Property ID="Angle" Value="90" />
                 <Property ID="Radius" Value="150" />
                 <Property ID="Z" Value="0" />
               </Group>

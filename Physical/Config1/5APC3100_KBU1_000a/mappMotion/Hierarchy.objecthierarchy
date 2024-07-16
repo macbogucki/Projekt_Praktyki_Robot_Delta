@@ -33,7 +33,7 @@
         <Selector ID="Type" Value="StandardFrame">
           <Property ID="Name" Value="ConveyorPlace" />
           <Group ID="Translation">
-            <Property ID="X" Value="170" />
+            <Property ID="X" Value="270" />
             <Property ID="Y" Value="150" />
             <Property ID="Z" Value="40" />
           </Group>
@@ -50,7 +50,7 @@
           <Group ID="Translation">
             <Property ID="X" Value="310" />
             <Property ID="Y" Value="310" />
-            <Property ID="Z" Value="60" />
+            <Property ID="Z" Value="100" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />

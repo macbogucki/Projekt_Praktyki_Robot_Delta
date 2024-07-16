@@ -20,9 +20,9 @@
           <Property ID="Height" Value="50" />
         </Group>
         <Group ID="Translation">
-          <Property ID="X" Value="-150" />
-          <Property ID="Y" Value="0.0" />
-          <Property ID="Z" Value="0.0" />
+          <Property ID="X" Value="0" />
+          <Property ID="Y" Value="0" />
+          <Property ID="Z" Value="0" />
         </Group>
         <Group ID="Orientation">
           <Property ID="Angle1" Value="0.0" />
@@ -91,8 +91,8 @@
         </Group>
         <Group ID="Translation">
           <Property ID="X" Value="0" />
-          <Property ID="Y" Value="-20" />
-          <Property ID="Z" Value="0.0" />
+          <Property ID="Y" Value="0" />
+          <Property ID="Z" Value="0" />
         </Group>
         <Group ID="Orientation">
           <Property ID="Angle1" Value="0.0" />
@@ -126,8 +126,23 @@
           </Group>
         </Group>
         <Group ID="Template[2]">
-          <Selector ID="VisualRepresentation">
-            <Property ID="Size" Value="50.0" />
+          <Selector ID="VisualRepresentation" Value="2DShape">
+            <Selector ID="ShapeType">
+              <Group ID="Dimensions">
+                <Property ID="Radius" Value="25.0" />
+              </Group>
+              <Group ID="Translation">
+                <Property ID="X" Value="0.0" />
+                <Property ID="Y" Value="0.0" />
+                <Property ID="Z" Value="0.0" />
+              </Group>
+              <Group ID="Orientation">
+                <Property ID="Angle1" Value="0.0" />
+                <Property ID="Angle2" Value="0.0" />
+                <Property ID="Angle3" Value="0.0" />
+              </Group>
+              <Property ID="Material" Value="BlackMatte" />
+            </Selector>
           </Selector>
           <Group ID="Filter">
             <Group ID="ObjectState">

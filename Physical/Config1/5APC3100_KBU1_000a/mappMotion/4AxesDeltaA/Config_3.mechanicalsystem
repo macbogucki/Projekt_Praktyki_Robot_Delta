@@ -138,12 +138,12 @@
           <Selector ID="EndEffectorPlatformToFlange" Value="ConnectionLine">
             <Property ID="DistanceMin" Value="-1.79769313486231E308" />
             <Property ID="DistanceMax" Value="1.79769313486231E308" />
-            <Property ID="Distance" Value="0.0" />
+            <Property ID="Distance" Value="1" />
           </Selector>
           <Selector ID="FlangeToTcp" Value="ConnectionLine">
             <Property ID="DistanceMin" Value="-1.79769313486231E308" />
             <Property ID="DistanceMax" Value="1.79769313486231E308" />
-            <Property ID="Distance" Value="0.0" />
+            <Property ID="Distance" Value="45" />
           </Selector>
         </Selector>
         <Property ID="DynamicModelIsReadOnly" Value="0" />

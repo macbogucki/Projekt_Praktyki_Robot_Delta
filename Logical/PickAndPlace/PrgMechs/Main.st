@@ -18,8 +18,8 @@ PROGRAM _INIT
     gAxisQ1;
     gAxisQ2;
     gAxisQ3;
-    gAxisQ4;
-    
+	gAxisQ4;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC

@@ -70,6 +70,7 @@
         <Property ID="FeatureRef[3]" Value="Feature_PathDefinition" />
         <Property ID="FeatureRef[4]" Value="Feature_Programs" />
         <Property ID="FeatureRef[5]" Value="Feature_Tracking" />
+        <Property ID="FeatureRef[6]" Value="Feature_MotionPacketLog" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="None" />

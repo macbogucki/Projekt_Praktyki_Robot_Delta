@@ -20,7 +20,7 @@
           <Property ID="Height" Value="50" />
         </Group>
         <Group ID="Translation">
-          <Property ID="X" Value="-150" />
+          <Property ID="X" Value="0" />
           <Property ID="Y" Value="0.0" />
           <Property ID="Z" Value="0.0" />
         </Group>
@@ -41,7 +41,7 @@
               <Group ID="Translation">
                 <Property ID="X" Value="0.0" />
                 <Property ID="Y" Value="0.0" />
-                <Property ID="Z" Value="0.0" />
+                <Property ID="Z" Value="0" />
               </Group>
               <Group ID="Orientation">
                 <Property ID="Angle1" Value="0.0" />
@@ -83,6 +83,9 @@
       </Selector>
     </Selector>
     <Selector ID="SceneViewerObject" Value="Used">
+      <Selector ID="Dimensions">
+        <Property ID="Material" Value="Undefined" />
+      </Selector>
       <Selector ID="VisualRepresentation" Value="Cuboid">
         <Group ID="Dimensions">
           <Property ID="Length" Value="215" />
@@ -91,7 +94,7 @@
         </Group>
         <Group ID="Translation">
           <Property ID="X" Value="0" />
-          <Property ID="Y" Value="-20" />
+          <Property ID="Y" Value="0" />
           <Property ID="Z" Value="0.0" />
         </Group>
         <Group ID="Orientation">

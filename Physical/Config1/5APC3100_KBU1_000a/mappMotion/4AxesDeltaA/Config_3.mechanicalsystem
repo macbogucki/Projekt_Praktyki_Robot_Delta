@@ -82,8 +82,8 @@
           <Group ID="CountDirections">
             <Property ID="JointAxisIsReadOnly" Value="0" />
             <Property ID="JointAxis[1]" Value="Standard" />
-            <Property ID="JointAxis[2]" Value="Standard" />
-            <Property ID="JointAxis[3]" Value="Standard" />
+            <Property ID="JointAxis[2]" Value="Inverse" />
+            <Property ID="JointAxis[3]" Value="Inverse" />
             <Property ID="JointAxis[4]" Value="Standard" />
           </Group>
         </Selector>
@@ -138,12 +138,12 @@
           <Selector ID="EndEffectorPlatformToFlange" Value="ConnectionLine">
             <Property ID="DistanceMin" Value="-1.79769313486231E308" />
             <Property ID="DistanceMax" Value="1.79769313486231E308" />
-            <Property ID="Distance" Value="0.0" />
+            <Property ID="Distance" Value="0" />
           </Selector>
           <Selector ID="FlangeToTcp" Value="ConnectionLine">
             <Property ID="DistanceMin" Value="-1.79769313486231E308" />
             <Property ID="DistanceMax" Value="1.79769313486231E308" />
-            <Property ID="Distance" Value="0.0" />
+            <Property ID="Distance" Value="0" />
           </Selector>
         </Selector>
         <Property ID="DynamicModelIsReadOnly" Value="0" />

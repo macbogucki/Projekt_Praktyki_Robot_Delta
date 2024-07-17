@@ -10,7 +10,6 @@
         <Selector ID="CircleCoordinates" Value="Relative" />
         <Selector ID="JACS_ACSProgramming" Value="JACS" />
         <Selector ID="ContourConnection" Value="Inactive" />
-        <Selector ID="AccuracyHoldDelays" Value="None" />
         <Selector ID="ProgrammingUnits" Value="UseAxesGroupSettings" />
         <Group ID="Feedrates">
           <Selector ID="FeedPath" Value="Standard" />
@@ -30,5 +29,12 @@
   </Element>
   <Element ID="Feature_Jogging" Type="axesgroupfeature">
     <Selector ID="Type" Value="Jogging" />
+  </Element>
+  <Element ID="Feature_MotionPacketLog" Type="axesgroupfeature">
+    <Selector ID="Type" Value="MotionPacketLog">
+      <Selector ID="Location" Value="User">
+        <Property ID="FileDevice" Value="CNC_PrgDir" />
+      </Selector>
+    </Selector>
   </Element>
 </Configuration>

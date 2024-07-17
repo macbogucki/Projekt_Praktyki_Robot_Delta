@@ -34,7 +34,7 @@
               <Property ID="Name" Value="ZeroPosPickConveyor" />
               <Selector ID="Type" Value="StandardFrame">
                 <Group ID="Translation">
-                  <Property ID="X" Value="0" />
+                  <Property ID="X" Value="-300" />
                   <Property ID="Y" Value="0" />
                   <Property ID="Z" Value="-430" />
                 </Group>

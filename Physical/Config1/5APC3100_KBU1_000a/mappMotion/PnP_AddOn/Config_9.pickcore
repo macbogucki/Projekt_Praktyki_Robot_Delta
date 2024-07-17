@@ -14,10 +14,10 @@
       <Property ID="InfeedRegister" Value="gPickRegister" />
       <Property ID="OutfeedRegister" Value="gPlaceRegister" />
       <Selector ID="Movement" Value="Basic">
-        <Property ID="PickOffsetZ" Value="50" />
-        <Property ID="PickRounding" Value="30" />
-        <Property ID="PlaceOffsetZ" Value="50" />
-        <Property ID="PlaceRounding" Value="30" />
+        <Property ID="PickOffsetZ" Value="20" />
+        <Property ID="PickRounding" Value="10" />
+        <Property ID="PlaceOffsetZ" Value="20" />
+        <Property ID="PlaceRounding" Value="10" />
       </Selector>
       <Selector ID="Limits" Value="Basic">
         <Group ID="WithObject">

@@ -1,0 +1,10 @@
+VAR
+	RC_Step : RCStepEnum;
+	LastStep : RCStepEnum;
+	MpDelta4Axis_0 : MpDelta4Axis;
+	DeltaParameters : MpDelta4AxisParType;
+	MpAxisBasic_0 : MpAxisBasic;
+	AxisParameters_0 : MpAxisBasicParType;
+	MpAxisBasic_1 : MpAxisBasic;
+	AxisParameters_1 : MpAxisBasicParType;
+END_VAR

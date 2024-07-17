@@ -53,15 +53,9 @@
         <Property ID="TrajectoryPlanningIsReadOnly" Value="0" />
         <Selector ID="TrajectoryPlanning" Value="Basic">
           <Property ID="LimitCheckResolutionIsReadOnly" Value="0" />
-          <Selector ID="LimitCheckResolution" Value="UserDefinedTime">
-            <Property ID="TimeIsReadOnly" Value="0" />
-            <Property ID="Time" Value="0.01" />
-          </Selector>
-          <Selector ID="BufferTime" Value="UserDefinedTime">
-            <Property ID="Time" Value="0.1" />
-          </Selector>
+          <Selector ID="LimitCheckResolution" Value="Automatic" />
+          <Selector ID="BufferTime" Value="Automatic" />
           <Selector ID="BarrierParametrization" Value="JointCoordinates" />
-          <Selector ID="TorqueLimitConsideration" Value="Exact" />
         </Selector>
         <Group ID="Miscellaneous">
           <Selector ID="NonMovementsLimit" Value="NotUsed" />
@@ -70,17 +64,13 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="StopReaction">
-        <Group ID="AxisError">
-          <Property ID="AxisReactionIsReadOnly" Value="0" />
-        </Group>
-      </Group>
       <Group ID="AxesGroupFeatures">
         <Property ID="FeatureRef[1]" Value="Feature_FrameHierarchy" />
         <Property ID="FeatureRef[2]" Value="Feature_Jogging" />
         <Property ID="FeatureRef[3]" Value="Feature_PathDefinition" />
         <Property ID="FeatureRef[4]" Value="Feature_Programs" />
         <Property ID="FeatureRef[5]" Value="Feature_Tracking" />
+        <Property ID="FeatureRef[6]" Value="Feature_MotionPacketLog" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="None" />

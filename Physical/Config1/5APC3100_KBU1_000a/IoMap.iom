@@ -1,4 +1,3 @@
-
 VAR_CONFIG
-
+	::PrgPickCor:Gripper AT %QX."X20DO8322".DigitalOutput08;
 END_VAR

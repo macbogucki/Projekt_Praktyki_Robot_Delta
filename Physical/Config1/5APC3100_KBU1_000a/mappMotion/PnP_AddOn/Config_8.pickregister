@@ -4,21 +4,67 @@
   <Element ID="gPickRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPick" />
-      <Property ID="Length" Value="2000" />
-      <Property ID="Width" Value="250" />
+      <Property ID="Length" Value="600" />
+      <Property ID="Width" Value="120" />
+      <Property ID="Height" Value="10" />
       <Selector ID="MotionSource" Value="Axis">
         <Property ID="AxisRef" Value="gAxis_1" />
-        <Selector ID="MovementLimits" Value="UseAxisLimits">
-          <Selector ID="Direction" Value="Bidirectional" />
-        </Selector>
+        <Selector ID="MovementLimits" Value="UseAxisLimits" />
       </Selector>
     </Selector>
     <Selector ID="SceneViewerObject" Value="Used">
+      <Selector ID="VisualRepresentation" Value="Conveyor belt">
+        <Group ID="Dimensions">
+          <Property ID="Length" Value="610" />
+          <Property ID="Width" Value="120" />
+          <Property ID="Height" Value="50" />
+        </Group>
+        <Group ID="Translation">
+          <Property ID="X" Value="0" />
+          <Property ID="Y" Value="0.0" />
+          <Property ID="Z" Value="0.0" />
+        </Group>
+        <Group ID="Orientation">
+          <Property ID="Angle1" Value="0.0" />
+          <Property ID="Angle2" Value="0.0" />
+          <Property ID="Angle3" Value="0.0" />
+        </Group>
+        <Property ID="Material" Value="GreenMatte" />
+      </Selector>
       <Selector ID="Content">
         <Group ID="Template[1]">
+          <Selector ID="VisualRepresentation" Value="2DShape">
+            <Selector ID="ShapeType">
+              <Group ID="Dimensions">
+                <Property ID="Radius" Value="25.0" />
+              </Group>
+              <Group ID="Translation">
+                <Property ID="X" Value="0.0" />
+                <Property ID="Y" Value="0.0" />
+                <Property ID="Z" Value="0" />
+              </Group>
+              <Group ID="Orientation">
+                <Property ID="Angle1" Value="0.0" />
+                <Property ID="Angle2" Value="0.0" />
+                <Property ID="Angle3" Value="0.0" />
+              </Group>
+            </Selector>
+          </Selector>
+          <Group ID="Filter">
+            <Group ID="ObjectState">
+              <Property ID="State[1]" Value="1" />
+            </Group>
+          </Group>
+        </Group>
+        <Group ID="Template[2]">
           <Selector ID="VisualRepresentation">
             <Property ID="Size" Value="50.0" />
           </Selector>
+          <Group ID="Filter">
+            <Group ID="ObjectState">
+              <Property ID="State[1]" Value="2" />
+            </Group>
+          </Group>
         </Group>
       </Selector>
     </Selector>
@@ -27,19 +73,70 @@
   <Element ID="gPlaceRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPlace" />
-      <Selector ID="MotionSource">
-        <Selector ID="MovementLimits" Value="Internal">
-          <Selector ID="Acceleration" Value="Basic" />
-          <Selector ID="Direction" Value="Bidirectional" />
-        </Selector>
+      <Property ID="Length" Value="205" />
+      <Property ID="Width" Value="60" />
+      <Property ID="Height" Value="10" />
+      <Property ID="MaxItems" Value="5" />
+      <Selector ID="MotionSource" Value="Axis">
+        <Property ID="AxisRef" Value="gAxis_2" />
+        <Selector ID="MovementLimits" Value="UseAxisLimits" />
       </Selector>
     </Selector>
     <Selector ID="SceneViewerObject" Value="Used">
+      <Selector ID="Dimensions">
+        <Property ID="Material" Value="Undefined" />
+      </Selector>
+      <Selector ID="VisualRepresentation" Value="Cuboid">
+        <Group ID="Dimensions">
+          <Property ID="Length" Value="215" />
+          <Property ID="Width" Value="60" />
+          <Property ID="Height" Value="50" />
+        </Group>
+        <Group ID="Translation">
+          <Property ID="X" Value="0" />
+          <Property ID="Y" Value="0" />
+          <Property ID="Z" Value="0.0" />
+        </Group>
+        <Group ID="Orientation">
+          <Property ID="Angle1" Value="0.0" />
+          <Property ID="Angle2" Value="0.0" />
+          <Property ID="Angle3" Value="0.0" />
+        </Group>
+      </Selector>
       <Selector ID="Content">
         <Group ID="Template[1]">
+          <Selector ID="VisualRepresentation" Value="2DShape">
+            <Selector ID="ShapeType">
+              <Group ID="Dimensions">
+                <Property ID="Radius" Value="25.0" />
+              </Group>
+              <Group ID="Translation">
+                <Property ID="X" Value="0.0" />
+                <Property ID="Y" Value="0.0" />
+                <Property ID="Z" Value="0.0" />
+              </Group>
+              <Group ID="Orientation">
+                <Property ID="Angle1" Value="0.0" />
+                <Property ID="Angle2" Value="0.0" />
+                <Property ID="Angle3" Value="0.0" />
+              </Group>
+            </Selector>
+          </Selector>
+          <Group ID="Filter">
+            <Group ID="ObjectState">
+              <Property ID="State[1]" Value="7" />
+            </Group>
+          </Group>
+        </Group>
+        <Group ID="Template[2]">
           <Selector ID="VisualRepresentation">
             <Property ID="Size" Value="50.0" />
           </Selector>
+          <Group ID="Filter">
+            <Group ID="ObjectState">
+              <Property ID="State[1]" Value="2" />
+            </Group>
+          </Group>
         </Group>
       </Selector>
     </Selector>

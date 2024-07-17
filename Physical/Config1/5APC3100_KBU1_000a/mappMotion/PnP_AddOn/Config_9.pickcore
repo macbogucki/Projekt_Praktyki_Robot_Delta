@@ -14,12 +14,23 @@
       <Property ID="InfeedRegister" Value="gPickRegister" />
       <Property ID="OutfeedRegister" Value="gPlaceRegister" />
       <Selector ID="Movement" Value="Basic">
-        <Property ID="PickOffsetZ" Value="50" />
-        <Property ID="PickRounding" Value="30" />
-        <Property ID="PlaceOffsetZ" Value="50" />
-        <Property ID="PlaceRounding" Value="30" />
+        <Property ID="PickOffsetZ" Value="20" />
+        <Property ID="PickRounding" Value="10" />
+        <Property ID="PlaceOffsetZ" Value="20" />
+        <Property ID="PlaceRounding" Value="10" />
       </Selector>
-      <Selector ID="Limits" Value="NotUsed" />
+      <Selector ID="Limits" Value="Basic">
+        <Group ID="WithObject">
+          <Property ID="Velocity" Value="700" />
+          <Property ID="Acceleration" Value="2000" />
+          <Property ID="Deceleration" Value="2000" />
+        </Group>
+        <Group ID="WithoutObject">
+          <Property ID="Velocity" Value="700" />
+          <Property ID="Acceleration" Value="2000" />
+          <Property ID="Deceleration" Value="2000" />
+        </Group>
+      </Selector>
     </Group>
     <Group ID="OperationMode[1]">
       <Property ID="Name" Value="ConveyorToConveyor" />
@@ -29,7 +40,7 @@
         <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
       </Group>
       <Group ID="AssignedJob[2]">
-        <Property ID="Name" />
+        <Property ID="Name" Value="" />
         <Selector ID="Processing" Value="FIFO" />
         <Selector ID="JobExecBehav" Value="WaitForPlaceHolder" />
       </Group>

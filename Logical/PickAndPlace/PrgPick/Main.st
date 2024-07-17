@@ -68,7 +68,8 @@ PROGRAM _CYCLIC
                 MpPickRegCreateProduct.Parameters.Mode := mpPICK_CREATE_SINGLEITEM;
                 MpPickRegCreateProduct.Parameters.ObjectTypeName := 'MyProduct';
                 MpPickRegCreateProduct.Parameters.Translation.X  := 0;                
-                MpPickRegCreateProduct.Parameters.Translation.Y  := 125; // in the middle of conveyor width
+				MpPickRegCreateProduct.Parameters.Translation.Y  := 60; // in the middle of conveyor width
+				MpPickRegCreateProduct.Parameters.Translation.Z  := 10;  
                 MpPickRegCreateProduct.Create := TRUE;
                 
                 LastProductConveyorPosition := MpPickRegCreateProduct.Parameters.LatchedConveyor.Position;

@@ -3,13 +3,13 @@ PROGRAM _INIT
     MpDelta4Axis_0.Override := 100.0; 
     MpDelta4Axis_0.Enable   := TRUE; 
 
-    AxisParameters_0.Velocity     := 130.0;
-    AxisParameters_0.Acceleration := 50.0;
-    AxisParameters_0.Deceleration := 50.0;
+    AxisParameters_0.Velocity     := 50.0;
+    AxisParameters_0.Acceleration := 20.0;
+    AxisParameters_0.Deceleration := 20.0;
 
-    AxisParameters_1.Velocity     := 130.0;
-    AxisParameters_1.Acceleration := 50.0;
-    AxisParameters_1.Deceleration := 50.0;
+    AxisParameters_1.Velocity     := 0.0;
+    AxisParameters_1.Acceleration := 1.0;
+    AxisParameters_1.Deceleration := 1.0;
     
     MpAxisBasic_0.Enable := TRUE;
     MpAxisBasic_1.Enable := TRUE;
@@ -18,8 +18,8 @@ PROGRAM _INIT
     gAxisQ1;
     gAxisQ2;
     gAxisQ3;
-    gAxisQ4;
-    
+	gAxisQ4;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC

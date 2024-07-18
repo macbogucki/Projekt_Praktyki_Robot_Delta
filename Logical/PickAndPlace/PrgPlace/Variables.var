@@ -10,5 +10,5 @@ END_VAR
 (*Functionblocks*)
 VAR
 	MpPickRegister_0 : MpPickRegister;
-	MpPickRegCreatePlaceholder : MpPickRegCreateObject;
+	MpPickRegCreateContainer : MpPickRegCreateObject;
 END_VAR

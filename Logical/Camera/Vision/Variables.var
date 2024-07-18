@@ -1,0 +1,3 @@
+VAR
+	Cam : Camera;
+END_VAR

@@ -32,5 +32,10 @@
     <Object Type="Library" Language="binary" Description="The AsIO library makes it possible to determine the states and values of a data point and carry out forcing operations.">AsIO</Object>
     <Object Type="Library" Language="binary" Description="The AsTime Library supports DATE_AND_TIME and TIME data types.">astime</Object>
     <Object Type="Library" Language="binary" Description="The DataObj library can be used to dynamically create, dynamically delete and copy data objects, etc. ">DataObj</Object>
+    <Object Type="File">mCoWebServ.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ1.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ2.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ3.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ4.mcowebservercfg</Object>
   </Objects>
 </Package>

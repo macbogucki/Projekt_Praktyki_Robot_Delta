@@ -1,3 +1,10 @@
 VAR_CONFIG
 	::PrgPickCor:Gripper AT %QX."X20DO8322".DigitalOutput08;
+	::Vision:Cam.Parameters.SetFocus AT %QW."VSS112R24.042P-000".SetFocus;
+	::Vision:Cam.Parameters.ExposureTime AT %QD."VSS112R24.042P-000".ExposureTime01;
+	::Vision:Cam.Parameters.FlashColor AT %QB."VSS112R24.042P-000".FlashColor01;
+	::Vision:Cam.Parameters.FlashSegment AT %QB."VSS112R24.042P-000".FlashSegment01;
+	::Vision:Cam.Camera_Output.PosMatchX AT %ID."VSS112R24.042P-000".PositionXMatching01;
+	::Vision:Cam.Camera_Output.PosMatchY AT %ID."VSS112R24.042P-000".PositionYMatching01;
+	::Vision:Cam.Cmd.Enable_Matching AT %QX."VSS112R24.042P-000".EnableMatching;
 END_VAR

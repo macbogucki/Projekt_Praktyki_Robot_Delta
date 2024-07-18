@@ -32,6 +32,9 @@
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
       </GlobalVariables>
+      <Task Name="Vision">
+        <Variable Name="Cam" RecursiveEnable="2" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

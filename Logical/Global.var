@@ -10,4 +10,5 @@ VAR CONSTANT
 END_VAR
 VAR
 	TablePosition : LREAL := 5;
+	ExposureTime : UDINT := 1000;
 END_VAR

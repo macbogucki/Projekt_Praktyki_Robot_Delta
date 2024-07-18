@@ -7,5 +7,6 @@
     <Object Type="Package">Libraries</Object>
     <Object Type="File">Robotic.st</Object>
     <Object Type="Package">PickAndPlace</Object>
+    <Object Type="Package">Camera</Object>
   </Objects>
 </Package>

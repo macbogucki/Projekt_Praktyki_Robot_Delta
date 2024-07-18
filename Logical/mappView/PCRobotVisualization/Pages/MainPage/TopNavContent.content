@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="TopNavContent" height="100" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Button" id="Auto1Button" top="0" left="675" width="125" height="50" zIndex="0" text="Auto1" borderStyle="none" backColor="rgba(255, 140, 0, 1)" disabledBackColor="rgba(245, 245, 245, 1)" fontSize="24px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="Auto2Button" top="0" left="800" width="125" height="50" zIndex="1" text="Auto2" borderStyle="none" backColor="rgba(255, 140, 0, 1)" disabledBackColor="rgba(245, 245, 245, 1)" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.Button" id="ReczneButton" top="0" left="925" width="125" height="50" zIndex="2" text="Ręczne" borderStyle="none" backColor="rgba(255, 140, 0, 1)" disabledBackColor="rgba(245, 245, 245, 1)" fontSize="24px" />
+  </Widgets>
+</Content>

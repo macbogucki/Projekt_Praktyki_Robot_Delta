@@ -8,9 +8,16 @@
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />
+    <EventBindingsSet refId="PCMainAuto1Content_eventbinding" />
+    <EventBindingsSet refId="TopNavContent_eventbinding" />
+    <EventBindingsSet refId="PCTopContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs />
-  <Contents />
+  <Contents>
+    <Content refId="PCMainManualContent" />
+    <Content refId="PCMainAuto2Content" />
+    <Content refId="TopNavContent" />
+  </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />

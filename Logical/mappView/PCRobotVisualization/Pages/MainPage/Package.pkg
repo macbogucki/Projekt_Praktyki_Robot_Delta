@@ -3,6 +3,9 @@
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" Description="Page description">PCMainPage.page</Object>
-    <Object Type="File">MainContent.content</Object>
+    <Object Type="File">PCMainAuto1Content.content</Object>
+    <Object Type="File" Description="2">PCMainAuto2Content.content</Object>
+    <Object Type="File">PCMainManualContent.content</Object>
+    <Object Type="File">TopNavContent.content</Object>
   </Objects>
 </Package>

@@ -8,5 +8,8 @@
     <Object Type="File">EventBinding.eventbinding</Object>
     <Object Type="File">PCMainContent.binding</Object>
     <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">PCMainAuto1Content.eventbinding</Object>
+    <Object Type="File">TopNavContent.eventbinding</Object>
+    <Object Type="File">PCTopContent.eventbinding</Object>
   </Objects>
 </Package>

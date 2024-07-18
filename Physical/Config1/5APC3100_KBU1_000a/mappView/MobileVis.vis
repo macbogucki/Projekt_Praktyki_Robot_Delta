@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <vdef:Visualization id="MobileRobotVisualization" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
   <StartPage pageRefId="MobileMainPage" />
-  <Pages />
+  <Pages>
+    <Page refId="PCAlarmsPage" />
+  </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="PCMainContent_binding" />
@@ -17,6 +19,8 @@
     <Content refId="PCMainManualContent" />
     <Content refId="PCMainAuto2Content" />
     <Content refId="TopNavContent" />
+    <Content refId="PCServiceContent" />
+    <Content refId="PCAlarmsContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

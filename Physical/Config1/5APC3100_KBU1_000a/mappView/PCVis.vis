@@ -4,6 +4,7 @@
   <Pages>
     <Page refId="MobileMainPage" />
     <Page refId="PCServicePage" />
+    <Page refId="PCAlarmsPage" />
   </Pages>
   <Navigations />
   <BindingsSets>
@@ -23,6 +24,8 @@
     <Content refId="PCMainManualContent" />
     <Content refId="PCMainAuto2Content" />
     <Content refId="TopNavContent" />
+    <Content refId="PCServiceContent" />
+    <Content refId="PCAlarmsContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

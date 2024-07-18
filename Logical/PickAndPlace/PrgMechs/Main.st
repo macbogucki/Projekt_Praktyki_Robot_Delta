@@ -2,7 +2,7 @@ PROGRAM _INIT
 
 	MpDelta4Axis_0.Override := 100.0; 
 	MpDelta4Axis_0.Enable   := TRUE; 
-
+	
 	AxisParameters_0.Velocity     := 50.0;
 	AxisParameters_0.Acceleration := 20.0;
 	AxisParameters_0.Deceleration := 20.0;
@@ -111,6 +111,7 @@ PROGRAM _CYCLIC
                 RC_Step  := RC_ERROR;
             END_IF;
         
+		//Tutaj zaczyna siê start procesu pick and place conv->static
         RC_READY:
             ReadyMechanics := TRUE;
             IF CmdStart AND ReadyToStart THEN
@@ -120,7 +121,7 @@ PROGRAM _CYCLIC
         (* start conveyors to move *)
         RC_START_PROCESS:
             MpAxisBasic_0.MoveVelocity := TRUE;
-            MpAxisBasic_1.MoveVelocity := TRUE;
+            MpAxisBasic_1.MoveVelocity := TRUE;  //Dotyczy "drugiej taœmy" czyli stanowiska do odk³adania kr¹¿ków
             RC_Step := RC_WAIT_PROCESS_STARTED;
 			
         RC_WAIT_PROCESS_STARTED:

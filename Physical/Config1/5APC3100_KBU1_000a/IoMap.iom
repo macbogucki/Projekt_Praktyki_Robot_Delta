@@ -7,4 +7,5 @@ VAR_CONFIG
 	::Vision:Cam.Camera_Output.PosMatchX AT %ID."VSS112R24.042P-000".PositionXMatching01;
 	::Vision:Cam.Camera_Output.PosMatchY AT %ID."VSS112R24.042P-000".PositionYMatching01;
 	::Vision:Cam.Cmd.Enable_Matching AT %QX."VSS112R24.042P-000".EnableMatching;
+	::Vision:CameraStatus AT %ID."VSS112R24.042P-000".CameraStatus;
 END_VAR

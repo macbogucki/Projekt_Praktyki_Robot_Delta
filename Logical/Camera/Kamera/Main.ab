@@ -1,0 +1,28 @@
+
+PROGRAM _INIT
+	(* Insert code here *)
+
+	ViAxisAcquisition_0.MpLink:=ADR(gCamera);
+	ViAxisAcquisition_0.Enable := TRUE;
+	ViAxisAcquisition_0.AcquisitionParameters:= AcquisitionParameters;
+	ViAxisAcquisition_0.AdvancedParameters := AdvancedParameters;
+	MakingPhoto := ViAxisAcquisition_0.InOperation
+	
+	//Config camera triggered by position of axis 
+	AcquisitionParameters.StartPosition :=0;
+	AcquisitionParameters.Period := 160;
+	AcquisitionParameters.AcquisitionPositions[0] := 80;
+	//AdvancedParameters.
+	
+END_PROGRAM
+
+PROGRAM _CYCLIC
+	(* Insert code here *)
+	 
+END_PROGRAM
+
+PROGRAM _EXIT
+	(* Insert code here *)
+	 
+END_PROGRAM
+

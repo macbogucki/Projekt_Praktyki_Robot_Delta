@@ -1,8 +1,8 @@
 VAR
-	Cam : Camera;
-	ViAxisAcquisition_0 : ViBaseAxisBasedAcquisition;
+	MpLink : ViComponentType;
+	Enable : BOOL;
 	AcquisitionParameters : ViBaseAxBsdAcqAcqParType;
 	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
+	ViAxisAcquisition_0 : ViBaseAxisBasedAcquisition;
 	MakingPhoto : BOOL;
-	CameraStatus : UDINT;
 END_VAR

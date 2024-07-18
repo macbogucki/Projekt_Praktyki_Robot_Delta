@@ -41,6 +41,11 @@
       </Group>
     </Group>
     <Group ID="ImageAcquisition">
+      <Group ID="AcquisitionConfiguration">
+        <Selector ID="TriggerSource" Value="MappAxis">
+          <Property ID="AxisReference" Value="gAxis_1" />
+        </Selector>
+      </Group>
       <Group ID="ImageSettings">
         <Property ID="ImageWidth" Value="1952" />
         <Property ID="ImageHeight" Value="1080" />

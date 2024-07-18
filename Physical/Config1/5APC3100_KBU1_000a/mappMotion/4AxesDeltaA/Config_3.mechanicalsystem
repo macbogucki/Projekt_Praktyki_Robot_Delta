@@ -74,16 +74,16 @@
           </Group>
           <Group ID="Offsets">
             <Property ID="JointAxisIsReadOnly" Value="0" />
-            <Property ID="JointAxis[1]" Value="-20" />
+            <Property ID="JointAxis[1]" Value="0" />
             <Property ID="JointAxis[2]" Value="0.0" />
-            <Property ID="JointAxis[3]" Value="-20" />
+            <Property ID="JointAxis[3]" Value="0" />
             <Property ID="JointAxis[4]" Value="0.0" />
           </Group>
           <Group ID="CountDirections">
             <Property ID="JointAxisIsReadOnly" Value="0" />
             <Property ID="JointAxis[1]" Value="Standard" />
-            <Property ID="JointAxis[2]" Value="Inverse" />
-            <Property ID="JointAxis[3]" Value="Inverse" />
+            <Property ID="JointAxis[2]" Value="Standard" />
+            <Property ID="JointAxis[3]" Value="Standard" />
             <Property ID="JointAxis[4]" Value="Standard" />
           </Group>
         </Selector>

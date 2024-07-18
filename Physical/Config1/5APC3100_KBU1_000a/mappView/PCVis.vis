@@ -15,8 +15,12 @@
     <EventBindingsSet refId="PCMainAuto1Content_eventbinding" />
     <EventBindingsSet refId="TopNavContent_eventbinding" />
     <EventBindingsSet refId="PCTopContent_eventbinding" />
+    <EventBindingsSet refId="PCAlarmsContent_eventbinding" />
+    <EventBindingsSet refId="AlarmDetailsContent_eventbinding" />
   </EventBindingsSets>
-  <Dialogs />
+  <Dialogs>
+    <Dialog refId="AlarmDetailsDialog" />
+  </Dialogs>
   <Contents>
     <Content refId="MobileTopContent" />
     <Content refId="MobileLeftContent" />
@@ -26,10 +30,15 @@
     <Content refId="TopNavContent" />
     <Content refId="PCServiceContent" />
     <Content refId="PCAlarmsContent" />
+    <Content refId="AlarmDetailsContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
+  <StartTheme themeRefId="BuRThemeFlat1" />
+  <Themes>
+    <Theme refId="BuRThemeFlat1" />
+  </Themes>
   <Configurations>
     <Configuration key="activityCount" value="false" />
     <Gestures>

@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">PCMainLayout.layout</Object>
     <Object Type="File">PCSecondLayout.layout</Object>
+    <Object Type="File">AlarmDetailsLayout.layout</Object>
   </Objects>
 </Package>

@@ -11,5 +11,7 @@
     <Object Type="File">PCMainAuto1Content.eventbinding</Object>
     <Object Type="File">TopNavContent.eventbinding</Object>
     <Object Type="File">PCTopContent.eventbinding</Object>
+    <Object Type="File">PCAlarmsContent.eventbinding</Object>
+    <Object Type="File">AlarmDetailsContent.eventbinding</Object>
   </Objects>
 </Package>

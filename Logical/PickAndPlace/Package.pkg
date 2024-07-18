@@ -7,6 +7,7 @@
     <Object Type="Program" Language="IEC" Description="Handle Delta &amp; Conveyor Belts">PrgMechs</Object>
     <Object Type="Program" Language="IEC" Description="PickCore process handling">PrgPickCore</Object>
     <Object Type="Program" Language="IEC" Description="Pick the products">PrgPick</Object>
+    <Object Type="Program" Language="IEC">MainProg</Object>
     <Object Type="Program" Language="IEC" Description="Place the products">PrgPlace</Object>
     <Object Type="Package">Scene</Object>
   </Objects>

@@ -8,48 +8,19 @@
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <EventHandler condition="DeviceType = '1920x1080'">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="session.VariableAction" refId="::SYSTEM:clientInfo.currentPageId">
-                <Method xsi:type="session.VariableAction.SetValueString" value="MobileMainPage" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="clientSystem.Action">
-                <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="MobileMainContent" pageId="MobileMainPage" areaId="AreaContent" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="widgets.brease.TextOutput.Action" contentRefId="PCMainContent" widgetRefId="Resolution3">
-                <Method xsi:type="widgets.brease.TextOutput.Action.SetValue" value="rozdzielczosc 1920" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+      <EventHandler condition="DeviceType = &quot;1920x1080&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="PCMainPage" />
+          </Target>
+        </Action>
       </EventHandler>
       <EventHandler condition="DeviceType = &quot;1536x2048&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="session.VariableAction" refId="::SYSTEM:clientInfo.currentPageId">
-                <Method xsi:type="session.VariableAction.SetValueString" value="PCMainPage" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.TextOutput.Action" contentRefId="PCMainContent" widgetRefId="Resolution3">
-                <Method xsi:type="widgets.brease.TextOutput.Action.SetValue" value="rozdzielczosc 1536" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="MobileMainPage" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>

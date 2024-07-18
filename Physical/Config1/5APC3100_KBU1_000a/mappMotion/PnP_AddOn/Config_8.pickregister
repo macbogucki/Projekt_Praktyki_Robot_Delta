@@ -88,7 +88,7 @@
       </Selector>
       <Selector ID="VisualRepresentation" Value="Cuboid">
         <Group ID="Dimensions">
-          <Property ID="Length" Value="215" />
+          <Property ID="Length" Value="205" />
           <Property ID="Width" Value="60" />
           <Property ID="Height" Value="50" />
         </Group>

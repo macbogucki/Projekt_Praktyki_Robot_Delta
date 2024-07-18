@@ -72,6 +72,7 @@ PROGRAM _CYCLIC
                 MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
                 MpPickRegCreatePlaceholder.Parameters.Translation.X := 30;
 				MpPickRegCreatePlaceholder.Parameters.Translation.Y := 30;// in the middle of conveyor width
+				MpPickRegCreatePlaceholder.Parameters.Translation.Z := 10;
 				MpPickRegCreatePlaceholder.Create := TRUE;
 
                 LastPlaceHolderConveyorPosition := MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position;

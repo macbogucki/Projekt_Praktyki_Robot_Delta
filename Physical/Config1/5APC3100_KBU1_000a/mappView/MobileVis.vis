@@ -1,19 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<vdef:Visualization id="PCRobotVisualization" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
-  <StartPage pageRefId="PCMainPage" />
-  <Pages>
-    <Page refId="MobileMainPage" />
-    <Page refId="PCServicePage" />
-  </Pages>
+<vdef:Visualization id="MobileRobotVisualization" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="MobileMainPage" />
+  <Pages />
   <Navigations />
-  <BindingsSets />
-  <EventBindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="PCMainContent_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="eventbinding_1" />
+  </EventBindingsSets>
   <Dialogs />
-  <Contents>
-    <Content refId="MobileTopContent" />
-    <Content refId="MobileLeftContent" />
-    <Content refId="MobileMainContent" />
-  </Contents>
+  <Contents />
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />

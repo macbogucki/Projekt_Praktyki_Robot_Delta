@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="MainPage">
+      <tuv xml:lang="pl">
+        <seg>Strona główna</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Heim</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main Page</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ServicePage">
+      <tuv xml:lang="pl">
+        <seg>Serwis</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Haupsteite</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Service Page</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmsPage">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Alarmseite</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarms Page</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LoggedAs">
+      <tuv xml:lang="pl">
+        <seg>Zalogowany jako:</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Angemeldet als</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Logout">
+      <tuv xml:lang="pl">
+        <seg>Wyloguj się</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Ausloggen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logout</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Acknowledge">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Anerkennen
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AcknowledgeAll">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź wszystkie</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Alle Anerkennen
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge All</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

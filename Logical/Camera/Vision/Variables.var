@@ -5,4 +5,5 @@ VAR
 	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
 	MakingPhoto : BOOL;
 	CameraStatus : UDINT;
+	MpAxisBasic_0 : MpAxisBasic;
 END_VAR

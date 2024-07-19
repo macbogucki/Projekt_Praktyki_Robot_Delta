@@ -18,6 +18,7 @@ TYPE
 	END_STRUCT;
 	Status : 	STRUCT 
 		AquisitionComplete : BOOL;
+		IsCameraReady : BOOL;
 	END_STRUCT;
 	Camera_Output : 	STRUCT 
 		PosMatchX : DINT;

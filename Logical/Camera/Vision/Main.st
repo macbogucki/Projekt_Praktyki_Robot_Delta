@@ -14,13 +14,12 @@ PROGRAM _INIT
 	
 	ViAxisAcquisition_0.Update:=0;
 	ViAxisAcquisition_0.MpLink:=ADR(gCamera);
-	ViAxisAcquisition_0.Enable := TRUE;
-	
-	
 	
 	ViAxisAcquisition_0.AcquisitionParameters:= AcquisitionParameters;
 	ViAxisAcquisition_0.AdvancedParameters := AdvancedParameters;
 	MakingPhoto := ViAxisAcquisition_0.InOperation;
+	
+
 	
 	//advanced settings
 	
@@ -28,17 +27,20 @@ PROGRAM _INIT
 
 	//AdvancedParameters.
 	
-	ViAxisAcquisition_0();
+
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	(* Insert code here *)
+
+	
+	IF Cam.Status.IsCameraReady AND Axis0IsHomed THEN
+		ViAxisAcquisition_0.Enable := TRUE;
+	END_IF 
+		
 	ViAxisAcquisition_0();
-	IF ViAxisAcquisition_0.InOperation THEN
-		MakingPhoto := 1;
-		END_IF
-	 
+	
 END_PROGRAM
 
 PROGRAM _EXIT

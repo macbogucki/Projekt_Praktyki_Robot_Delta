@@ -1,0 +1,7 @@
+VAR
+	MpAuditTrail_0 : MpAuditTrail;
+	TypeVar : WSTRING[100];
+	MessageVar : WSTRING[100];
+	CommentVar : WSTRING[100];
+	Zmienna : BOOL;
+END_VAR

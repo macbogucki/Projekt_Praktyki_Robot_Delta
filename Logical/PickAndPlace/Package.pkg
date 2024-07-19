@@ -9,5 +9,6 @@
     <Object Type="Program" Language="IEC" Description="Pick the products">PrgPick</Object>
     <Object Type="Program" Language="IEC" Description="Place the products">PrgPlace</Object>
     <Object Type="Package">Scene</Object>
+    <Object Type="Program" Language="IEC">Audyt</Object>
   </Objects>
 </Package>

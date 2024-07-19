@@ -41,15 +41,15 @@ PROGRAM _CYCLIC
             END_IF;
 			
         P_ENABLE_ADD_REGISTER_FBS:
-            MpPickRegCreatePlaceholder.Enable := TRUE;
-            MpPickRegCreatePlaceholder.Create := FALSE;
+            MpPickRegCreateContainer.Enable := TRUE;
+            MpPickRegCreateContainer.Create := FALSE;
             P_Step := P_WAIT_ENABLE_ADD_REGISTER_FBS;
 			
         P_WAIT_ENABLE_ADD_REGISTER_FBS:
-            IF 	MpPickRegCreatePlaceholder.Active THEN
+            IF 	MpPickRegCreateContainer.Active THEN
                 P_Step := P_WAIT_START_PROCESS;
             
-            ELSIF MpPickRegCreatePlaceholder.Error THEN
+            ELSIF MpPickRegCreateContainer.Error THEN
                 LastStep := P_Step;
                 P_Step := P_ERROR;
             END_IF;
@@ -67,17 +67,18 @@ PROGRAM _CYCLIC
             
             IF (ElapsedDistance >= PlaceHoldersSpacing) THEN
         
-                MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
-                MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
-                MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
-                MpPickRegCreatePlaceholder.Parameters.Translation.X := 30;
-				MpPickRegCreatePlaceholder.Parameters.Translation.Y := 30;// in the middle of conveyor width
-				MpPickRegCreatePlaceholder.Parameters.Translation.Z := 10;
-				MpPickRegCreatePlaceholder.Create := TRUE;
+                MpPickRegCreateContainer.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
+                MpPickRegCreateContainer.Parameters.Mode := mpPICK_CREATE_CONTAINER_EMPTY;
+				//MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
+				MpPickRegCreateContainer.Parameters.ObjectTypeName := 'MyContainer';
+                MpPickRegCreateContainer.Parameters.Translation.X := 30;
+				MpPickRegCreateContainer.Parameters.Translation.Y := 30;// in the middle of conveyor width
+				MpPickRegCreateContainer.Parameters.Translation.Z := 10;
+				MpPickRegCreateContainer.Create := TRUE;
 
-                LastPlaceHolderConveyorPosition := MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position;
+                LastPlaceHolderConveyorPosition := MpPickRegCreateContainer.Parameters.LatchedConveyor.Position;
             ELSE
-                MpPickRegCreatePlaceholder.Create := FALSE;
+                MpPickRegCreateContainer.Create := FALSE;
             END_IF
 			
         P_ERROR:
@@ -90,8 +91,12 @@ PROGRAM _CYCLIC
     MpPickRegister_0.MpLink := ADR(gPlaceRegister);
     MpPickRegister_0();
     
-    MpPickRegCreatePlaceholder.MpLink := ADR(gPlaceRegister);
-	MpPickRegCreatePlaceholder();
+    //MpPickRegCreatePlaceholder.MpLink := ADR(gPlaceRegister);
+	//MpPickRegCreatePlaceholder();
+	
+	MpPickRegCreateContainer.MpLink := ADR(gPlaceRegister);
+	MpPickRegCreateContainer();
+	
 	 
 END_PROGRAM
 

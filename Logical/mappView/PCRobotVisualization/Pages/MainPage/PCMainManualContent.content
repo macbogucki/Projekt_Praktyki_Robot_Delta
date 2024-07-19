@@ -2,7 +2,7 @@
 <Content id="PCMainManualContent" height="880" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="sds" top="0" left="640" width="430" height="75" zIndex="0" text="Ręczne ssterowanie" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider" top="85" left="140" zIndex="1" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider" top="85" left="140" zIndex="1" showUnit="true" smallChange="2" />
     <Widget xsi:type="widgets.brease.Ellipse" id="ConvStatus" top="510" left="395" zIndex="2" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ConvToggleButton" top="520" left="220" width="150" height="75" zIndex="3" multiLine="true" text="Start/Stop Conveyor" wordWrap="true" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="215" left="90" zIndex="4" text="X" fontSize="18px" />

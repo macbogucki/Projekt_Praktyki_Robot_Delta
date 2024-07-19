@@ -2,8 +2,8 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package SubType="AreaContentsPackage" PackageType="AreaContentsPackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="File">TopContent.content</Object>
-    <Object Type="File">LeftContent.content</Object>
+    <Object Type="File">PCTopContent.content</Object>
+    <Object Type="File">PCLeftContent.content</Object>
     <Object Type="File">PCBottomContent.content</Object>
   </Objects>
 </Package>

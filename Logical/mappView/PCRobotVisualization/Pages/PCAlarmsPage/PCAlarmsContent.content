@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PCAlarmsContent" height="980" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="160" left="520" width="830" height="600" zIndex="0" itemsPerPage="10">
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="160" left="445" width="830" height="600" zIndex="0" itemsPerPage="10">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmID" width="50" zIndex="0" columnType="instanceId" text="ID" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmName" width="230" zIndex="1" columnType="name" text="Name" />

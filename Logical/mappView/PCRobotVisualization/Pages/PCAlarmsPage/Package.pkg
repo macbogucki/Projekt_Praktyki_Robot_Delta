@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File" Description="Page description">PCAlarmsPage.page</Object>
     <Object Type="File">PCAlarmsContent.content</Object>
+    <Object Type="File">PCAlarmsNavContent.content</Object>
+    <Object Type="File">PCAlarmsHistoryContent.content</Object>
   </Objects>
 </Package>

@@ -6,6 +6,9 @@
     <Widget xsi:type="widgets.brease.InfoBanner" id="InfoBanner" top="0" left="100" zIndex="2" autoClose="true" docking="top">
       <Widgets />
     </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="225" left="250" width="130" zIndex="3" text="Time tracking" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="405" left="160" width="130" zIndex="3" text="Time tracking" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StartButton" top="270" left="160" width="115" height="45" zIndex="4" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StopButton1" top="340" left="160" width="115" height="45" zIndex="5" text="Stop" backColor="rgba(255, 0, 0, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="TimeTrackingNumericInput" top="405" left="325" zIndex="6" />
   </Widgets>
 </Content>

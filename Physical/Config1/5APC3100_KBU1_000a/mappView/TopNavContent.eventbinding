@@ -2,7 +2,7 @@
 <EventBindingSet id="TopNavContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
     <EventBinding id="TopNavContent.Auto1Button.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="TopNavContent" widgetRefId="Auto1Button" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="Auto1Button" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
@@ -13,21 +13,21 @@
               <Sequence>
                 <Step order="0">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto1Button">
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto1Button">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="1">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto2Button">
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="2">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="ReczneButton">
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="ReczneButton">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
@@ -38,8 +38,8 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_3">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="TopNavContent" widgetRefId="Auto2Button" event="Click" />
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="Auto2Button" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
@@ -50,21 +50,21 @@
               <Sequence>
                 <Step order="0">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto2Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto1Button">
+                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="1">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto1Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
+                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="2">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="ReczneButton">
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="ReczneButton">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
@@ -75,8 +75,8 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_4">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="TopNavContent" widgetRefId="ReczneButton" event="Click" />
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="ReczneButton" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
@@ -87,22 +87,22 @@
               <Sequence>
                 <Step order="0">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="ReczneButton">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto1Button">
+                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="1">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto2Button">
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>
                 </Step>
                 <Step order="2">
                   <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="TopNavContent" widgetRefId="Auto1Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="ReczneButton">
+                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
                     </Target>
                   </Action>
                 </Step>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="PCAlarmsNavContent" height="100" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Button" id="CurrentAlarmsButton" top="0" left="590" width="215" height="50" zIndex="0" text="Current alarms" borderStyle="none" backColor="rgba(255, 140, 0, 1)" disabledBackColor="rgba(245, 245, 245, 1)" fontSize="24px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="HistoryAlarmsButton" top="0" left="805" width="210" height="50" zIndex="1" text="History of alarms" borderStyle="none" backColor="rgba(255, 140, 0, 1)" disabledBackColor="rgba(245, 245, 245, 1)" fontSize="24px" />
+  </Widgets>
+</Content>

@@ -4,7 +4,7 @@
     <Assignment type="Content" baseContentRefId="PCTopContent" areaRefId="TopArea" backColor="rgba(255, 140, 0, 1)" />
     <Assignment type="Content" baseContentRefId="PCLeftContent" areaRefId="LeftArea" backColor="rgba(105, 105, 105, 1)" />
     <Assignment type="Content" baseContentRefId="PCMainAuto1Content" areaRefId="MainArea" />
-    <Assignment type="Content" baseContentRefId="TopNavContent" areaRefId="TopNavArea" />
+    <Assignment type="Content" baseContentRefId="PCTopNavContent" areaRefId="TopNavArea" />
     <Assignment type="Content" baseContentRefId="PCBottomContent" areaRefId="BottomArea" backColor="rgba(245, 245, 245, 1)" />
   </Assignments>
 </pdef:Page>

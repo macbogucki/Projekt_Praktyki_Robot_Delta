@@ -20,6 +20,7 @@
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="AlarmDetailsDialog" />
+    <Dialog refId="LoginDialog" />
   </Dialogs>
   <Contents>
     <Content refId="MobileTopContent" />
@@ -31,6 +32,8 @@
     <Content refId="PCServiceContent" />
     <Content refId="PCAlarmsContent" />
     <Content refId="AlarmDetailsContent" />
+    <Content refId="PCBottomContent" />
+    <Content refId="LoginContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

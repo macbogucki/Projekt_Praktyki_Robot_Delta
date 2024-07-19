@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PCMainManualContent" height="880" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="sds" top="170" left="690" width="430" height="75" zIndex="0" text="Ręczne ssterowanie" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="sds" top="0" left="640" width="430" height="75" zIndex="0" text="Ręczne ssterowanie" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider" top="170" left="205" zIndex="1" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="ConvStatus" top="510" left="395" zIndex="2" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ConvToggleButton" top="520" left="220" width="150" height="75" zIndex="3" multiLine="true" text="Start/Stop Conveyor" wordWrap="true" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider1" top="255" left="210" zIndex="4" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider2" top="335" left="210" zIndex="5" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider3" top="175" left="650" zIndex="6" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider4" top="260" left="655" zIndex="7" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider5" top="340" left="655" zIndex="8" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="215" left="90" zIndex="9" text="X" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="295" left="90" zIndex="10" text="Y" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="380" left="90" zIndex="11" text="Z" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="555" zIndex="12" text="Axis 1" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="300" left="555" zIndex="13" text="Axis 2" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="385" left="555" zIndex="14" text="Axis 3" fontSize="18px" />
   </Widgets>
 </Content>

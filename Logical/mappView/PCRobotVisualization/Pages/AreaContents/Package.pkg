@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">TopContent.content</Object>
     <Object Type="File">LeftContent.content</Object>
+    <Object Type="File">PCBottomContent.content</Object>
   </Objects>
 </Package>

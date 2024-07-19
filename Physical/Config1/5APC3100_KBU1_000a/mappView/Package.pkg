@@ -13,5 +13,6 @@
     <Object Type="File">PCTopContent.eventbinding</Object>
     <Object Type="File">PCAlarmsContent.eventbinding</Object>
     <Object Type="File">AlarmDetailsContent.eventbinding</Object>
+    <Object Type="File">PCMainManualContent.eventbinding</Object>
   </Objects>
 </Package>

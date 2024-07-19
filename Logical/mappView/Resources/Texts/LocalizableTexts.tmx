@@ -88,5 +88,16 @@ Angemeldet als</seg>
         <seg>Acknowledge All</seg>
       </tuv>
     </tu>
+    <tu tuid="TakePhoto">
+      <tuv xml:lang="pl">
+        <seg>Zrób zdjęcie</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Mach ein Foto</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Take a photo</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

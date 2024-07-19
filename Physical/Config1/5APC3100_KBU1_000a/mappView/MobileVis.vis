@@ -15,6 +15,7 @@
     <EventBindingsSet refId="PCTopContent_eventbinding" />
     <EventBindingsSet refId="PCAlarmsContent_eventbinding" />
     <EventBindingsSet refId="AlarmDetailsContent_eventbinding" />
+    <EventBindingsSet refId="PCMainManualContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="AlarmDetailsDialog" />

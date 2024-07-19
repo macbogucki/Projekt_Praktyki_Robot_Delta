@@ -16,5 +16,7 @@
     <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="555" zIndex="12" text="Axis 1" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="Label5" top="300" left="555" zIndex="13" text="Axis 2" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="385" left="555" zIndex="14" text="Axis 3" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Button" id="PhotoButton" top="655" left="220" width="150" height="75" zIndex="15" multiLine="true" text="$IAT/TakePhoto" wordWrap="true" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Button" id="PackMLButton" top="655" left="460" width="150" height="75" zIndex="16" multiLine="true" text="Pack ML" wordWrap="true" fontSize="18px" />
   </Widgets>
 </Content>

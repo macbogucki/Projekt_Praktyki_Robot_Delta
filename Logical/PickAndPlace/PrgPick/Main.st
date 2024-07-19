@@ -70,8 +70,9 @@ PROGRAM _CYCLIC
                 MpPickRegCreateProduct.Parameters.Translation.X  := 0;                
 				MpPickRegCreateProduct.Parameters.Translation.Y  := 60; // in the middle of conveyor width
 				MpPickRegCreateProduct.Parameters.Translation.Z  := 10;  
-                MpPickRegCreateProduct.Create := TRUE;
-                
+				MpPickRegCreateProduct.Create := TRUE;
+               // gTokenNumber :
+				
                 LastProductConveyorPosition := MpPickRegCreateProduct.Parameters.LatchedConveyor.Position;
             ELSE
                 MpPickRegCreateProduct.Create := FALSE;

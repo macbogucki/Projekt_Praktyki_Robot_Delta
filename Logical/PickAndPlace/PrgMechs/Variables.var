@@ -1,4 +1,5 @@
 VAR
+	homingModeQ1 : MpAxisBasicParType;
 	RC_Step : RCStepEnum;
 	LastStep : RCStepEnum;
 	MpDelta4Axis_0 : MpDelta4Axis;
@@ -7,4 +8,12 @@ VAR
 	AxisParameters_0 : MpAxisBasicParType;
 	MpAxisBasic_1 : MpAxisBasic;
 	AxisParameters_1 : MpAxisBasicParType;
+	MpAxisBasic_Q1 : MpAxisBasic;
+	MpAxisBasic_Q2 : MpAxisBasic;
+	MpAxisBasic_Q3 : MpAxisBasic;
+	Delta : MpAxisBasic;
+	MpAxisBasic_Q4 : MpAxisBasic;
+	homingModeQ3 : MpAxisBasicParType;
+	homingModeQ4 : MpAxisBasicParType;
+	homingModeQ2 : MpAxisBasicParType;
 END_VAR

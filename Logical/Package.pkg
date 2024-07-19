@@ -8,5 +8,6 @@
     <Object Type="File">Robotic.st</Object>
     <Object Type="Package">PickAndPlace</Object>
     <Object Type="Package">Camera</Object>
+    <Object Type="Package">mappView</Object>
   </Objects>
 </Package>

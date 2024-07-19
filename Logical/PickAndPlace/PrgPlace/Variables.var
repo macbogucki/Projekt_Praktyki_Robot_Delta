@@ -4,11 +4,17 @@ VAR
 	Error : BOOL;
 	PlaceHoldersSpacing : LREAL;
 	LastPlaceHolderConveyorPosition : LREAL;
+	ContainerID : UDINT;
 	ElapsedDistance : LREAL;
 END_VAR
 (*   *)
 (*Functionblocks*)
 VAR
 	MpPickRegister_0 : MpPickRegister;
-	MpPickRegCreatePlaceholder : MpPickRegCreateObject;
+	MpPickRegCreateContainer : MpPickRegCreateObject;
+	MpPickRegGetObjectsContainer : MpPickRegGetObjects;
+	TON_0 : TON;
+	MpPickRegDeleteTokens : MpPickRegDeleteObjects;
+	Iterator : USINT;
+	numberOfDeletes : USINT;
 END_VAR

@@ -9,11 +9,9 @@
     <Task Name="PrgPlace" Source="PickAndPlace.PrgPlace.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#3">
-    <Task Name="PrgMechs" Source="PickAndPlace.PrgMechs.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-  </TaskClass>
-  <TaskClass Name="Cyclic#4">
     <Task Name="MainProg" Source="PickAndPlace.MainProg.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#4" />
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
@@ -58,6 +56,7 @@
     <BinaryObject Name="Config_7" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_9" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="UserLib" Source="PickAndPlace.UserLibraries.UserLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -86,6 +85,8 @@
     <LibraryObject Name="McStpAx" Source="Libraries.McStpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIODiag" Source="Libraries.AsIODiag.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpPackML" Source="Libraries.MpPackML.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarlog" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -98,7 +99,5 @@
     <LibraryObject Name="asioacc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpPackML" Source="Libraries.MpPackML.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

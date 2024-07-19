@@ -11,8 +11,11 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
     CASE P_Step OF
-        P_WAIT_ENABLE:
-            P_Step := P_ENABLE_REGISTER_FB;
+		P_WAIT_ENABLE:
+			IF NOT AbortExecute AND NOT StopExecute THEN
+				P_Step := P_ENABLE_REGISTER_FB;
+				StopExecutedPlace := FALSE;
+			END_IF
 			
         P_ENABLE_REGISTER_FB:
             MpPickRegister_0.Enable := TRUE;
@@ -85,8 +88,14 @@ PROGRAM _CYCLIC
             Error := TRUE;
             ReadyPlaceReg := FALSE;
 
-    END_CASE;
-    
+	END_CASE;
+	
+	IF AbortExecute OR StopExecute THEN
+		ReadyPlaceReg := FALSE;
+		P_Step := P_WAIT_ENABLE;
+		StopExecutedPlace := TRUE;
+	END_IF
+	
     (* FB calls *)    
     MpPickRegister_0.MpLink := ADR(gPlaceRegister);
     MpPickRegister_0();

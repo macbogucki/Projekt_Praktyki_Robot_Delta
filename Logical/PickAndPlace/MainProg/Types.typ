@@ -101,4 +101,11 @@ TYPE
 		Sec : DINT; (*Time format: seconds*)
 		uSec : DINT; (*Time format: microseconds*)
 	END_STRUCT;
+	RES_StepType : 
+		(
+		HOMING_DELTA,
+		ACTIVATE_AXIS,
+		HOMING_AXIS,
+		COMPLETE_STATE
+		);
 END_TYPE

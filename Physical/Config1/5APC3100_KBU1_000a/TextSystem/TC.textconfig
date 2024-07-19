@@ -12,7 +12,7 @@
       </Group>
     </Group>
     <Group ID="TargetFiles">
-      <Property ID="TargetFile[1]" Value="mappView.Layouts.LocalizableTexts.tmx" />
+      <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.LocalizableTexts.tmx" />
     </Group>
   </Element>
 </Configuration>

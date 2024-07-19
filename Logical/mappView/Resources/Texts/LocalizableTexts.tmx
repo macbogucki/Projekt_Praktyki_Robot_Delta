@@ -99,5 +99,16 @@ Angemeldet als</seg>
         <seg>Take a photo</seg>
       </tuv>
     </tu>
+    <tu tuid="Velocity">
+      <tuv xml:lang="pl">
+        <seg>Prędkość</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -12,8 +12,8 @@ END_VAR
 VAR
 	MpPickRegister_0 : MpPickRegister;
 	MpPickRegCreateContainer : MpPickRegCreateObject;
-	MpPickRegGetObjectsContainer : MpPickRegCreateObjects;
-	MpPickGerDeleteTokens : MpPickRegDeleteObjects;
+	MpPickRegGetObjectsContainer : MpPickRegGetObjects;
+	MpPickRegDeleteTokens : MpPickRegDeleteObjects;
 	Iterator : USINT;
 	numberOfDeletes : USINT;
 	TON_1 : TON;

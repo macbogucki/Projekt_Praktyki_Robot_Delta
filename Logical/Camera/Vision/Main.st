@@ -35,7 +35,7 @@ PROGRAM _CYCLIC
 	(* Insert code here *)
 
 	
-	IF Cam.Status.IsCameraReady AND Axis0IsHomed THEN
+	IF Cam.Status.IsCameraReady AND MpDelta4Axis_0.IsHomed THEN
 		ViAxisAcquisition_0.Enable := TRUE;
 	END_IF 
 		

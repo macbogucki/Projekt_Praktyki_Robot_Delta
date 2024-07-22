@@ -40,9 +40,9 @@ PROGRAM _CYCLIC
             END_IF
             
         RC_HOME_ROBOT: 
-           MpDelta4Axis_0.Home := TRUE;
-           IF MpDelta4Axis_0.IsHomed THEN
-                MpDelta4Axis_0.Home := FALSE;
+			MpDelta4Axis_0.Home := TRUE;
+			IF MpDelta4Axis_0.IsHomed THEN
+				MpDelta4Axis_0.Home := FALSE;
                 RC_Step := RC_ROBOT_READY;
            END_IF
            
@@ -82,20 +82,16 @@ PROGRAM _CYCLIC
 			
         RC_WAIT_HOME_AXIS:
 			IF MpAxisBasic_0.IsHomed THEN
-				Axis0IsHomed := TRUE;
-                IF MpAxisBasic_0.IsHomed THEN
+				IF MpAxisBasic_0.IsHomed THEN
                     MpAxisBasic_0.Home := FALSE;
                     MpAxisBasic_1.Home := FALSE;
 					RC_Step := RC_READY;
 					
                 END_IF
 			ELSIF MpAxisBasic_0.Error OR MpAxisBasic_1.Error THEN
-				Axis0IsHomed := FALSE;
-                LastStep := RC_Step;
+				LastStep := RC_Step;
 				RC_Step  := RC_ERROR;
-			ELSE
-				Axis0IsHomed := FALSE;
-            END_IF;
+			END_IF;
         
         RC_READY:
             ReadyMechanics := TRUE;

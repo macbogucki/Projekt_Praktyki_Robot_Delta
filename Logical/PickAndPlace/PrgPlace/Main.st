@@ -65,10 +65,11 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 			(* We need to create positions (place holders) on place conveyor where to place picked objects *)
+
 		P_CREATE_OBJECTS:
         
 			ElapsedDistance := DistanceOverPeriod(PlaceConveyorPosition, LastPlaceHolderConveyorPosition, PlaceConveyorLength);
-            
+(*            
 			IF (ElapsedDistance >= PlaceHoldersSpacing) THEN
         
 				MpPickRegCreateContainer.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
@@ -84,7 +85,7 @@ PROGRAM _CYCLIC
 			ELSE
 				MpPickRegCreateContainer.Create := FALSE;
 			END_IF
-			
+*)		
 		P_ERROR:
 			Error := TRUE;
 			ReadyPlaceReg := FALSE;
@@ -96,7 +97,7 @@ PROGRAM _CYCLIC
 
 	MpPickRegGetObjectsContainer.Get := FALSE;
 	MpPickRegDeleteTokens.Delete := FALSE;
-	IF (MpPickRegGetObjectsContainer.Get = FALSE) THEN
+	IF MpPickRegGetObjectsContainer.Get = FALSE THEN
 		TON_1.IN := TRUE;
 		IF TON_1.Q THEN
 			MpPickRegGetObjectsContainer.Get := TRUE;

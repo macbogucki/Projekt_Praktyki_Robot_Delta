@@ -58,10 +58,9 @@ PROGRAM _CYCLIC
                 C_Step := C_PROCESSING;
             END_IF;
 			
-        C_PROCESSING: (* now create products on moving conveyor for picking *)
             
             ElapsedDistance := DistanceOverPeriod(PickConveyorPosition, LastProductConveyorPosition, PickConveyorLength);
-            
+(*           
             IF (ElapsedDistance >= ProductSpacing) THEN
                 
                 MpPickRegCreateProduct.Parameters.LatchedConveyor.Position:= PickConveyorPosition;			
@@ -80,9 +79,9 @@ PROGRAM _CYCLIC
             IF MpPickRegCreateProduct.Error THEN
                 LastStep := C_Step;
                 C_Step   := C_ERROR;
-            END_IF;
-			
-        C_ERROR:
+			END_IF;
+*)	
+		C_ERROR:
             Error := TRUE;
             ReadyPickReg := FALSE;
 

@@ -11,5 +11,4 @@ END_VAR
 VAR
 	TablePosition : LREAL := 5;
 	ExposureTime : UDINT := 1000;
-	Axis0IsHomed : BOOL;
 END_VAR

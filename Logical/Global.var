@@ -10,4 +10,11 @@ VAR CONSTANT
 END_VAR
 VAR
 	TablePosition : LREAL := 5;
+	ProgramPickExecuteBool : BOOL;
+	AbortExecute : BOOL;
+	StopExecute : BOOL;
+	StopExecutedPick : BOOL;
+	AbortExecutedPick : BOOL;
+	StopExecutedPickCore : BOOL;
+	StopExecutedPlace : BOOL;
 END_VAR

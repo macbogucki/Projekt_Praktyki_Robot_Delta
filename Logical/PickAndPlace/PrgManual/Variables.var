@@ -1,0 +1,12 @@
+VAR
+	MpDelta4AxisManual : MpDelta4Axis;
+	MoveXPos : BOOL;
+	MoveXNeg : BOOL;
+	MoveYPos : BOOL;
+	MoveYNeg : BOOL;
+	MoveZPos : BOOL;
+	MoveZNeg : BOOL;
+	XVel : USINT;
+	YVel : USINT;
+	ZVel : USINT;
+END_VAR

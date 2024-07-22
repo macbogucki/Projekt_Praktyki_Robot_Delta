@@ -4,18 +4,21 @@ PROGRAM _INIT
     P_Step := P_WAIT_ENABLE;
     Error := FALSE;
 
-    PlaceHoldersSpacing := 120; // distance between two consecutive place holders
-    	 
+	PlaceHoldersSpacing := 120; // distance between two consecutive place holders
+	numberOfDeletes := 0;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+//	IF NOT(gManualMode) THEN
+	
+	TON_0();
+	TON_0.PT := T#5s;
+	
     CASE P_Step OF
-		P_WAIT_ENABLE:
-			IF NOT AbortExecute AND NOT StopExecute THEN
-				P_Step := P_ENABLE_REGISTER_FB;
-				StopExecutedPlace := FALSE;
-			END_IF
+        P_WAIT_ENABLE:
+            P_Step := P_ENABLE_REGISTER_FB;
 			
         P_ENABLE_REGISTER_FB:
             MpPickRegister_0.Enable := TRUE;
@@ -45,8 +48,10 @@ PROGRAM _CYCLIC
 			
         P_ENABLE_ADD_REGISTER_FBS:
             MpPickRegCreateContainer.Enable := TRUE;
-            MpPickRegCreateContainer.Create := FALSE;
-            P_Step := P_WAIT_ENABLE_ADD_REGISTER_FBS;
+			MpPickRegCreateContainer.Create := FALSE;
+			MpPickRegGetObjectsContainer.Enable := TRUE;
+			MpPickRegDeleteTokens.Enable := TRUE;
+			P_Step := P_WAIT_ENABLE_ADD_REGISTER_FBS;
 			
         P_WAIT_ENABLE_ADD_REGISTER_FBS:
             IF 	MpPickRegCreateContainer.Active THEN
@@ -72,15 +77,16 @@ PROGRAM _CYCLIC
         
                 MpPickRegCreateContainer.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
                 MpPickRegCreateContainer.Parameters.Mode := mpPICK_CREATE_CONTAINER_EMPTY;
-				//MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
 				MpPickRegCreateContainer.Parameters.ObjectTypeName := 'MyContainer';
                 MpPickRegCreateContainer.Parameters.Translation.X := 30;
 				MpPickRegCreateContainer.Parameters.Translation.Y := 30;// in the middle of conveyor width
 				MpPickRegCreateContainer.Parameters.Translation.Z := 10;
-				MpPickRegCreateContainer.Create := TRUE;
-
-                LastPlaceHolderConveyorPosition := MpPickRegCreateContainer.Parameters.LatchedConveyor.Position;
-            ELSE
+				ContainerID := MpPickRegCreateContainer.ObjectPositionId;
+				MpPickRegCreateContainer.Create := TRUE; 
+			
+				LastPlaceHolderConveyorPosition := MpPickRegCreateContainer.Parameters.LatchedConveyor.Position;
+			ELSE
+// Moze to trzeba rozwazyc ->ContainerID := MpPickRegCreateContainer.ObjectPositionId;
                 MpPickRegCreateContainer.Create := FALSE;
             END_IF
 			
@@ -90,22 +96,69 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	
-	IF AbortExecute OR StopExecute THEN
-		ReadyPlaceReg := FALSE;
-		P_Step := P_WAIT_ENABLE;
-		StopExecutedPlace := TRUE;
-	END_IF
 	
+	
+
+	MpPickRegGetObjectsContainer.Get := FALSE;
+	MpPickRegDeleteTokens.Delete := FALSE;
+	IF (MpPickRegGetObjectsContainer.Get = FALSE) THEN
+		TON_0.IN := TRUE;
+		IF TON_0.Q THEN
+			MpPickRegGetObjectsContainer.Get := TRUE;
+			TON_0.IN := FALSE;
+		END_IF
+	END_IF	
+	
+	IF ContainerID > 0 THEN
+		
+		MpPickRegGetObjectsContainer.Parameters.DataAddress := ADR(gContainerInfo);
+		MpPickRegGetObjectsContainer.Parameters.GetMode := mpPICK_GET_CONTAINER_CONTENT;
+		MpPickRegGetObjectsContainer.Parameters.ObjectPositionId := ContainerID;
+		MpPickRegGetObjectsContainer.Parameters.ObjectTypeName := 'MyContainer';			
+		MpPickRegGetObjectsContainer.Parameters.NumberOfObjectPositions := 4;
+		MpPickRegGetObjectsContainer.MpLink := ADR(gPlaceRegister);
+		MpPickRegGetObjectsContainer();
+		
+	END_IF;
+	
+	
+	FOR Iterator := 0 TO 3 DO
+		IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT AND gDeleteObjects) THEN
+			MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
+			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
+			MpPickRegDeleteTokens.Delete := TRUE;
+			numberOfDeletes := numberOfDeletes + 1;
+		ELSE
+			MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
+			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
+			MpPickRegDeleteTokens.Delete := FALSE;
+			
+		END_IF;
+		IF numberOfDeletes = 4 THEN
+			P_Step := P_WAIT_ENABLE;
+			numberOfDeletes := 0;
+		END_IF
+		
+	//	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
+	//	MpPickRegDeleteTokens();
+		
+	END_FOR;
+	gDeleteObjects := 0;
+	
+    
     (* FB calls *)    
     MpPickRegister_0.MpLink := ADR(gPlaceRegister);
     MpPickRegister_0();
-    
-    //MpPickRegCreatePlaceholder.MpLink := ADR(gPlaceRegister);
-	//MpPickRegCreatePlaceholder();
 	
 	MpPickRegCreateContainer.MpLink := ADR(gPlaceRegister);
 	MpPickRegCreateContainer();
 	
+	
+	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
+	MpPickRegDeleteTokens();
+	
+	
+//	END_IF
 	 
 END_PROGRAM
 

@@ -110,5 +110,49 @@ Angemeldet als</seg>
         <seg>Velocity</seg>
       </tuv>
     </tu>
+    <tu tuid="TrackingTime">
+      <tuv xml:lang="pl">
+        <seg>Czas śledzenia</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Zeiterfassung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tracking time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Reset">
+      <tuv xml:lang="pl">
+        <seg>Reset</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Rücksetzen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reset</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Clear">
+      <tuv xml:lang="pl">
+        <seg>Wyczyść</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Klar</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Clear</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Abort">
+      <tuv xml:lang="pl">
+        <seg>Anuluj</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Abbrechen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Abort</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

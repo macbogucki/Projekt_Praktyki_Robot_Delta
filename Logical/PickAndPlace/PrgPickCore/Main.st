@@ -7,7 +7,6 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	IF ProgramPickExecuteBool THEN
 	    CASE PC_Step OF
 	        
 	        (* Enable the PickCore *)
@@ -43,7 +42,7 @@ PROGRAM _CYCLIC
 	        PC_READY_TO_START:
 	            ReadyPickCore := TRUE;
 	            
-	            IF CmdStart THEN
+	            IF CmdStart AND ProgramPickExecuteBool THEN
 	                MpPickCore_0.Parameters.OperationMode := 'ConveyorToConveyor';
 				    MpPickCore_0.ProcessStart := TRUE;
 	                PC_Step := PC_WAIT_START_CORE_PROCESS;
@@ -71,7 +70,6 @@ PROGRAM _CYCLIC
 	            ReadyPickCore := FALSE;
 	        
 	    END_CASE
-	END_IF
 	IF AbortExecute OR StopExecute THEN
 		PC_Step := PC_ENABLE_PICK_CORE;
 		ReadyPickCore := FALSE;

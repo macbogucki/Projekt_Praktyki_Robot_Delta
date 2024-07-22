@@ -44,6 +44,8 @@ PROGRAM _INIT
 	MpPackMLMode_0.Activate := TRUE;
 	MpPackMLMode_0.Stop := TRUE;
 	
+	RES_Step := HOMING_DELTA;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC

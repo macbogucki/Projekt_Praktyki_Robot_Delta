@@ -10,10 +10,11 @@ ACTION ActionReseting:
 			END_IF
 			
 		ACTIVATE_AXIS:
-			IF MpAxisBasic_0.Active THEN	
+			IF MpAxisBasic_0.Active AND MpDelta4Axis_0.Active THEN	
+				MpDelta4Axis_0.Power := TRUE;
 				MpAxisBasic_0.Power := TRUE;
 				MpAxisBasic_1.Power := TRUE; // axis not used, do not worry
-				IF MpAxisBasic_0.PowerOn THEN
+				IF MpAxisBasic_0.PowerOn AND MpDelta4Axis_0.PowerOn THEN
 					RES_Step := HOMING_AXIS; 
 				END_IF
 				

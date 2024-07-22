@@ -71,15 +71,12 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		mpPACKML_STATE_STOPPED:
+			MpPackMLMode_0.Reset := FALSE;
 			StopExecute := FALSE;
-			IF MpDelta4Axis_0.Active THEN
-				MpDelta4Axis_0.Power := TRUE;
-				IF MpDelta4Axis_0.PowerOn THEN
-					MpPackMLMode_0.Reset := TRUE;
-				END_IF
-			END_IF
+			
 		
 		mpPACKML_STATE_RESETTING:
+			
 			MpPackMLMode_0.Reset := FALSE;
 			ActionReseting;
 		

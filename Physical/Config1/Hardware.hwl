@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/18/2024 09:30:20" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/21/2024 13:15:15" />
   </TimeStamps>
   <Modules>
     <Module Name="80VD100PD.C000-14" Type="80VD100PD.C000-14" X="452" Y="634" />
@@ -21,6 +21,7 @@
     <Module Name="X20PS9400" Type="X20PS9400" X="328" Y="286" />
     <Module Name="X20TB12" Type="X20TB12" X="328" Y="313" />
     <Module Name="X20BC0083" Type="X20BC0083" X="303" Y="286" />
+    <Module Name="VSS112R24.042P-000" Type="VSS112R24.042P-000" X="631" Y="579" />
   </Modules>
   <Links>
     <Link From="5AC901.IPLK-00" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
@@ -149,6 +150,17 @@
       <Point X="896.5" Y="275.1" />
       <Point X="896.5" Y="282.1" />
       <Point X="896.5" Y="282.1" />
+    </Link>
+    <Link From="VSS112R24.042P-000" To="80VD100PD.C000-14" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="649" Y="697" />
+      <Point X="649" Y="697" />
+      <Point X="649" Y="702" />
+      <Point X="649" Y="715" />
+      <Point X="625" Y="715" />
+      <Point X="625" Y="708" />
+      <Point X="510" Y="708" />
+      <Point X="501" Y="708" />
+      <Point X="501" Y="708" />
     </Link>
   </Links>
   <InfoElements />

@@ -60,6 +60,8 @@
         <Variable Name="XVel" />
         <Variable Name="YVel" />
         <Variable Name="ZVel" />
+      <Task Name="Vision">
+        <Variable Name="Cam" RecursiveEnable="2" />
       </Task>
     </Module>
   </DefaultView>

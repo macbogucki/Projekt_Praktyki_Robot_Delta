@@ -31,6 +31,8 @@
         <Variable Name="ReadyPickReg" />
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
+        <Variable Name="gManualMode" />
+        <Variable Name="gDeleteObjects" />
       </GlobalVariables>
       <Task Name="MainProg">
         <Variable Name="MpPackMLMode_0">

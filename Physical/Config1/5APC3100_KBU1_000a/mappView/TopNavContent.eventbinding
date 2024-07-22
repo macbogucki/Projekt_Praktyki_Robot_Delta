@@ -5,6 +5,45 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="Auto1Button" event="Click" />
       <EventHandler>
         <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gManualMode">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="PCMainAuto1Content" pageId="PCMainPage" areaId="MainArea" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="ReczneButton" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gManualMode">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="PCMainManualContent" pageId="PCMainPage" areaId="MainArea" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <Operand datatype="BOOL" name="ManualMode">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gManualMode">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="ManualMode = FALSE">
+        <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="PCMainAuto1Content" pageId="PCMainPage" areaId="MainArea" />
           </Target>
@@ -37,47 +76,7 @@
           </Result>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_1">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="Auto2Button" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="PCMainAuto2Content" pageId="PCMainPage" areaId="MainArea" />
-          </Target>
-          <Result>
-            <ResultHandler>
-              <Sequence>
-                <Step order="0">
-                  <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto1Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-                    </Target>
-                  </Action>
-                </Step>
-                <Step order="1">
-                  <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
-                    </Target>
-                  </Action>
-                </Step>
-                <Step order="2">
-                  <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="ReczneButton">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-                    </Target>
-                  </Action>
-                </Step>
-              </Sequence>
-            </ResultHandler>
-          </Result>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_2">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCTopNavContent" widgetRefId="ReczneButton" event="Click" />
-      <EventHandler>
+      <EventHandler condition="ManualMode = TRUE">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="PCMainManualContent" pageId="PCMainPage" areaId="MainArea" />

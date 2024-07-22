@@ -8,9 +8,9 @@
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="215" left="90" zIndex="4" text="X" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="295" left="90" zIndex="5" text="Y" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="380" left="90" zIndex="6" text="Z" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="555" zIndex="7" text="Axis 1" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="300" left="555" zIndex="8" text="Axis 2" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="385" left="555" zIndex="9" text="Axis 3" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="555" zIndex="7" text="Axis Q1" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="300" left="555" zIndex="8" text="Axis Q2" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="385" left="555" zIndex="9" text="Axis Q3" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Button" id="PhotoButton" top="655" left="220" width="150" height="75" zIndex="10" multiLine="true" text="$IAT/TakePhoto" wordWrap="true" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Button" id="PackMLButton" top="655" left="470" width="150" height="75" zIndex="11" multiLine="true" text="Pack ML" wordWrap="true" fontSize="18px" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="205" left="180" width="60" height="60" zIndex="12" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
@@ -20,5 +20,11 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="285" left="275" width="60" height="60" zIndex="16" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="365" left="180" width="60" height="60" zIndex="17" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="365" left="275" width="60" height="60" zIndex="18" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="205" left="655" width="60" height="60" zIndex="19" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="205" left="750" width="60" height="60" zIndex="20" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="285" left="655" width="60" height="60" zIndex="21" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="285" left="750" width="60" height="60" zIndex="22" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="365" left="655" width="60" height="60" zIndex="23" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton12" top="365" left="750" width="60" height="60" zIndex="24" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
   </Widgets>
 </Content>

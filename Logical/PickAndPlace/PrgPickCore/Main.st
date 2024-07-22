@@ -13,10 +13,13 @@ PROGRAM _CYCLIC
     CASE PC_Step OF
         
         (* Enable the PickCore *)
-        PC_ENABLE_PICK_CORE:
-            MpPickCore_0.Enable := TRUE;
-            PC_Step := PC_WAIT_ENABLE_PICK_CORE;
-            
+		PC_ENABLE_PICK_CORE:
+			MpPickCore_0.Enable := TRUE;
+			IF NOT AbortExecute AND NOT StopExecute THEN
+				PC_Step := PC_WAIT_ENABLE_PICK_CORE;
+				StopExecutedPickCore := FALSE;
+			END_IF
+			
         PC_WAIT_ENABLE_PICK_CORE:
             IF MpPickCore_0.Active THEN
                 PC_Step := PC_ENABLE_CORE_PROCESS;
@@ -71,8 +74,23 @@ PROGRAM _CYCLIC
             Error := TRUE;
             ReadyPickCore := FALSE;
         
-    END_CASE
-    
+	END_CASE
+	
+	IF AbortExecute OR StopExecute THEN
+		PC_Step := PC_ENABLE_PICK_CORE;
+		ReadyPickCore := FALSE;
+		StopExecutedPickCore := TRUE;
+	END_IF
+	
+	IF ResetExecutePickCore THEN
+		MpPickCore_0.ErrorReset := TRUE;
+		PC_Step := PC_ENABLE_PICK_CORE;
+		ResetExecutedPickCore := TRUE;
+		Error := FALSE;
+	ELSE
+		MpPickCore_0.ErrorReset := FALSE;
+	END_IF
+	
     (* Call FBs *)
     MpPickCore_0.MpLink := ADR(gPickCore_1);
 	MpPickCore_0();

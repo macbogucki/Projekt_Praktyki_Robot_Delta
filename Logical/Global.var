@@ -17,4 +17,6 @@ VAR
 	AbortExecutedPick : BOOL;
 	StopExecutedPickCore : BOOL;
 	StopExecutedPlace : BOOL;
+	ResetExecutePickCore : BOOL;
+	ResetExecutedPickCore : BOOL;
 END_VAR

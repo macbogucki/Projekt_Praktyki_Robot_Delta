@@ -17,8 +17,11 @@ PROGRAM _CYCLIC
 	TON_0.PT := T#5s;
 	
     CASE P_Step OF
-        P_WAIT_ENABLE:
-            P_Step := P_ENABLE_REGISTER_FB;
+		P_WAIT_ENABLE:
+			IF NOT AbortExecute AND NOT StopExecute THEN
+				P_Step := P_ENABLE_REGISTER_FB;
+				StopExecutedPlace := FALSE;
+			END_IF
 			
         P_ENABLE_REGISTER_FB:
             MpPickRegister_0.Enable := TRUE;
@@ -96,7 +99,11 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	
-	
+	IF AbortExecute OR StopExecute THEN
+		ReadyPlaceReg := FALSE;
+		P_Step := P_WAIT_ENABLE;
+		StopExecutedPlace := TRUE;
+	END_IF
 	
 
 	MpPickRegGetObjectsContainer.Get := FALSE;

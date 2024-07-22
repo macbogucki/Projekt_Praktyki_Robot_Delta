@@ -22,8 +22,13 @@
         </Group>
       </Group>
       <Selector ID="DefaultLanguage" Value="BRGCode" />
-      <Selector ID="Location" Value="Default">
-        <Property ID="FileDevice" Value="CNC_PrgDir" />
+      <Selector ID="Location" Value="User">
+        <Group ID="UserLocation[1]">
+          <Property ID="FileDevice" Value="CNC_PrgDir" />
+        </Group>
+        <Group ID="UserLocation[2]">
+          <Property ID="FileDevice" Value="CNC_PrgDirRobot" />
+        </Group>
       </Selector>
     </Selector>
   </Element>

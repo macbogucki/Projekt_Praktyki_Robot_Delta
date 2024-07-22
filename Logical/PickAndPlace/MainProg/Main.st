@@ -44,7 +44,7 @@ PROGRAM _INIT
 	MpPackMLMode_0.Activate := TRUE;
 	MpPackMLMode_0.Stop := TRUE;
 	
-	RES_Step := HOMING_DELTA;
+	
 	
 END_PROGRAM
 
@@ -71,17 +71,22 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		mpPACKML_STATE_STOPPED:
-			MpPackMLMode_0.Reset := FALSE;
+			MpPackMLMode_0.Clear := FALSE;
+			MpPackMLMode_0.Stop := FALSE;
 			StopExecute := FALSE;
-			
+			RES_Step := HOMING_DELTA;
 		
 		mpPACKML_STATE_RESETTING:
-			
-			MpPackMLMode_0.Reset := FALSE;
-			ActionReseting;
+			ResetExecutePickCore := TRUE;
+			IF ResetExecutedPickCore THEN
+				MpPackMLMode_0.Reset := FALSE;
+				ActionReseting;
+			END_IF
 		
 		// Idle state - watiting for START command
 		mpPACKML_STATE_IDLE:
+			ResetExecutePickCore := FALSE;
+			ResetExecutedPickCore := FALSE;
 			ReadyMechanics := TRUE;
 			IF CmdStart AND ReadyToStart THEN
 				MpPackMLMode_0.Start := TRUE;
@@ -113,6 +118,7 @@ PROGRAM _CYCLIC
 			END_IF 
 			
 		mpPACKML_STATE_ABORTED:
+			MpPackMLMode_0.Abort := FALSE;
 			AbortExecute := FALSE;
 			
 		mpPACKML_STATE_CLEARING:

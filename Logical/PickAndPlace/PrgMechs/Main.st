@@ -43,6 +43,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
     
+//	IF NOT(gManualMode) THEN
     (* Prepare mechanics: Robot & conveyors *)
     CASE RC_Step OF
         
@@ -145,13 +146,15 @@ PROGRAM _CYCLIC
             
     END_CASE    
     
-    ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
+		ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
     
     (* Call FBs *)
     MpDelta4Axis_0.MpLink     := ADR(g4AxDeltaA);
     MpDelta4Axis_0.Parameters := ADR(DeltaParameters); 
     MpDelta4Axis_0();
     
+	//END_IF
+		
     MpAxisBasic_0.MpLink     := ADR(gAxis_1);
     MpAxisBasic_0.Parameters := ADR(AxisParameters_0);
     MpAxisBasic_0();

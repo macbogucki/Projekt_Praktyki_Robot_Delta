@@ -8,6 +8,8 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
+	//IF NOT(gManualMode) THEN
+	
     CASE PC_Step OF
         
         (* Enable the PickCore *)
@@ -73,7 +75,12 @@ PROGRAM _CYCLIC
     
     (* Call FBs *)
     MpPickCore_0.MpLink := ADR(gPickCore_1);
-    MpPickCore_0();
+	MpPickCore_0();
+		
+
+	
+	//ELSE MpPickCore_0.Enable := FALSE;
+//	END_IF	
 	 
 END_PROGRAM
 

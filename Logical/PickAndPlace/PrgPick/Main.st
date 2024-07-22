@@ -10,6 +10,8 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
     
+//	IF NOT(gManualMode) THEN
+	
     CASE C_Step OF
         C_WAIT_ENABLE:
             LastStep := C_WAIT_ENABLE;
@@ -87,6 +89,7 @@ PROGRAM _CYCLIC
             Error := TRUE;
             ReadyPickReg := FALSE;
 
+			
     END_CASE
 
     (* FB calls *)
@@ -94,6 +97,8 @@ PROGRAM _CYCLIC
     MpPickRegister_0();
 
     MpPickRegCreateProduct.MpLink := ADR(gPickRegister);
-    MpPickRegCreateProduct();
+	MpPickRegCreateProduct();
+		
+//	END_IF
      
 END_PROGRAM

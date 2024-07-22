@@ -12,4 +12,5 @@ VAR
 	gContainerInfo : ARRAY[0..3] OF MpPickObjPosInfoType;
 	gTokenNumber : UDINT;
 	gDeleteObjects : BOOL;
+	gManualMode : BOOL;
 END_VAR

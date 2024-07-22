@@ -11,6 +11,8 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+//	IF NOT(gManualMode) THEN
+	
 	TON_0();
 	TON_0.PT := T#5s;
 	
@@ -84,6 +86,7 @@ PROGRAM _CYCLIC
 			
 				LastPlaceHolderConveyorPosition := MpPickRegCreateContainer.Parameters.LatchedConveyor.Position;
 			ELSE
+// Moze to trzeba rozwazyc ->ContainerID := MpPickRegCreateContainer.ObjectPositionId;
                 MpPickRegCreateContainer.Create := FALSE;
             END_IF
 			
@@ -105,12 +108,18 @@ PROGRAM _CYCLIC
 			TON_0.IN := FALSE;
 		END_IF
 	END_IF	
-	MpPickRegGetObjectsContainer.Parameters.DataAddress := ADR(gContainerInfo);
-	MpPickRegGetObjectsContainer.Parameters.GetMode := mpPICK_GET_CONTAINER_CONTENT;
-	MpPickRegGetObjectsContainer.Parameters.ObjectPositionId := ContainerID;
-	MpPickRegGetObjectsContainer.Parameters.ObjectTypeName := 'MyContainer';			
-	MpPickRegGetObjectsContainer.Parameters.NumberOfObjectPositions := 4;
 	
+	IF ContainerID > 0 THEN
+		
+		MpPickRegGetObjectsContainer.Parameters.DataAddress := ADR(gContainerInfo);
+		MpPickRegGetObjectsContainer.Parameters.GetMode := mpPICK_GET_CONTAINER_CONTENT;
+		MpPickRegGetObjectsContainer.Parameters.ObjectPositionId := ContainerID;
+		MpPickRegGetObjectsContainer.Parameters.ObjectTypeName := 'MyContainer';			
+		MpPickRegGetObjectsContainer.Parameters.NumberOfObjectPositions := 4;
+		MpPickRegGetObjectsContainer.MpLink := ADR(gPlaceRegister);
+		MpPickRegGetObjectsContainer();
+		
+	END_IF;
 	
 	
 	FOR Iterator := 0 TO 3 DO
@@ -119,11 +128,20 @@ PROGRAM _CYCLIC
 			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
 			MpPickRegDeleteTokens.Delete := TRUE;
 			numberOfDeletes := numberOfDeletes + 1;
+		ELSE
+			MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
+			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
+			MpPickRegDeleteTokens.Delete := FALSE;
+			
 		END_IF;
 		IF numberOfDeletes = 4 THEN
 			P_Step := P_WAIT_ENABLE;
 			numberOfDeletes := 0;
-		END_IF	
+		END_IF
+		
+	//	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
+	//	MpPickRegDeleteTokens();
+		
 	END_FOR;
 	gDeleteObjects := 0;
 	
@@ -135,14 +153,12 @@ PROGRAM _CYCLIC
 	MpPickRegCreateContainer.MpLink := ADR(gPlaceRegister);
 	MpPickRegCreateContainer();
 	
-	MpPickRegGetObjectsContainer.MpLink := ADR(gPlaceRegister);
-	MpPickRegGetObjectsContainer();
 	
 	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
 	MpPickRegDeleteTokens();
 	
 	
-
+//	END_IF
 	 
 END_PROGRAM
 

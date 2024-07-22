@@ -4,6 +4,7 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="PrgPickCor" Source="PickAndPlace.PrgPickCore.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="PrgPlace" Source="PickAndPlace.PrgPlace.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PrgManual" Source="PickAndPlace.PrgManual.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2">
     <Task Name="PrgPick" Source="PickAndPlace.PrgPick.prg" Memory="UserROM" Language="IEC" Debugging="true" />

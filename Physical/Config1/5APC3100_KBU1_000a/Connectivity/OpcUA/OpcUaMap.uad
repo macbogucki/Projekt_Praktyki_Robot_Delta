@@ -32,6 +32,33 @@
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
       </GlobalVariables>
+      <Task Name="MainProg">
+        <Variable Name="MpPackMLMode_0">
+          <Variable Name="Start" />
+          <Variable Name="Stop" />
+          <Variable Name="Reset" />
+          <Variable Name="Abort" />
+          <Variable Name="Clear" />
+          <Variable Name="Error" />
+          <Variable Name="Info">
+            <Variable Name="ModeCurrent" />
+            <Variable Name="StateCurrent" />
+          </Variable>
+          <Variable Name="StateCurrent" />
+          <Variable Name="StateComplete" />
+        </Variable>
+      </Task>
+      <Task Name="PrgManual">
+        <Variable Name="MoveXNeg" />
+        <Variable Name="MoveXPos" />
+        <Variable Name="MoveYNeg" />
+        <Variable Name="MoveYPos" />
+        <Variable Name="MoveZNeg" />
+        <Variable Name="MoveZPos" />
+        <Variable Name="XVel" />
+        <Variable Name="YVel" />
+        <Variable Name="ZVel" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

@@ -9,6 +9,8 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="PCMainContent_binding" />
+    <BindingsSet refId="PCMainAuto1Content_binding" />
+    <BindingsSet refId="PCMainManualContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />

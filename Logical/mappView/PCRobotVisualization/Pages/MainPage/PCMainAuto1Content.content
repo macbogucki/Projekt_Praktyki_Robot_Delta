@@ -2,13 +2,15 @@
 <Content id="PCMainAuto1Content" height="880" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="sds" top="25" left="690" width="290" height="40" zIndex="0" text=" Tryb Conv → Static" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.VideoPlayer" id="VideoPlayer1" top="585" left="1395" width="268" height="256" zIndex="1" src="Media/Shrek.mp4" />
-    <Widget xsi:type="widgets.brease.InfoBanner" id="InfoBanner" top="0" left="100" zIndex="2" autoClose="true" docking="top">
+    <Widget xsi:type="widgets.brease.InfoBanner" id="InfoBanner" top="0" left="100" zIndex="1" autoClose="true" docking="top">
       <Widgets />
     </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="405" left="160" width="130" zIndex="3" text="Time tracking" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.PushButton" id="StartButton" top="270" left="160" width="115" height="45" zIndex="4" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.PushButton" id="StopButton1" top="340" left="160" width="115" height="45" zIndex="5" text="Stop" backColor="rgba(255, 0, 0, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="TimeTrackingNumericInput" top="405" left="325" zIndex="6" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="460" left="160" width="130" zIndex="2" text="$IAT/TrackingTime" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StartButton" top="125" left="160" width="135" height="55" zIndex="3" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StopButton1" top="190" left="160" width="135" height="55" zIndex="4" text="Stop" backColor="rgba(255, 0, 0, 1)" mouseDownBackColor="rgba(128, 0, 0, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="TimeTrackingNumericInput" top="460" left="325" zIndex="5" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StopButton2" top="255" left="160" width="135" height="55" zIndex="6" text="$IAT/Reset" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StopButton3" top="320" left="160" width="135" height="55" zIndex="7" text="$IAT/Clear" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StopButton4" top="385" left="160" width="135" height="55" zIndex="8" text="$IAT/Abort" fontSize="18px" style="Command" />
   </Widgets>
 </Content>

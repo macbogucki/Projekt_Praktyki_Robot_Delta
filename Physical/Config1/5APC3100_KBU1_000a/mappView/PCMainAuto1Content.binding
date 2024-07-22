@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="PCMainAuto1Content_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:CmdStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="StartButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Stop" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="StopButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Reset" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ResetButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Clear" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ClearButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Abort" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="AbortButton" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

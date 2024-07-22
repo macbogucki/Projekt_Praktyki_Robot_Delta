@@ -16,5 +16,7 @@
     <Object Type="File">PCMainManualContent.eventbinding</Object>
     <Object Type="File">LoginContent.eventbinding</Object>
     <Object Type="File">PCAlarmsNavContent.eventbinding</Object>
+    <Object Type="File">PCMainAuto1Content.binding</Object>
+    <Object Type="File">PCMainManualContent.binding</Object>
   </Objects>
 </Package>

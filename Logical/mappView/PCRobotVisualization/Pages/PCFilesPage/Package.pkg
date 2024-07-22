@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Page description">PCFilesPage.page</Object>
+    <Object Type="File">PCFilesContent.content</Object>
+    <Object Type="File">PCFilesNavContent.content</Object>
+  </Objects>
+</Package>

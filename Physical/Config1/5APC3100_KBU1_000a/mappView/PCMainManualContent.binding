@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="PCMainManualContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveYPos" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYPosButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveXNeg" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXNegButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveXPos" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXPosButton" attribute="value" />
+</Binding>
+		<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:XVel" attribute="node" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveZPos" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZPosButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveZNeg" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZNegButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:MoveYNeg" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYNegButton" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

@@ -5,10 +5,13 @@
     <Page refId="MobileMainPage" />
     <Page refId="PCServicePage" />
     <Page refId="PCAlarmsPage" />
+    <Page refId="PCFilesPage" />
   </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="PCMainContent_binding" />
+    <BindingsSet refId="PCMainAuto1Content_binding" />
+    <BindingsSet refId="PCMainManualContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />
@@ -40,6 +43,8 @@
     <Content refId="PCServiceNavContent" />
     <Content refId="PCAlarmsNavContent" />
     <Content refId="PCAlarmsHistoryContent" />
+    <Content refId="PCFilesContent" />
+    <Content refId="PCFilesNavContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

@@ -110,6 +110,7 @@ PROGRAM _CYCLIC
 	MpPickRegDeleteTokens.Delete := FALSE;
 	IF (MpPickRegGetObjectsContainer.Get = FALSE) THEN
 		TON_0.IN := TRUE;
+		
 		IF TON_0.Q THEN
 			MpPickRegGetObjectsContainer.Get := TRUE;
 			TON_0.IN := FALSE;

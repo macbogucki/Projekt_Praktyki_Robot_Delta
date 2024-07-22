@@ -17,4 +17,5 @@ VAR
 	Iterator : USINT;
 	numberOfDeletes : USINT;
 	TON_1 : TON;
+	TON_0 : TON;
 END_VAR

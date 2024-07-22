@@ -94,14 +94,14 @@ PROGRAM _CYCLIC
 			MpAxisBasic_1.MoveVelocity := TRUE;
 			IF MpPackMLMode_0.Start THEN
 				MpPackMLMode_0.Start := FALSE;
-				
 			END_IF	
 			IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
+				ProgramPickExecuteBool := TRUE;
 				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
-			ProgramPickExecuteBool := TRUE;
+			
 
 		mpPACKML_STATE_ABORTING:
 			MpDelta4Axis_0.Power := FALSE;

@@ -15,7 +15,7 @@ PROGRAM _CYCLIC
 			LastStep := C_WAIT_ENABLE;
 			IF NOT AbortExecute AND NOT StopExecute THEN
 				C_Step   := C_ENABLE_REGISTER_FB;
-				StopExecutedPickCore := FALSE;
+				StopExecutedPick := FALSE;
 			END_IF
 			
         (* Pick-and-Place register handling for Picking conveyor *)

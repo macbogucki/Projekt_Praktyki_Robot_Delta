@@ -1,86 +1,42 @@
 
 PROGRAM _INIT
-	(* Insert code here *)
-	MpPackMLCore_0.Enable := TRUE;
-	MpPackMLMode_0.Enable := TRUE;
-	MpDelta4Axis_0.Override := 100.0; 
-	MpDelta4Axis_0.Enable   := TRUE; 
-	
-	AxisParameters_0.Velocity     := 50.0;
-	AxisParameters_0.Acceleration := 20.0;
-	AxisParameters_0.Deceleration := 20.0;
-
-	AxisParameters_1.Velocity     := 0.0;
-	AxisParameters_1.Acceleration := 1.0;
-	AxisParameters_1.Deceleration := 1.0;
-    
-	MpAxisBasic_0.Enable := TRUE;
-	MpAxisBasic_1.Enable := TRUE;
-	MpAxisBasic_Q1.Enable := TRUE;
-	MpAxisBasic_Q2.Enable := TRUE;
-	MpAxisBasic_Q3.Enable := TRUE;
-	MpAxisBasic_Q4.Enable := TRUE;
-        
-	// dummy call of axis PVs just to avoid warning -2141192189 "The PV 'gAxisQx' does not exists" in logger
-	
-	gAxisQ1;
-	gAxisQ2;
-	gAxisQ3;
-	gAxisQ4;
-	
-	IF DiagCpuIsARsim() THEN
-		homingModeQ1.Homing.Mode := mcHOMING_DIRECT;
-		homingModeQ2.Homing.Mode := mcHOMING_DIRECT;
-		homingModeQ3.Homing.Mode := mcHOMING_DIRECT;
-		homingModeQ4.Homing.Mode := mcHOMING_DIRECT;
-	ELSE
-		homingModeQ1.Homing.Mode := mcHOMING_DEFAULT;
-		homingModeQ2.Homing.Mode := mcHOMING_DEFAULT;
-		homingModeQ3.Homing.Mode := mcHOMING_DEFAULT;
-		homingModeQ4.Homing.Mode := mcHOMING_DEFAULT;
-	END_IF;
-	
-	//Activate block and set first state to Stopping (important, )
-	MpPackMLMode_0.Activate := TRUE;
-	MpPackMLMode_0.Stop := TRUE;
-	
-	
+	MainInitAction;
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	(* Insert code here *)
-	MpPackMLCore_0.MpLink := ADR(gPackMLCore);
-	MpPackMLMode_0.MpLink := ADR(gPackMLCore);
-	MpPackMLMode_0.ModeID := 1;
 	
-	MpPackMLMode_0.StateComplete := FALSE;
+	//Configuring PackML
+	MpPackCyclicAction;
 	
 	PackMLCurrentState := MpPackMLStateCurrent(gPackMLCore);
+	
+	// State machine in PackML standard
 	CASE PackMLCurrentState OF
 		mpPACKML_STATE_UNDEFINED:
 			
-			
+		//State in which pcoess is being stopped slowly
 		mpPACKML_STATE_STOPPING:
-			MpDelta4Axis_0.Power := FALSE;
-			MpAxisBasic_0.Power := FALSE;
-			ReadyMechanics := FALSE;
 			StopExecute := TRUE;
+			CmdStart := FALSE;
 			IF StopExecutedPick AND StopExecutedPickCore AND StopExecutedPlace THEN
+				ReadyMechanics := FALSE;
 				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
-			
+		
+		// Program is stopped and waiting for reset command 
 		mpPACKML_STATE_STOPPED:
 			MpPackMLMode_0.Clear := FALSE;
 			MpPackMLMode_0.Stop := FALSE;
 			StopExecute := FALSE;
 			RES_Step := HOMING_DELTA;
 		
+		// Program parameters are reseting in this state
 		mpPACKML_STATE_RESETTING:
 			ResetExecutePickCore := TRUE;
 			IF ResetExecutedPickCore THEN
 				MpPackMLMode_0.Reset := FALSE;
-				ActionReseting;
+				ResetingAction;
 			END_IF
 		
 		// Idle state - watiting for START command
@@ -94,97 +50,61 @@ PROGRAM _CYCLIC
 		
 		// Starting state - conveyor start
 		mpPACKML_STATE_STARTING:
-			IF NOT(gManualMode) THEN
-			MpAxisBasic_0.MoveVelocity := TRUE;
-			MpAxisBasic_1.MoveVelocity := TRUE;
-			END_IF
 			IF MpPackMLMode_0.Start THEN
 				MpPackMLMode_0.Start := FALSE;
-			END_IF	
-			IF NOT(gManualMode) THEN
-			IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
-				ProgramPickExecuteBool := TRUE;
-				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
+			
+			IF NOT(gManualMode) THEN
+				MpAxisBasic_0.MoveVelocity := TRUE;
+				MpAxisBasic_1.MoveVelocity := TRUE;
+				IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
+					ProgramPickExecuteBool := TRUE;		// condition in Pick program
+					MpPackMLStateComplete(gPackMLCore,1);
+				END_IF
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
 			
-
+		// aborting -> when imidiate stop is in use
 		mpPACKML_STATE_ABORTING:
 			MpDelta4Axis_0.Power := FALSE;
 			MpAxisBasic_0.Power := FALSE;
 			ReadyMechanics := FALSE;
 			AbortExecute := TRUE;
+			CmdStart := FALSE;
 			IF NOT MpDelta4Axis_0.PowerOn
 				AND NOT MpAxisBasic_0.PowerOn THEN
 					MpPackMLStateComplete(gPackMLCore,1);
 			END_IF 
-			
+		
+		// Program is aborted. powers are shut down - waiting for cleaning command
 		mpPACKML_STATE_ABORTED:
 			MpPackMLMode_0.Abort := FALSE;
 			AbortExecute := FALSE;
 			
+			//Clearing alarms/bugs/warnings
 		mpPACKML_STATE_CLEARING:
 			MpPackMLStateComplete(gPackMLCore,1);
 
 	END_CASE;
 	
-	gIsConvHomed := MpDelta4Axis_0.IsHomed;
-	gTcpPositionX := MpDelta4Axis_0.X;
-	gTcpPositionY := MpDelta4Axis_0.Y;
-	gTcpPositionZ := MpDelta4Axis_0.Z;
 	
-	IF gManualMode THEN
-	DeltaParameters.Jog.Velocity[0] := DeltaParamConnections.Jog.Velocity[0];
-	DeltaParameters.Jog.Velocity[1] := DeltaParamConnections.Jog.Velocity[1];
-	DeltaParameters.Jog.Velocity[2] := DeltaParamConnections.Jog.Velocity[2];
-	DeltaParameters.ManualMoveType := DeltaParamConnections.ManualMoveType;
-	DeltaParameters.Jog.CoordSystem := DeltaParamConnections.Jog.CoordSystem;
-	DeltaParameters.CoordSystem := DeltaParamConnections.CoordSystem;
-	//DeltaParameters.Position[0] := DeltaParamConnections.Position[0];
-	//DeltaParameters.Position[1] := DeltaParamConnections.Position[1];
-	//DeltaParameters.Position[2] := DeltaParamConnections.Position[2];
-	MpDelta4Axis_0.Enable := gMpDelta4AxisEnable;
-	MpDelta4Axis_0.Jog := gMpDelta4AxisJog;
-		
-	END_IF
+	
+	CheckManualAction;
 	
 	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
 	
+	//MpPack init
 	MpPackMLMode_0();
 	MpPackMLCore_0();
 	
-	MpDelta4Axis_0.MpLink     := ADR(g4AxDeltaA);
-	MpDelta4Axis_0.Parameters := ADR(DeltaParameters); 
-	MpDelta4Axis_0();
+	//All axis configuration -mplink -config -init
+	AxisConfigAction;
     
-	MpAxisBasic_0.MpLink     := ADR(gAxis_1);
-	MpAxisBasic_0.Parameters := ADR(AxisParameters_0);
-	MpAxisBasic_0();
-    
-	MpAxisBasic_1.MpLink     := ADR(gAxis_2);
-	MpAxisBasic_1.Parameters := ADR(AxisParameters_1);
-	MpAxisBasic_1();
-	
-	MpAxisBasic_Q1.MpLink := ADR(gAxisQ1);
-	MpAxisBasic_Q1.Parameters := ADR(homingModeQ1);
-	MpAxisBasic_Q1();
-	
-	MpAxisBasic_Q2.MpLink := ADR(gAxisQ2);
-	MpAxisBasic_Q2.Parameters := ADR(homingModeQ2);
-	MpAxisBasic_Q2();
-		
-	MpAxisBasic_Q3.MpLink := ADR(gAxisQ3);
-	MpAxisBasic_Q3.Parameters := ADR(homingModeQ3);
-	MpAxisBasic_Q3();
-	
-	MpAxisBasic_Q4.MpLink := ADR(gAxisQ4);
-	MpAxisBasic_Q4.Parameters := ADR(homingModeQ4);
-	MpAxisBasic_Q4();
-    
+	//Updating both conveyors position
 	PickConveyorPosition  := MpAxisBasic_0.Position;
 	PlaceConveyorPosition := MpAxisBasic_1.Position;
+	
 END_PROGRAM
 
 PROGRAM _EXIT

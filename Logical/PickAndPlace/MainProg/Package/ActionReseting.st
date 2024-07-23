@@ -1,5 +1,5 @@
 
-ACTION ActionReseting: 
+ACTION ResetingAction: 
 	
 	CASE RES_Step OF
 		HOMING_DELTA:

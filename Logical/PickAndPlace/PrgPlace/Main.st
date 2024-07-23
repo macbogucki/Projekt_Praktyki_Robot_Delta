@@ -6,6 +6,7 @@ PROGRAM _INIT
 
 	PlaceHoldersSpacing := 120; // distance between two consecutive place holders
 	numberOfDeletes := 0;
+	gTokenNumber := 0;
 	
 END_PROGRAM
 
@@ -136,21 +137,22 @@ PROGRAM _CYCLIC
 			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
 			MpPickRegDeleteTokens.Delete := TRUE;
 			numberOfDeletes := numberOfDeletes + 1;
-		ELSE
-			MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
+			ELSE
+				MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
 			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
 			MpPickRegDeleteTokens.Delete := FALSE;
-			
+						
 		END_IF;
 		IF numberOfDeletes = 4 THEN
 			P_Step := P_WAIT_ENABLE;
 			numberOfDeletes := 0;
 		END_IF
+		IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT) THEN
+			gTokenNumber := Iterator +1;		
+		END_IF
 		
-	//	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
-	//	MpPickRegDeleteTokens();
-		
-	END_FOR;
+
+		END_FOR;
 	gDeleteObjects := 0;
 	
     

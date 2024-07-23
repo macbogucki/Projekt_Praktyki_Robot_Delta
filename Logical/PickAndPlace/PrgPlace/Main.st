@@ -11,7 +11,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-//	IF NOT(gManualMode) THEN
+	IF NOT(gManualMode) THEN
 	
 	TON_0();
 	TON_0.PT := T#5s;
@@ -166,7 +166,7 @@ PROGRAM _CYCLIC
 	MpPickRegDeleteTokens();
 	
 	
-//	END_IF
+	END_IF
 	 
 END_PROGRAM
 

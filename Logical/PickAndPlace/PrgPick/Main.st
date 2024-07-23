@@ -10,7 +10,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
     
-//	IF NOT(gManualMode) THEN
+	IF NOT(gManualMode) THEN
 	
 	CASE C_Step OF
 		C_WAIT_ENABLE:
@@ -107,6 +107,6 @@ PROGRAM _CYCLIC
 	MpPickRegCreateProduct.MpLink := ADR(gPickRegister);
 	MpPickRegCreateProduct();
 		
-//	END_IF
+	END_IF
      
 END_PROGRAM

@@ -94,14 +94,18 @@ PROGRAM _CYCLIC
 		
 		// Starting state - conveyor start
 		mpPACKML_STATE_STARTING:
+			IF NOT(gManualMode) THEN
 			MpAxisBasic_0.MoveVelocity := TRUE;
 			MpAxisBasic_1.MoveVelocity := TRUE;
+			END_IF
 			IF MpPackMLMode_0.Start THEN
 				MpPackMLMode_0.Start := FALSE;
 			END_IF	
+			IF NOT(gManualMode) THEN
 			IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
 				ProgramPickExecuteBool := TRUE;
 				MpPackMLStateComplete(gPackMLCore,1);
+			END_IF
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
@@ -125,6 +129,26 @@ PROGRAM _CYCLIC
 			MpPackMLStateComplete(gPackMLCore,1);
 
 	END_CASE;
+	
+	gIsConvHomed := MpDelta4Axis_0.IsHomed;
+	gTcpPositionX := MpDelta4Axis_0.X;
+	gTcpPositionY := MpDelta4Axis_0.Y;
+	gTcpPositionZ := MpDelta4Axis_0.Z;
+	
+	IF gManualMode THEN
+	DeltaParameters.Jog.Velocity[0] := DeltaParamConnections.Jog.Velocity[0];
+	DeltaParameters.Jog.Velocity[1] := DeltaParamConnections.Jog.Velocity[1];
+	DeltaParameters.Jog.Velocity[2] := DeltaParamConnections.Jog.Velocity[2];
+	DeltaParameters.ManualMoveType := DeltaParamConnections.ManualMoveType;
+	DeltaParameters.Jog.CoordSystem := DeltaParamConnections.Jog.CoordSystem;
+	DeltaParameters.CoordSystem := DeltaParamConnections.CoordSystem;
+	//DeltaParameters.Position[0] := DeltaParamConnections.Position[0];
+	//DeltaParameters.Position[1] := DeltaParamConnections.Position[1];
+	//DeltaParameters.Position[2] := DeltaParamConnections.Position[2];
+	MpDelta4Axis_0.Enable := gMpDelta4AxisEnable;
+	MpDelta4Axis_0.Jog := gMpDelta4AxisJog;
+		
+	END_IF
 	
 	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
 	

@@ -12,5 +12,13 @@ VAR
 	gContainerInfo : ARRAY[0..3] OF MpPickObjPosInfoType;
 	gTokenNumber : {REDUND_UNREPLICABLE} UDINT := 0;
 	gDeleteObjects : BOOL;
+	gMpDelta4AxisEnable : BOOL;
+	gMpDelta4AxisJog : BOOL;
+	gManualHoming : BOOL;
+	DeltaParamConnections : MpDelta4AxisParType;
 	gManualMode : BOOL;
+	gIsConvHomed : BOOL;
+	gTcpPositionX : LREAL;
+	gTcpPositionY : LREAL;
+	gTcpPositionZ : LREAL;
 END_VAR

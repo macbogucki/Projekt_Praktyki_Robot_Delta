@@ -1,5 +1,9 @@
 VAR
-	MpDelta4AxisManual : MpDelta4Axis;
+	HomeX : USINT;
+	HomeY : USINT;
+	HomingOffset : USINT;
+	HomingVel : USINT;
+	HomeZ : USINT;
 	MoveXPos : BOOL;
 	MoveXNeg : BOOL;
 	MoveYPos : BOOL;
@@ -9,4 +13,5 @@ VAR
 	XVel : USINT;
 	YVel : USINT;
 	ZVel : USINT;
+	ManualEnum : MANUAL_ENUM;
 END_VAR

@@ -12,5 +12,6 @@
     <Object Type="Program" Language="IEC">PrgManual</Object>
     <Object Type="Package">Scene</Object>
     <Object Type="Program" Language="IEC">Audyt</Object>
+    <Object Type="Program" Language="IEC">UsersMenagment</Object>
   </Objects>
 </Package>

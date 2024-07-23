@@ -5,14 +5,61 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	MessageVar := "Audtyt start";
-	(* Insert code here *)
+	//Wiadomoœci do audytu
+	MessageVarStart := "Uruchomiono uklad";
+	MessageVarStop := "Zatrzymano prace ukladu";
+	MessageVarLogin := "Zalogowano uzytkownia";
+	MessageVarLoginFailed := "Logowanie nie powiodlo sie";
+	MessageVarLogout := "Wylogowano uzytkownika";
+	MessageVarCase := "Zmiana trybu pracy";
+	MessageVarAlarm := "Wystapi³ alarm";
+
+	//Wywo³ywanie audytu
 	MpAuditTrail_0();
 	MpAuditTrail_0.MpLink := ADR(gAuditTrail);
 	MpAuditTrail_0.DeviceName := ADR('CF');
-	IF Zmienna THEN
-		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVar, CommentVar);
+	//Usuniêcie danych z audytu
+	IF DeleteAudit THEN
+		MpAuditClearBuffer(gAuditTrail);
 	END_IF;
+	//Uruchomienie maszyny
+	R_TRIG_0(CLK := CmdStart);
+	IF R_TRIG_0.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarStart, CommentVar);
+	END_IF;
+	//Ausyt Stopu
+	R_TRIG_1(CLK := StopExecute);
+	IF R_TRIG_1.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarStop, CommentVar);
+	END_IF;
+	//Audyt zalogowania
+	R_TRIG_2(CLK := Login);
+	IF R_TRIG_2.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarLogin, CommentVar);
+		Login := FALSE;
+	END_IF;
+	//Audyt wylogowania
+	R_TRIG_3(CLK := Logout);
+	IF R_TRIG_3.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarLogout, CommentVar);
+		Logout := FALSE;
+	END_IF;
+	//Audyt b³¹d logowania
+	R_TRIG_4(CLK := LoginFailed);
+	IF R_TRIG_4.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarLoginFailed, CommentVar);
+		LoginFailed := FALSE;
+	END_IF;
+	(*//Audyt zmiany trybu pracy
+	R_TRIG_5(CLK :=);
+	IF R_TRIG_5.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarCase, CommentVar);
+	END_IF;
+	//Audyt wystopiênie alarmu
+	R_TRIG_6(CLK := );
+	IF R_TRIG_6.Q THEN
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarAlarm, CommentVar);
+	END_IF;*)
 END_PROGRAM
 
 PROGRAM _EXIT

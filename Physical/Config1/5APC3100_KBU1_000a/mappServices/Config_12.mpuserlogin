@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gUserLogin" Type="mpuserlogin">
+    <Group ID="Login">
+      <Property ID="AutoLogout" Value="3600" />
+    </Group>
+  </Element>
+</Configuration>

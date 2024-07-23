@@ -15,5 +15,6 @@
         <Property ID="Encrypt" Value="FALSE" />
       </Group>
     </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

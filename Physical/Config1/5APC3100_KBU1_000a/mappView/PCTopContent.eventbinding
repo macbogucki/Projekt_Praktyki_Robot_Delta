@@ -11,5 +11,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="PCTopContent.LogoutButton1.Click">
+      <Source xsi:type="widgets.brease.LogoutButton.Event" contentRefId="PCTopContent" widgetRefId="LogoutButton1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Audyt:Logout">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

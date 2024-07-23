@@ -80,7 +80,12 @@
         <Variable Name="MpAuditTrail_0">
           <Variable Name="Export" />
           <Variable Name="ExportArchive" />
+          <Variable Name="CurrentRecord" />
         </Variable>
+        <Variable Name="DeleteAudit" />
+        <Variable Name="Login" />
+        <Variable Name="Logout" />
+        <Variable Name="LoginFailed" />
       </Task>
     </Module>
   </DefaultView>

@@ -5,5 +5,6 @@
     <Object Type="File">Config_mS1.mpaudittrail</Object>
     <Object Type="File">Config.mppackmlcore</Object>
     <Object Type="File">Config_11.mpalarmxcore</Object>
+    <Object Type="File">Config_12.mpuserlogin</Object>
   </Objects>
 </Package>

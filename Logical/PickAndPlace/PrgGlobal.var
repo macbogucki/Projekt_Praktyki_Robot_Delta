@@ -1,5 +1,4 @@
 VAR
-	CmdStart : BOOL := FALSE; (*Set = 1 to start the process*)
 	ReadyMechanics : BOOL := FALSE;
 	ReadyPickCore : BOOL := FALSE;
 	ReadyPickReg : BOOL := FALSE;
@@ -11,13 +10,9 @@ VAR
 	PlaceConveyorLength : LREAL := 205; (*must be the same as place conveyor length in MpPick configuration*)
 	gContainerInfo : ARRAY[0..3] OF MpPickObjPosInfoType;
 	gTokenNumber : {REDUND_UNREPLICABLE} UDINT := 0;
-	gDeleteObjects : BOOL;
 	gMpDelta4AxisEnable : BOOL;
 	gMpDelta4AxisJog : BOOL;
-	gManualHoming : BOOL;
 	DeltaParamConnections : MpDelta4AxisParType;
-	gManualMode : BOOL;
-	gIsConvHomed : BOOL;
 	gTcpPositionX : LREAL;
 	gTcpPositionY : LREAL;
 	gTcpPositionZ : LREAL;

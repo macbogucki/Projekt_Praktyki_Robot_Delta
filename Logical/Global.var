@@ -14,6 +14,13 @@ VAR
 	StopExecutedPickCore : BOOL;
 	StopExecutedPlace : BOOL;
 	ResetExecutePickCore : BOOL;
+	gTokenStartPosY : USINT;
+	CmdStart : BOOL := FALSE; (*Set = 1 to start the process*)
+	gDeleteObjects : BOOL;
+	gManualHoming : BOOL;
+	gManualMode : BOOL;
+	gIsConvHomed : BOOL;
+	gMakeToken : BOOL;
 	ResetExecutedPickCore : BOOL;
 	place : USINT := 0;
 	conv : USINT := 0;

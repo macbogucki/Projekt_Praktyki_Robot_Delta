@@ -11,6 +11,7 @@
     <BindingsSet refId="PCMainAuto1Content_binding" />
     <BindingsSet refId="PCMainManualContent_binding" />
     <BindingsSet refId="PCAuditsContent_binding" />
+    <BindingsSet refId="PCAlarmsContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />

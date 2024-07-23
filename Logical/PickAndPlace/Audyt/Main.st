@@ -2,6 +2,7 @@
 PROGRAM _INIT
 	(* Insert code here *)
 	MpAuditTrail_0.Enable := TRUE;
+	Logout := FALSE;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -21,6 +22,7 @@ PROGRAM _CYCLIC
 	//Usuniêcie danych z audytu
 	IF DeleteAudit THEN
 		MpAuditClearBuffer(gAuditTrail);
+		DeleteAudit := FALSE;
 	END_IF;
 	//Uruchomienie maszyny
 	R_TRIG_0(CLK := CmdStart);
@@ -37,6 +39,7 @@ PROGRAM _CYCLIC
 	IF R_TRIG_2.Q THEN
 		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarLogin, CommentVar);
 		Login := FALSE;
+		Logout := FALSE;
 	END_IF;
 	//Audyt wylogowania
 	R_TRIG_3(CLK := Logout);
@@ -60,6 +63,7 @@ PROGRAM _CYCLIC
 	IF R_TRIG_6.Q THEN
 		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarAlarm, CommentVar);
 	END_IF;*)
+
 END_PROGRAM
 
 PROGRAM _EXIT

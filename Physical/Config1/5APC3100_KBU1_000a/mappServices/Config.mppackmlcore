@@ -19,5 +19,6 @@
         <Selector ID="State[17]" Value="0" />
       </Group>
     </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

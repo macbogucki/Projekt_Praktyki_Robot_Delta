@@ -37,7 +37,7 @@
         <Property ID="Deceleration" Value="20" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gAxis_2" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -75,6 +75,6 @@
         <Property ID="Deceleration" Value="1" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

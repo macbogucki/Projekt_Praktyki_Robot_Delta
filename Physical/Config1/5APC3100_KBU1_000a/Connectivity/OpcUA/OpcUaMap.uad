@@ -35,6 +35,7 @@
         <Variable Name="ReadyPickReg" />
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
+        <Variable Name="gManualMode" />
       </GlobalVariables>
       <Task Name="Vision">
         <Variable Name="Cam" RecursiveEnable="2" />

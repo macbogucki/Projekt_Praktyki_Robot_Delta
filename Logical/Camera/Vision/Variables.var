@@ -5,6 +5,4 @@ VAR
 	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
 	MakingPhoto : BOOL;
 	CameraStatus : UDINT;
-	Token_Y : REAL;
-	Token_X : REAL;
 END_VAR

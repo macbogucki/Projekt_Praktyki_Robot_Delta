@@ -15,5 +15,7 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="70" left="135" width="220" height="380" zIndex="1" backColor="rgba(211, 211, 211, 1)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="335" left="980" width="680" height="488" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
     <Widget xsi:type="widgets.brease.Label" id="sds1" top="280" left="1185" width="290" height="40" zIndex="11" text="Podgląd zdjęcia" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="590" left="160" width="130" zIndex="12" text="$IAT/CurrentState" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="CurrentStateTextOutput" top="590" left="305" zIndex="13" fontSize="18px" />
   </Widgets>
 </Content>

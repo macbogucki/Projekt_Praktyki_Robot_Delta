@@ -76,6 +76,12 @@
         <Variable Name="YVel" />
         <Variable Name="ZVel" />
       </Task>
+      <Task Name="Audyt">
+        <Variable Name="MpAuditTrail_0">
+          <Variable Name="Export" />
+          <Variable Name="ExportArchive" />
+        </Variable>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

@@ -12,6 +12,7 @@
     <BindingsSet refId="PCMainContent_binding" />
     <BindingsSet refId="PCMainAuto1Content_binding" />
     <BindingsSet refId="PCMainManualContent_binding" />
+    <BindingsSet refId="PCAuditsContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />
@@ -23,6 +24,7 @@
     <EventBindingsSet refId="PCMainManualContent_eventbinding" />
     <EventBindingsSet refId="LoginContent_eventbinding" />
     <EventBindingsSet refId="PCAlarmsNavContent_eventbinding" />
+    <EventBindingsSet refId="PCAuditsContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="AlarmDetailsDialog" />
@@ -35,7 +37,7 @@
     <Content refId="PCMainManualContent" />
     <Content refId="PCMainAuto2Content" />
     <Content refId="PCTopNavContent" />
-    <Content refId="PCServiceContent" />
+    <Content refId="PCAuditsContent" />
     <Content refId="PCAlarmsContent" />
     <Content refId="AlarmDetailsContent" />
     <Content refId="PCBottomContent" />
@@ -45,6 +47,8 @@
     <Content refId="PCAlarmsHistoryContent" />
     <Content refId="PCFilesContent" />
     <Content refId="PCFilesNavContent" />
+    <Content refId="PCUpdatesContent" />
+    <Content refId="PCPackMLContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

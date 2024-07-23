@@ -126,6 +126,12 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	
+	IF MpAxisBasic_0.IsHomed THEN
+		gIsConvHomed := TRUE;
+	ELSE
+		gIsConvHomed := FALSE;
+	END_IF
+	
 	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
 	
 	MpPackMLMode_0();

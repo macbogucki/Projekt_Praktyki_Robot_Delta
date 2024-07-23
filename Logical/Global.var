@@ -19,4 +19,5 @@ VAR
 	StopExecutedPlace : BOOL;
 	ResetExecutePickCore : BOOL;
 	ResetExecutedPickCore : BOOL;
+	gIsConvHomed : BOOL;
 END_VAR

@@ -8,7 +8,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
-	//IF NOT(gManualMode) THEN
+	IF NOT(gManualMode) THEN
 	
     CASE PC_Step OF
         
@@ -98,7 +98,7 @@ PROGRAM _CYCLIC
 
 	
 	//ELSE MpPickCore_0.Enable := FALSE;
-//	END_IF	
+	END_IF	
 	 
 END_PROGRAM
 

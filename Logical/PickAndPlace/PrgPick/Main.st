@@ -10,7 +10,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
     
-//	IF NOT(gManualMode) THEN
+	IF NOT(gManualMode) THEN
 	
 	CASE C_Step OF
 		C_WAIT_ENABLE:
@@ -72,8 +72,8 @@ PROGRAM _CYCLIC
 				MpPickRegCreateProduct.Parameters.LatchedConveyor.Position:= PickConveyorPosition;			
 				MpPickRegCreateProduct.Parameters.Mode := mpPICK_CREATE_SINGLEITEM;
 				MpPickRegCreateProduct.Parameters.ObjectTypeName := 'MyProduct';
-				MpPickRegCreateProduct.Parameters.Translation.X  := 0;                
-				MpPickRegCreateProduct.Parameters.Translation.Y  := 60; // in the middle of conveyor width
+				MpPickRegCreateProduct.Parameters.Translation.X  := 300;                
+				MpPickRegCreateProduct.Parameters.Translation.Y  := 100; // in the middle of conveyor width
 				MpPickRegCreateProduct.Parameters.Translation.Z  := 10;  
 				MpPickRegCreateProduct.Create := TRUE;
 				// gTokenNumber :
@@ -107,6 +107,6 @@ PROGRAM _CYCLIC
 	MpPickRegCreateProduct.MpLink := ADR(gPickRegister);
 	MpPickRegCreateProduct();
 		
-//	END_IF
+	END_IF
      
 END_PROGRAM

@@ -18,9 +18,7 @@
         <Variable Name="gAxisQ3" RecursiveEnable="2" />
         <Variable Name="gAxisQ4" RecursiveEnable="2" />
         <Variable Name="gDeleteObjects" />
-        <Variable Name="DeltaParameters" RecursiveEnable="2" />
         <Variable Name="g4AxDeltaA" RecursiveEnable="2" />
-        <Variable Name="MpDelta4Axis_0" RecursiveEnable="2" />
         <Variable Name="P0" RecursiveEnable="2" />
         <Variable Name="P1" RecursiveEnable="2" />
         <Variable Name="P2" RecursiveEnable="2" />

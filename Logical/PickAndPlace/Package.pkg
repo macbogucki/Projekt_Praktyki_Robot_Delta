@@ -4,7 +4,6 @@
   <Objects>
     <Object Type="Package">UserLibraries</Object>
     <Object Type="File" Description="Pick and place global variables">PrgGlobal.var</Object>
-    <Object Type="Program" Language="IEC" Description="Handle Delta &amp; Conveyor Belts">PrgMechs</Object>
     <Object Type="Program" Language="IEC" Description="PickCore process handling">PrgPickCore</Object>
     <Object Type="Program" Language="IEC" Description="Pick the products">PrgPick</Object>
     <Object Type="Program" Language="IEC">MainProg</Object>

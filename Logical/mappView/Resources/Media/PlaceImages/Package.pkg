@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">4_krazki.svg</Object>
+    <Object Type="File">0_krazkow.svg</Object>
+    <Object Type="File">1_krazek.svg</Object>
+    <Object Type="File">2_krazki.svg</Object>
+    <Object Type="File">3_krazki.svg</Object>
+  </Objects>
+</Package>

@@ -28,6 +28,9 @@ PROGRAM _INIT
 	gAxisQ3;
 	gAxisQ4;
 	
+	place := 0;
+	conv := 0;
+	
 	IF DiagCpuIsARsim() THEN
 		homingModeQ1.Homing.Mode := mcHOMING_DIRECT;
 		homingModeQ2.Homing.Mode := mcHOMING_DIRECT;

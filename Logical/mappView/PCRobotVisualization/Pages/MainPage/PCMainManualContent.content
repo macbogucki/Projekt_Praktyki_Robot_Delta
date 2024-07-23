@@ -2,32 +2,40 @@
 <Content id="PCMainManualContent" height="880" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="sds" top="0" left="640" width="430" height="75" zIndex="1" text="Ręczne ssterowanie" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider" top="85" left="140" zIndex="2" showUnit="true" smallChange="2" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="ConvStatus" top="510" left="395" zIndex="3" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ConvToggleButton" top="520" left="220" width="150" height="75" zIndex="4" multiLine="true" text="Start/Stop Conveyor" wordWrap="true" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="225" left="240" zIndex="5" text="X" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="305" left="240" zIndex="6" text="Y" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="390" left="240" zIndex="7" text="Z" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="555" zIndex="8" text="Axis Q1" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="300" left="555" zIndex="9" text="Axis Q2" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="385" left="555" zIndex="10" text="Axis Q3" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Button" id="PhotoButton" top="180" left="1235" width="150" height="75" zIndex="11" multiLine="true" text="$IAT/TakePhoto" wordWrap="true" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="PackMLButton" top="685" left="230" width="150" height="75" zIndex="12" multiLine="true" text="Pack ML" wordWrap="true" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveXPosButton" top="205" left="160" width="60" height="60" zIndex="13" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveXNegButton" top="205" left="290" width="60" height="60" zIndex="14" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label7" top="130" left="55" zIndex="15" text="$IAT/Velocity" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveYPosButton" top="290" left="155" width="60" height="60" zIndex="16" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveYNegButton" top="295" left="290" width="60" height="60" zIndex="17" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveZPosButton" top="375" left="155" width="60" height="60" zIndex="18" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveZNegButton" top="375" left="290" width="60" height="60" zIndex="19" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="205" left="655" width="60" height="60" zIndex="20" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="205" left="750" width="60" height="60" zIndex="21" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="285" left="655" width="60" height="60" zIndex="22" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="285" left="750" width="60" height="60" zIndex="23" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="365" left="655" width="60" height="60" zIndex="24" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton12" top="365" left="750" width="60" height="60" zIndex="25" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="340" left="985" width="680" height="488" zIndex="26" backColor="rgba(211, 211, 211, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="sds1" top="285" left="1190" width="290" height="40" zIndex="27" text="Podgląd zdjęcia" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="170" left="95" width="765" height="310" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="VelocitySlider" top="60" left="465" zIndex="2" showUnit="true" smallChange="2" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="ConvStatus" top="150" left="1330" zIndex="3" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ConvToggleButton" top="155" left="1155" width="150" height="75" zIndex="4" multiLine="true" text="Start/Stop Conveyor" wordWrap="true" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="210" left="470" zIndex="5" text="X" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="290" left="470" zIndex="6" text="Y" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="375" left="470" zIndex="7" text="Z" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="205" left="785" zIndex="8" text="Axis Q1" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="285" left="785" zIndex="9" text="Axis Q2" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="370" left="785" zIndex="10" text="Axis Q3" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Button" id="PhotoButton" top="315" left="1300" width="150" height="75" zIndex="11" multiLine="true" text="$IAT/TakePhoto" wordWrap="true" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="PackMLButton" top="495" left="95" width="150" height="75" zIndex="12" multiLine="true" text="Pack ML" wordWrap="true" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveXPosButton" top="190" left="390" width="60" height="60" zIndex="13" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveXNegButton" top="190" left="520" width="60" height="60" zIndex="14" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="105" left="380" zIndex="15" text="$IAT/Velocity" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveYPosButton" top="275" left="385" width="60" height="60" zIndex="16" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveYNegButton" top="280" left="520" width="60" height="60" zIndex="17" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveZPosButton" top="360" left="385" width="60" height="60" zIndex="18" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MoveZNegButton" top="360" left="520" width="60" height="60" zIndex="19" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="190" left="885" width="60" height="60" zIndex="20" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="190" left="980" width="60" height="60" zIndex="21" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="270" left="885" width="60" height="60" zIndex="22" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="270" left="980" width="60" height="60" zIndex="23" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="350" left="885" width="60" height="60" zIndex="24" image="Media/SymbolLib/Edit/Add.svg" textAlign="center" rotation="0deg" fontSize="64px" bold="false" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton12" top="350" left="980" width="60" height="60" zIndex="25" image="Media/minus.svg" imageHeight="30" textAlign="center" fontSize="64px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="480" left="1180" width="423" height="340" zIndex="26" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="sds1" top="420" left="1255" width="290" height="40" zIndex="27" text="Podgląd zdjęcia" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="80" left="330" width="765" height="380" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="StartButton" top="105" left="115" width="140" height="55" zIndex="29" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="18px" bold="false" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="StopButton" top="175" left="115" width="140" height="55" zIndex="30" text="Stop" backColor="rgba(255, 0, 0, 1)" mouseDownBackColor="rgba(139, 0, 0, 1)" fontSize="18px" bold="false" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ResetButton" top="245" left="115" width="140" height="55" zIndex="31" text="$IAT/Reset" fontSize="18px" bold="false" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearButton" top="315" left="115" width="140" height="55" zIndex="32" text="$IAT/Clear" fontSize="18px" bold="false" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="AbortButton" top="385" left="115" width="140" height="55" zIndex="33" text="$IAT/Abort" fontSize="18px" bold="false" style="Command" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="85" left="70" width="220" height="380" zIndex="28" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.ImageList" id="PlaceImageList" top="695" left="340" width="290" height="80" zIndex="34" imageList="['0_krazkow.svg', '1_krazek.svg', '2_krazki.svg', '3_krazki.svg', '4_krazki.svg']" imagePrefix="Media/PlaceImages/" opacity="1" />
+    <Widget xsi:type="widgets.brease.ImageList" id="ConvImageList" top="560" left="340" width="415" height="115" zIndex="35" imageList="['conv.svg', 'conv_with_token.svg']" imagePrefix="Media/Conv/" opacity="1" />
   </Widgets>
 </Content>

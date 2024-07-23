@@ -18,5 +18,8 @@
     <Object Type="File">PCAlarmsNavContent.eventbinding</Object>
     <Object Type="File">PCMainAuto1Content.binding</Object>
     <Object Type="File">PCMainManualContent.binding</Object>
+    <Object Type="File">PCAuditsContent.binding</Object>
+    <Object Type="File">PCAuditsContent.eventbinding</Object>
+    <Object Type="File">PCAlarmsContent.binding</Object>
   </Objects>
 </Package>

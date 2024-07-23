@@ -29,5 +29,15 @@
 <Source xsi:type="opcUa" refId="::PrgManual:MoveYNeg" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYNegButton" attribute="value" />
 </Binding>
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:conv" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvImageList" attribute="selectedIndex" />
+</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:place" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="PlaceImageList" attribute="selectedIndex" />
+</Binding>
 </Bindings>
 </BindingsSet>

@@ -2,8 +2,9 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
+    <Object Type="File">PCAuditsContent.content</Object>
     <Object Type="File" Description="Page description">PCServicePage.page</Object>
-    <Object Type="File">PCServiceContent.content</Object>
     <Object Type="File">PCServiceNavContent.content</Object>
+    <Object Type="File">PCUpdatesContent.content</Object>
   </Objects>
 </Package>

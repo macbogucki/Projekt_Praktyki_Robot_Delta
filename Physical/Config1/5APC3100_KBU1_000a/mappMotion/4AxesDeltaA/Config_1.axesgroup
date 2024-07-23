@@ -73,6 +73,6 @@
         <Property ID="FeatureRef[6]" Value="Feature_MotionPacketLog" />
       </Group>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

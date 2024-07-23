@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="PCAuditsContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="PCAuditsContent.ExportMomentaryPushButton.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="PCAuditsContent" widgetRefId="ExportMomentaryPushButton" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="PCAuditsContent" widgetRefId="AuditList1">
+            <Method xsi:type="widgets.brease.AuditList.Action.Export" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PCAuditsContent.ClearMomentaryPushButton.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="PCAuditsContent" widgetRefId="ClearMomentaryPushButton" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Audyt:DeleteAudit">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

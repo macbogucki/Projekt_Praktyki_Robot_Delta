@@ -35,7 +35,7 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gAxisQ2" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -71,7 +71,7 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gAxisQ3" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -107,7 +107,7 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gAxisQ4" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -146,6 +146,6 @@
       <Property ID="TorqueIsInvisible" Value="0" />
       <Property ID="TorqueIsReadOnly" Value="0" />
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="PCAuditsContent" height="980" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="160" left="445" width="830" height="600" zIndex="0" itemsPerPage="10">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditID" width="50" zIndex="0" columnType="id" text="ID" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditOperatorName" width="210" zIndex="1" columnType="operator name" text="Operator Name" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditText" width="330" zIndex="2" text="Text" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditTimestamp" width="240" zIndex="3" columnType="timestamp" text="Timestamp" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ExportMomentaryPushButton" top="785" left="445" width="150" height="65" zIndex="1" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/Export" imageColor="rgba(255, 255, 255, 1)" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearMomentaryPushButton" top="785" left="630" width="150" height="65" zIndex="2" image="Media/SymbolLib/Edit/Delete.svg" text="Clear all" imageColor="rgba(255, 255, 255, 1)" style="Command" />
+  </Widgets>
+</Content>

@@ -7,5 +7,6 @@
     <Object Type="File" Description="2">PCMainAuto2Content.content</Object>
     <Object Type="File">PCMainManualContent.content</Object>
     <Object Type="File">PCTopNavContent.content</Object>
+    <Object Type="File">PCPackMLContent.content</Object>
   </Objects>
 </Package>

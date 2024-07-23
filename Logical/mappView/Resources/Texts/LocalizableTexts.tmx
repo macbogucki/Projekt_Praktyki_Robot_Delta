@@ -154,5 +154,28 @@ Angemeldet als</seg>
         <seg>Abort</seg>
       </tuv>
     </tu>
+    <tu tuid="CurrentState">
+      <tuv xml:lang="pl">
+        <seg>Obecny stan</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Aktuellen Zustand</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Export">
+      <tuv xml:lang="pl">
+        <seg>Eksport</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Export</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

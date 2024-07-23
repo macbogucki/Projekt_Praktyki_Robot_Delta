@@ -11,5 +11,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="widgets.brease.Login.Event" contentRefId="LoginContent" widgetRefId="Login" event="LoginSuccess" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Audyt:Login">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginContent.Login.LoginFailed">
+      <Source xsi:type="widgets.brease.Login.Event" contentRefId="LoginContent" widgetRefId="Login" event="LoginFailed" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Audyt:LoginFailed">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

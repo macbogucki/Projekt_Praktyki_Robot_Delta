@@ -62,11 +62,12 @@ PROGRAM _CYCLIC
 			
 			
 		mpPACKML_STATE_STOPPING:
-			MpDelta4Axis_0.Power := FALSE;
-			MpAxisBasic_0.Power := FALSE;
-			ReadyMechanics := FALSE;
 			StopExecute := TRUE;
+			
 			IF StopExecutedPick AND StopExecutedPickCore AND StopExecutedPlace THEN
+				MpDelta4Axis_0.Power := FALSE;
+				MpAxisBasic_0.Power := FALSE;
+				ReadyMechanics := FALSE;
 				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
 			
@@ -94,11 +95,9 @@ PROGRAM _CYCLIC
 		
 		// Starting state - conveyor start
 		mpPACKML_STATE_STARTING:
+			MpPackMLMode_0.Start := FALSE;
 			MpAxisBasic_0.MoveVelocity := TRUE;
 			MpAxisBasic_1.MoveVelocity := TRUE;
-			IF MpPackMLMode_0.Start THEN
-				MpPackMLMode_0.Start := FALSE;
-			END_IF	
 			IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
 				ProgramPickExecuteBool := TRUE;
 				MpPackMLStateComplete(gPackMLCore,1);

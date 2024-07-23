@@ -14,6 +14,7 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Audyt" Source="PickAndPlace.Audyt.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Vision" Source="Camera.Vision.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="UsersMenag" Source="PickAndPlace.UsersMenagment.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -115,5 +116,6 @@
     <LibraryObject Name="astime" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpUser" Source="Libraries.MpUser.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

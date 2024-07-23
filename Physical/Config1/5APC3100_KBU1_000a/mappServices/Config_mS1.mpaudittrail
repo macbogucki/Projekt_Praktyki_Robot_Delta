@@ -11,9 +11,11 @@
       <Selector ID="TextSource">
         <Property ID="OutputFormat" Value="[%[TIME=%c]] [%msg]" />
       </Selector>
+      <Selector ID="Archive" Value="On" />
       <Group ID="Export">
         <Property ID="Encrypt" Value="FALSE" />
       </Group>
     </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

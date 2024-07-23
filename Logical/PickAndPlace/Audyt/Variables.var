@@ -1,7 +1,24 @@
 VAR
 	MpAuditTrail_0 : MpAuditTrail;
 	TypeVar : WSTRING[100];
-	MessageVar : WSTRING[100];
+	MessageVarStart : WSTRING[100];
 	CommentVar : WSTRING[100];
 	Zmienna : BOOL;
+	DeleteAudit : BOOL;
+	MpUserLogin_0 : MpUserLogin;
+	R_TRIG_0 : R_TRIG;
+	MessageVarLogin : WSTRING[100];
+	MessageVarStop : WSTRING[100];
+	MessageVarLogout : WSTRING[100];
+	MessageVarCase : WSTRING[100];
+	MessageVarAlarm : WSTRING[100];
+	R_TRIG_1 : R_TRIG;
+	R_TRIG_2 : R_TRIG;
+	Login : BOOL;
+	R_TRIG_3 : R_TRIG;
+	Logout : BOOL;
+	R_TRIG_4 : R_TRIG;
+	R_TRIG_5 : R_TRIG;
+	LoginFailed : BOOL;
+	MessageVarLoginFailed : WSTRING[100];
 END_VAR

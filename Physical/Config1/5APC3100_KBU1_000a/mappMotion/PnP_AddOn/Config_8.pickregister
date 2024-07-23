@@ -69,7 +69,7 @@
         </Group>
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gPlaceRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
@@ -142,6 +142,6 @@
         </Group>
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

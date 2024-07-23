@@ -48,7 +48,7 @@ PROGRAM _CYCLIC
             ReadyPickCore := TRUE;
             
             IF CmdStart THEN
-                //MpPickCore_0.Parameters.OperationMode := 'ConveyorToConveyor';  //ZMIENIONE NA CZAS TESTOW!!!!!!
+                MpPickCore_0.Parameters.OperationMode := 'ConveyorToConveyor';  //ZMIENIONE NA CZAS TESTOW!!!!!!
 			    MpPickCore_0.ProcessStart := TRUE;
                 PC_Step := PC_WAIT_START_CORE_PROCESS;
             END_IF

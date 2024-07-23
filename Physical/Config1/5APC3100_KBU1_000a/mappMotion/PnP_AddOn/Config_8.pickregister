@@ -74,7 +74,7 @@
   <Element ID="gPlaceRegister" Type="pickregister">
     <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPlace" />
-      <Property ID="Length" Value="205" />
+      <Property ID="Length" Value="215" />
       <Property ID="Width" Value="60" />
       <Property ID="Height" Value="10" />
       <Property ID="MaxItems" Value="5" />

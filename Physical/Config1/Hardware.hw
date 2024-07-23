@@ -62,6 +62,7 @@
     <Parameter ID="FileDeviceName3" Value="CNC_PrgDirRobot" />
     <Parameter ID="FileDevicePath3" Value="F:\" />
     <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaPort" Value="4841" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
   <Module Name="80VD100PD.C000-14" Type="80VD100PD.C000-14" Version="2.5.0.0">

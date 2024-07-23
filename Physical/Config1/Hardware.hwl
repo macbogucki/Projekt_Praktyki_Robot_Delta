@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/19/2024 13:39:11" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/22/2024 21:44:09" />
   </TimeStamps>
   <Modules>
     <Module Name="80VD100PD.C000-14" Type="80VD100PD.C000-14" X="452" Y="634" />
@@ -21,6 +21,7 @@
     <Module Name="X20PS9400" Type="X20PS9400" X="328" Y="286" />
     <Module Name="X20TB12" Type="X20TB12" X="328" Y="313" />
     <Module Name="X20BC0083" Type="X20BC0083" X="303" Y="286" />
+    <Module Name="VSS112R24.042P-000" Type="VSS112R24.042P-000" X="598" Y="634" />
   </Modules>
   <Links>
     <Link From="5AC901.IPLK-00" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
@@ -42,6 +43,17 @@
       <Point X="510" Y="240" />
       <Point X="501" Y="240" />
       <Point X="501" Y="240" />
+    </Link>
+    <Link From="80VD100PD.C000-14" To="VSS112R24.042P-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="501" Y="708" />
+      <Point X="501" Y="708" />
+      <Point X="510" Y="708" />
+      <Point X="522" Y="708" />
+      <Point X="522" Y="765" />
+      <Point X="616" Y="765" />
+      <Point X="616" Y="757" />
+      <Point X="616" Y="752" />
+      <Point X="616" Y="752" />
     </Link>
     <Link From="80VD100PD.C000-14" To="8LVA23.B1030D200-0b" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
       <Point X="460" Y="687" />
@@ -81,8 +93,8 @@
       <Point X="496" Y="758" />
       <Point X="496" Y="758" />
       <Point X="510" Y="758" />
-      <Point X="515" Y="758" />
-      <Point X="515" Y="425" />
+      <Point X="536" Y="758" />
+      <Point X="536" Y="425" />
       <Point X="863.5" Y="425" />
       <Point X="863.5" Y="434.1" />
       <Point X="863.5" Y="441.1" />
@@ -132,8 +144,8 @@
       <Point X="471" Y="290" />
       <Point X="471" Y="301" />
       <Point X="471" Y="315" />
-      <Point X="543" Y="315" />
-      <Point X="543" Y="244" />
+      <Point X="536" Y="315" />
+      <Point X="536" Y="244" />
       <Point X="727.5" Y="244" />
       <Point X="727.5" Y="275.1" />
       <Point X="727.5" Y="282.1" />
@@ -143,8 +155,8 @@
       <Point X="496" Y="290" />
       <Point X="496" Y="290" />
       <Point X="510" Y="290" />
-      <Point X="550" Y="290" />
-      <Point X="550" Y="265" />
+      <Point X="543" Y="290" />
+      <Point X="543" Y="265" />
       <Point X="896.5" Y="265" />
       <Point X="896.5" Y="275.1" />
       <Point X="896.5" Y="282.1" />

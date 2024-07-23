@@ -24,7 +24,7 @@
         <Group ID="Position[2]">
           <Property ID="Object" Value="MyProduct" />
           <Group ID="Translation">
-            <Property ID="X" Value="48.0" />
+            <Property ID="X" Value="48" />
             <Property ID="Y" Value="0.0" />
             <Property ID="Z" Value="0.0" />
           </Group>
@@ -37,7 +37,7 @@
         <Group ID="Position[3]">
           <Property ID="Object" Value="MyProduct" />
           <Group ID="Translation">
-            <Property ID="X" Value="96.0" />
+            <Property ID="X" Value="96" />
             <Property ID="Y" Value="0.0" />
             <Property ID="Z" Value="0.0" />
           </Group>
@@ -50,7 +50,7 @@
         <Group ID="Position[4]">
           <Property ID="Object" Value="MyProduct" />
           <Group ID="Translation">
-            <Property ID="X" Value="144.0" />
+            <Property ID="X" Value="144" />
             <Property ID="Y" Value="0.0" />
             <Property ID="Z" Value="0.0" />
           </Group>

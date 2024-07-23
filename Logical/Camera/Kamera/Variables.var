@@ -1,0 +1,8 @@
+VAR
+	MpLink : ViComponentType;
+	Enable : BOOL;
+	AcquisitionParameters : ViBaseAxBsdAcqAcqParType;
+	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
+	ViAxisAcquisition_0 : ViBaseAxisBasedAcquisition;
+	MakingPhoto : BOOL;
+END_VAR

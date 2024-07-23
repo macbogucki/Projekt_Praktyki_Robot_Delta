@@ -10,7 +10,7 @@ VAR
 	PlaceConveyorPosition : LREAL;
 	PlaceConveyorLength : LREAL := 205; (*must be the same as place conveyor length in MpPick configuration*)
 	gContainerInfo : ARRAY[0..3] OF MpPickObjPosInfoType;
-	gTokenNumber : UDINT;
+	gTokenNumber : {REDUND_UNREPLICABLE} UDINT := 0;
 	gDeleteObjects : BOOL;
 	gManualMode : BOOL;
 END_VAR

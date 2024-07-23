@@ -9,5 +9,6 @@
     <Object Type="Package">PickAndPlace</Object>
     <Object Type="Package">mappView</Object>
     <Object Type="File">Project.language</Object>
+    <Object Type="Package">Camera</Object>
   </Objects>
 </Package>

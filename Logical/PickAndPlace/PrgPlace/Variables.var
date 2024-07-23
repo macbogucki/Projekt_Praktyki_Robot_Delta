@@ -7,14 +7,15 @@ VAR
 	ContainerID : UDINT;
 	ElapsedDistance : LREAL;
 END_VAR
-(*   *)
+(**)
 (*Functionblocks*)
 VAR
 	MpPickRegister_0 : MpPickRegister;
 	MpPickRegCreateContainer : MpPickRegCreateObject;
 	MpPickRegGetObjectsContainer : MpPickRegGetObjects;
-	TON_0 : TON;
 	MpPickRegDeleteTokens : MpPickRegDeleteObjects;
 	Iterator : USINT;
 	numberOfDeletes : USINT;
+	TON_1 : TON;
+	TON_0 : TON;
 END_VAR

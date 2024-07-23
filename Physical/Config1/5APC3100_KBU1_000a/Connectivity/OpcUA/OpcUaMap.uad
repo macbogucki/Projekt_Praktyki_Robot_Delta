@@ -10,13 +10,16 @@
   <DefaultView>
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
-        <Variable Name="g4AxDeltaA" RecursiveEnable="2" />
         <Variable Name="CmdStart" />
-        <Variable Name="DeltaParameters" RecursiveEnable="2" />
+        <Variable Name="gAxis_1" RecursiveEnable="2" />
+        <Variable Name="gAxis_2" RecursiveEnable="2" />
         <Variable Name="gAxisQ1" RecursiveEnable="2" />
         <Variable Name="gAxisQ2" RecursiveEnable="2" />
         <Variable Name="gAxisQ3" RecursiveEnable="2" />
         <Variable Name="gAxisQ4" RecursiveEnable="2" />
+        <Variable Name="gDeleteObjects" />
+        <Variable Name="DeltaParameters" RecursiveEnable="2" />
+        <Variable Name="g4AxDeltaA" RecursiveEnable="2" />
         <Variable Name="MpDelta4Axis_0" RecursiveEnable="2" />
         <Variable Name="P0" RecursiveEnable="2" />
         <Variable Name="P1" RecursiveEnable="2" />
@@ -26,28 +29,40 @@
         <Variable Name="PickConveyorPosition" />
         <Variable Name="PlaceConveyorLength" />
         <Variable Name="PlaceConveyorPosition" />
+        <Variable Name="ProgramPickExecuteBool" />
         <Variable Name="ReadyMechanics" />
         <Variable Name="ReadyPickCore" />
         <Variable Name="ReadyPickReg" />
         <Variable Name="ReadyPlaceReg" />
         <Variable Name="ReadyToStart" />
         <Variable Name="gManualMode" />
-        <Variable Name="gDeleteObjects" />
       </GlobalVariables>
+      <Task Name="Vision">
+        <Variable Name="Cam" RecursiveEnable="2" />
+      </Task>
       <Task Name="MainProg">
         <Variable Name="MpPackMLMode_0">
+          <Variable Name="MpLink" />
+          <Variable Name="Enable" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="ModeID" />
+          <Variable Name="Activate" />
           <Variable Name="Start" />
           <Variable Name="Stop" />
           <Variable Name="Reset" />
+          <Variable Name="Hold" />
+          <Variable Name="Unhold" />
+          <Variable Name="Suspend" />
+          <Variable Name="Unsuspend" />
           <Variable Name="Abort" />
           <Variable Name="Clear" />
-          <Variable Name="Error" />
-          <Variable Name="Info">
-            <Variable Name="ModeCurrent" />
-            <Variable Name="StateCurrent" />
-          </Variable>
-          <Variable Name="StateCurrent" />
           <Variable Name="StateComplete" />
+          <Variable Name="Active" />
+          <Variable Name="Error" />
+          <Variable Name="StatusID" />
+          <Variable Name="ChangeModeAllowed" />
+          <Variable Name="ModeActive" />
+          <Variable Name="StateCurrent" />
         </Variable>
       </Task>
       <Task Name="PrgManual">

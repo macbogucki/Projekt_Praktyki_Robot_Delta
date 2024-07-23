@@ -29,8 +29,18 @@
     <Object Type="Library" Language="binary" Description="The AsIODiag library provides functions for creating and evaluating I/O module information.">AsIODiag</Object>
     <Object Type="Library" Language="Binary" Description="Centralized event audit trail">MpAudit</Object>
     <Object Type="Library" Language="Binary" Description="OMAC PackML">MpPackML</Object>
-    <Object Type="Library" Language="binary" Description="The AsTime Library supports DATE_AND_TIME and TIME data types.">astime</Object>
-    <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
+    <Object Type="Library" Language="binary" Description="The AsARCfg library supports reading and writing Automation Runtime configurations.">AsARCfg</Object>
+    <Object Type="Library" Language="binary" Description="The powerlnk library supports low level layer 2 access to POWERLINK networks.">powerlnk</Object>
+    <Object Type="Library" Language="binary" Description="The AsEPL library is used to access service data objects of Ethernet-Powerlink stations">AsEPL</Object>
+    <Object Type="Library" Language="binary" Description="The AsIO library makes it possible to determine the states and values of a data point and carry out forcing operations.">AsIO</Object>
+    <Object Type="Library" Language="binary" Description="The DataObj library can be used to dynamically create, dynamically delete and copy data objects, etc. ">DataObj</Object>
+    <Object Type="File">mCoWebServ.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ1.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ2.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ3.mcowebservercfg</Object>
+    <Object Type="File">mCoWebServ4.mcowebservercfg</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
+    <Object Type="Library" Language="binary" Description="[mapp Vision] Base library">ViBase</Object>
+    <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
   </Objects>
 </Package>

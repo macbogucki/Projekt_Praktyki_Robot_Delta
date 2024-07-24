@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="PCTopContent" height="200" width="1920" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Image" id="Logo" top="10" left="10" width="270" height="180" zIndex="0" image="Media/br_logo.jpg" />
+  </Widgets>
+</Content>

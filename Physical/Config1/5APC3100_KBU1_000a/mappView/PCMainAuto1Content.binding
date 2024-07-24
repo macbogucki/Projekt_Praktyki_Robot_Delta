@@ -29,5 +29,9 @@
 <Source xsi:type="opcUa" refId="::Vision:Cam.Status.AquisitionComplete" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ConvImageList" attribute="selectedIndex" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:PackMLCurrentStateString" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="CurrentStateTextOutput" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

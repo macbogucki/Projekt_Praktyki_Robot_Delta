@@ -1,23 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PCMainAuto1Content" height="880" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="sds" top="25" left="690" width="290" height="40" zIndex="2" text=" Tryb Conv → Static" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.InfoBanner" id="InfoBanner" top="0" left="100" zIndex="3" autoClose="true" docking="top">
-      <Widgets />
-    </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="495" left="155" width="130" zIndex="4" text="$IAT/TrackingTime" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="TimeTrackingNumericInput" top="495" left="305" zIndex="5" />
+    <Widget xsi:type="widgets.brease.Label" id="sds" top="20" left="740" width="290" height="40" zIndex="3" text=" Tryb Conv → Static" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="120" left="430" width="130" zIndex="4" text="$IAT/TrackingTime" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="TimeTrackingNumericInput" top="120" left="615" zIndex="5" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="StartButton" top="90" left="180" width="140" height="55" zIndex="6" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="18px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="StopButton" top="160" left="180" width="140" height="55" zIndex="7" text="Stop" backColor="rgba(255, 0, 0, 1)" mouseDownBackColor="rgba(139, 0, 0, 1)" fontSize="18px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ResetButton" top="230" left="180" width="140" height="55" zIndex="8" text="$IAT/Reset" fontSize="18px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearButton" top="300" left="180" width="140" height="55" zIndex="9" text="$IAT/Clear" fontSize="18px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="AbortButton" top="370" left="180" width="140" height="55" zIndex="10" text="$IAT/Abort" fontSize="18px" bold="false" style="Command" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="70" left="135" width="220" height="380" zIndex="1" backColor="rgba(211, 211, 211, 1)" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="335" left="980" width="680" height="488" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="70" left="135" width="680" height="380" zIndex="2" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="335" left="980" width="680" height="488" zIndex="1" backColor="rgba(211, 211, 211, 1)" />
     <Widget xsi:type="widgets.brease.Label" id="sds1" top="280" left="1185" width="290" height="40" zIndex="11" text="Podgląd zdjęcia" fontSize="32px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="590" left="160" width="130" zIndex="12" text="$IAT/CurrentState" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="CurrentStateTextOutput" top="590" left="305" zIndex="13" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.ImageList" id="PlaceImageList" top="700" left="455" width="290" height="80" zIndex="14" imageList="['0_krazkow.svg', '1_krazek.svg', '2_krazki.svg', '3_krazki.svg', '4_krazki.svg']" imagePrefix="Media/PlaceImages/" opacity="1" />
-    <Widget xsi:type="widgets.brease.ImageList" id="ConvImageList" top="565" left="455" width="415" height="115" zIndex="15" imageList="['conv.svg', 'conv_with_token.svg']" imagePrefix="Media/Conv/" opacity="1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="215" left="430" width="130" zIndex="12" text="$IAT/CurrentState" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="CurrentStateTextOutput" top="215" left="605" width="145" height="35" zIndex="13" value="undefined" fontSize="22px" />
+    <Widget xsi:type="widgets.brease.ImageList" id="PlaceImageList" top="715" left="305" width="290" height="80" zIndex="14" imageList="['0_krazkow.svg', '1_krazek.svg', '2_krazki.svg', '3_krazki.svg', '4_krazki.svg']" imagePrefix="Media/PlaceImages/" opacity="1" />
+    <Widget xsi:type="widgets.brease.ImageList" id="ConvImageList" top="525" left="180" width="586" height="175" zIndex="15" imageList="['conv.svg', 'conv_with_token.svg']" imagePrefix="Media/Conv/" opacity="1" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="504" left="135" width="680" height="307" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="sds2" top="460" left="320" width="290" height="40" zIndex="16" text="Podgląd stanowiska" fontSize="32px" />
   </Widgets>
 </Content>

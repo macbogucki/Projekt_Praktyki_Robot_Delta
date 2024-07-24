@@ -15,9 +15,11 @@ PROGRAM _CYCLIC
 	CASE PackMLCurrentState OF
 		mpPACKML_STATE_UNDEFINED:
 			
+			PackMLCurrentStateString := 'Undefined';
 		//State in which pcoess is being stopped slowly
 		mpPACKML_STATE_STOPPING:
 			
+			PackMLCurrentStateString := 'Stopping';
 			MpAxisBasic_0.Stop := TRUE;
 			MpAxisBasic_0.MoveVelocity := FALSE;
 			MpAxisBasic_1.MoveVelocity := FALSE;
@@ -31,6 +33,7 @@ PROGRAM _CYCLIC
 		
 		// Program is stopped and waiting for reset command 
 		mpPACKML_STATE_STOPPED:
+			PackMLCurrentStateString := 'Stopped';
 			MpPackMLMode_0.Clear := FALSE;
 			MpPackMLMode_0.Stop := FALSE;
 			StopExecute := FALSE;
@@ -38,6 +41,7 @@ PROGRAM _CYCLIC
 		
 		// Program parameters are reseting in this state
 		mpPACKML_STATE_RESETTING:
+			PackMLCurrentStateString := 'Resetting';
 			MpPackMLMode_0.Reset := FALSE;
 			gDeleteObjects := TRUE;
 			ResetExecutePickCore := TRUE;
@@ -47,6 +51,7 @@ PROGRAM _CYCLIC
 		
 		// Idle state - watiting for START command
 		mpPACKML_STATE_IDLE:
+			PackMLCurrentStateString := 'Idle';
 			gDeleteObjects := FALSE;
 			ResetExecutePickCore := FALSE;
 			ResetExecutedPickCore := FALSE;
@@ -57,6 +62,7 @@ PROGRAM _CYCLIC
 		
 		// Starting state - conveyor start
 		mpPACKML_STATE_STARTING:
+			PackMLCurrentStateString := 'Starting';
 			MpPackMLMode_0.Start := FALSE;
 			IF NOT(gManualMode) THEN
 				MpAxisBasic_0.MoveVelocity := TRUE;
@@ -69,18 +75,21 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
-			
+			PackMLCurrentStateString := 'Execute';
 		// aborting -> when imidiate stop is in use
 		mpPACKML_STATE_ABORTING:
+			PackMLCurrentStateString := 'Aborting';
 			AbortingAction;
 		
 		// Program is aborted. powers are shut down - waiting for cleaning command
 		mpPACKML_STATE_ABORTED:
+			PackMLCurrentStateString := 'Aborted';
 			MpPackMLMode_0.Abort := FALSE;
 			AbortExecute := FALSE;
 			
 			//Clearing alarms/bugs/warnings
 		mpPACKML_STATE_CLEARING:
+			PackMLCurrentStateString := 'Clearing';
 			MpPackMLStateComplete(gPackMLCore,1);
 
 	END_CASE;

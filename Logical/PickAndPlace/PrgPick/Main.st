@@ -5,7 +5,6 @@ PROGRAM _INIT
 	Error := FALSE;
     
 	ProductSpacing := 120; // distance between two consecutive products
-	gTokenStartPosY := 60;
      
 END_PROGRAM
 
@@ -73,8 +72,8 @@ PROGRAM _CYCLIC
 				MpPickRegCreateProduct.Parameters.LatchedConveyor.Position:= PickConveyorPosition;			
 				MpPickRegCreateProduct.Parameters.Mode := mpPICK_CREATE_SINGLEITEM;
 				MpPickRegCreateProduct.Parameters.ObjectTypeName := 'MyProduct';
-				MpPickRegCreateProduct.Parameters.Translation.X  := 0;                
-				MpPickRegCreateProduct.Parameters.Translation.Y  := gTokenStartPosY; // in the middle of conveyor width
+				MpPickRegCreateProduct.Parameters.Translation.X  := gToken_X;                
+				MpPickRegCreateProduct.Parameters.Translation.Y  := gToken_Y; // in the middle of conveyor width
 				MpPickRegCreateProduct.Parameters.Translation.Z  := 10;  
 				MpPickRegCreateProduct.Create := TRUE;
 				gMakeToken := FALSE;

@@ -23,5 +23,6 @@ TYPE
 	Camera_Output : 	STRUCT 
 		PosMatchX : DINT;
 		PosMatchY : DINT;
+		NumResults : USINT;
 	END_STRUCT;
 END_TYPE

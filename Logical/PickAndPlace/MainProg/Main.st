@@ -33,6 +33,7 @@ PROGRAM _CYCLIC
 		
 		// Program parameters are reseting in this state
 		mpPACKML_STATE_RESETTING:
+			gDeleteObjects := TRUE;
 			ResetExecutePickCore := TRUE;
 			IF ResetExecutedPickCore THEN
 				MpPackMLMode_0.Reset := FALSE;
@@ -41,6 +42,7 @@ PROGRAM _CYCLIC
 		
 		// Idle state - watiting for START command
 		mpPACKML_STATE_IDLE:
+			gDeleteObjects := FALSE;
 			ResetExecutePickCore := FALSE;
 			ResetExecutedPickCore := FALSE;
 			ReadyMechanics := TRUE;

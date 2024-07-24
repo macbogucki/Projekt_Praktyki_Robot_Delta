@@ -31,13 +31,35 @@
 </Binding>
 
 
+
+	
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:conv" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvImageList" attribute="selectedIndex" />
+<Source xsi:type="opcUa" refId="::PrgManual:ZVel" attribute="node" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider2" attribute="node" />
 </Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:place" attribute="value" />
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="node" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:XVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="XVelNumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="YVelNumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:ZVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ZVelNumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenNumber" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="PlaceImageList" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Vision:Cam.Status.AquisitionComplete" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvImageList" attribute="selectedIndex" />
 </Binding>
 </Bindings>
 </BindingsSet>

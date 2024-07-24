@@ -35,9 +35,16 @@
         <Variable Name="ReadyToStart" />
         <Variable Name="gManualMode" />
         <Variable Name="gTokenNumber" />
+        <Variable Name="gMakeToken" />
+        <Variable Name="gToken_Y" />
+        <Variable Name="gToken_X" />
+        <Variable Name="gTcpPositionX" />
+        <Variable Name="gTcpPositionY" />
+        <Variable Name="gTcpPositionZ" />
       </GlobalVariables>
       <Task Name="Vision">
         <Variable Name="Cam" RecursiveEnable="2" />
+        <Variable Name="MakingPhoto" />
       </Task>
       <Task Name="MainProg">
         <Variable Name="MpPackMLMode_0">
@@ -63,6 +70,7 @@
           <Variable Name="ModeActive" />
           <Variable Name="StateCurrent" />
         </Variable>
+        <Variable Name="PackMLCurrentState" />
       </Task>
       <Task Name="PrgManual">
         <Variable Name="MoveXNeg" />
@@ -74,6 +82,11 @@
         <Variable Name="XVel" />
         <Variable Name="YVel" />
         <Variable Name="ZVel" />
+        <Variable Name="HomeX" />
+        <Variable Name="HomeY" />
+        <Variable Name="HomeZ" />
+        <Variable Name="HomingOffset" />
+        <Variable Name="HomingVel" />
       </Task>
       <Task Name="Audyt">
         <Variable Name="MpAuditTrail_0">

@@ -100,6 +100,11 @@
         <Variable Name="Logout" />
         <Variable Name="LoginFailed" />
       </Task>
+      <Task Name="Alarmy">
+        <Variable Name="MpAlarmXHistory_0">
+          <Variable Name="Export" />
+        </Variable>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

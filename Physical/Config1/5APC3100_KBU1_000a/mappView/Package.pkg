@@ -22,5 +22,7 @@
     <Object Type="File">PCAuditsContent.eventbinding</Object>
     <Object Type="File">PCAlarmsContent.binding</Object>
     <Object Type="File">PCAlarmsHistoryContent.binding</Object>
+    <Object Type="File">AlarmDetailsContent.binding</Object>
+    <Object Type="File">PCAlarmsHistoryContent.eventbinding</Object>
   </Objects>
 </Package>

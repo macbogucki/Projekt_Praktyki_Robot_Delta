@@ -35,8 +35,6 @@
         <Variable Name="ReadyToStart" />
         <Variable Name="gManualMode" />
         <Variable Name="gTokenNumber" />
-        <Variable Name="conv" />
-        <Variable Name="place" />
       </GlobalVariables>
       <Task Name="Vision">
         <Variable Name="Cam" RecursiveEnable="2" />

@@ -17,10 +17,15 @@ PROGRAM _CYCLIC
 			
 		//State in which pcoess is being stopped slowly
 		mpPACKML_STATE_STOPPING:
+			
+			MpAxisBasic_0.Stop := TRUE;
+			MpAxisBasic_0.MoveVelocity := FALSE;
+			MpAxisBasic_1.MoveVelocity := FALSE;
 			StopExecute := TRUE;
 			CmdStart := FALSE;
-			IF StopExecutedPick AND StopExecutedPickCore AND StopExecutedPlace THEN
+			IF StopExecutedPick AND MpAxisBasic_0.Stopped AND StopExecutedPickCore AND StopExecutedPlace THEN
 				ReadyMechanics := FALSE;
+				MpAxisBasic_0.Stop := FALSE;
 				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
 		
@@ -33,10 +38,10 @@ PROGRAM _CYCLIC
 		
 		// Program parameters are reseting in this state
 		mpPACKML_STATE_RESETTING:
+			MpPackMLMode_0.Reset := FALSE;
 			gDeleteObjects := TRUE;
 			ResetExecutePickCore := TRUE;
 			IF ResetExecutedPickCore THEN
-				MpPackMLMode_0.Reset := FALSE;
 				ResetingAction;
 			END_IF
 		
@@ -52,13 +57,11 @@ PROGRAM _CYCLIC
 		
 		// Starting state - conveyor start
 		mpPACKML_STATE_STARTING:
-			IF MpPackMLMode_0.Start THEN
-				MpPackMLMode_0.Start := FALSE;
-			END_IF
-			
+			MpPackMLMode_0.Start := FALSE;
 			IF NOT(gManualMode) THEN
 				MpAxisBasic_0.MoveVelocity := TRUE;
 				MpAxisBasic_1.MoveVelocity := TRUE;
+				
 				IF MpAxisBasic_0.Info.PLCopenState = mcAXIS_CONTINUOUS_MOTION THEN
 					ProgramPickExecuteBool := TRUE;		// condition in Pick program
 					MpPackMLStateComplete(gPackMLCore,1);
@@ -69,15 +72,7 @@ PROGRAM _CYCLIC
 			
 		// aborting -> when imidiate stop is in use
 		mpPACKML_STATE_ABORTING:
-			MpDelta4Axis_0.Power := FALSE;
-			MpAxisBasic_0.Power := FALSE;
-			ReadyMechanics := FALSE;
-			AbortExecute := TRUE;
-			CmdStart := FALSE;
-			IF NOT MpDelta4Axis_0.PowerOn
-				AND NOT MpAxisBasic_0.PowerOn THEN
-					MpPackMLStateComplete(gPackMLCore,1);
-			END_IF 
+			AbortingAction;
 		
 		// Program is aborted. powers are shut down - waiting for cleaning command
 		mpPACKML_STATE_ABORTED:
@@ -90,18 +85,17 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	
+	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
+	
+	//Conveyor homing information for camera
 	IF MpAxisBasic_0.IsHomed THEN
 		gIsConvHomed := TRUE;
 	ELSE
 		gIsConvHomed := FALSE;
 	END_IF
 	
-	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
-	
-	
+	//Manual move configuration
 	CheckManualAction;
-	
-	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
 	
 	//MpPack init
 	MpPackMLMode_0();

@@ -7,5 +7,6 @@
     <Object Type="File">AxisConfig.st</Object>
     <Object Type="File">MainInitAction.st</Object>
     <Object Type="File">MpPackCyclicAction.st</Object>
+    <Object Type="File">AbortingAction.st</Object>
   </Objects>
 </Package>

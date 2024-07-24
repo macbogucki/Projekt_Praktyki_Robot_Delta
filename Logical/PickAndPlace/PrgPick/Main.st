@@ -94,6 +94,7 @@ PROGRAM _CYCLIC
 
 			
 	END_CASE
+		
 	IF AbortExecute OR StopExecute THEN
 		C_Step := C_WAIT_ENABLE;
 		ReadyPickReg := FALSE;

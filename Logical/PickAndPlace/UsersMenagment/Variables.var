@@ -1,8 +1,5 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	MpAlarmXCore_0 : MpAlarmXCore;
+	MpAlarmXHistory_0 : MpAlarmXHistory;
+	ZmiennaTestowa : BOOL;
 END_VAR

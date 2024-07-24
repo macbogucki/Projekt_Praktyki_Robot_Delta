@@ -7,6 +7,7 @@
         <Property ID="[0]" Value="16" />
         <Property ID="[1]" Value="2" />
         <Property ID="[2]" Value="18" />
+        <Property ID="[3]" Value="33" />
       </Group>
       <Selector ID="TextSource">
         <Property ID="OutputFormat" Value="[%[TIME=%c]] [%msg]" />

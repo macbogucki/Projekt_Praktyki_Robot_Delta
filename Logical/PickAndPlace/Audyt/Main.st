@@ -13,7 +13,7 @@ PROGRAM _CYCLIC
 	MessageVarLoginFailed := "Logowanie nie powiodlo sie";
 	MessageVarLogout := "Wylogowano uzytkownika";
 	MessageVarCase := "Zmiana trybu pracy";
-	MessageVarAlarm := "Wystapi³ alarm";
+	MessageVarAlarm := "Wystapil alarm";
 
 	//Wywo³ywanie audytu
 	MpAuditTrail_0();

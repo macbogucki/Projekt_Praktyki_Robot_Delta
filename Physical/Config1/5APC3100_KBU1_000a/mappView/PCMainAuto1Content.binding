@@ -21,5 +21,13 @@
 <Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Abort" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="AbortButton" attribute="value" />
 </Binding>
-	</Bindings>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenNumber" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="PlaceImageList" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Vision:Cam.Status.AquisitionComplete" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ConvImageList" attribute="selectedIndex" />
+</Binding>
+</Bindings>
 </BindingsSet>

@@ -70,6 +70,7 @@
           <Variable Name="ModeActive" />
           <Variable Name="StateCurrent" />
         </Variable>
+        <Variable Name="PackMLCurrentState" />
       </Task>
       <Task Name="PrgManual">
         <Variable Name="MoveXNeg" />

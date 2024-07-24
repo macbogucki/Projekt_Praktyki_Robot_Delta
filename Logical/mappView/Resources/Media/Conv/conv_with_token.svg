@@ -47,18 +47,18 @@
        x="0.6638031"
        y="0.28642067" />
     <ellipse
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.62413;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.686225;stroke-dasharray:none;stroke-opacity:1"
        id="path38"
        cx="33.029339"
        cy="28.069229"
-       rx="26.637121"
-       ry="22.340811" />
+       rx="10.597564"
+       ry="10.024722" />
     <ellipse
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.88761;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.704302;stroke-dasharray:none;stroke-opacity:1"
        id="path39"
-       cx="33.244152"
+       cx="32.957737"
        cy="27.997618"
-       rx="22.484022"
-       ry="19.046974" />
+       rx="8.1629887"
+       ry="7.3037271" />
   </g>
 </svg>

@@ -2,6 +2,8 @@
 PROGRAM _INIT
 	(* Insert code here *)
 
+
+
 		//Config camera triggered by position of axis 
 	AcquisitionParameters.StartPosition :=0;
 	AcquisitionParameters.Period := 160;
@@ -38,14 +40,18 @@ PROGRAM _CYCLIC
 	IF Cam.Status.IsCameraReady AND gIsConvHomed THEN
 		ViAxisAcquisition_0.Enable := TRUE;
 		// Token pos
-		IF Cam.Camera_Output.NumResults > 0 AND NOT(Cam.Camera_Output.PhotosNum=OldPhotosNum) THEN
-
-			gToken_X := 120 - (((Cam.Camera_Output.PosMatchX*313)/1.7/108000)-120);
-			gToken_Y := 165 - (((Cam.Camera_Output.PosMatchY*174)/195200)*1.83) + 60;
+		IF EDGENEG(gIsCameraActive) THEN
+		IF Cam.Camera_Output.NumResults > 0 THEN
+			
+			RotationPeriod :=360/ConvVelocityDegrees;
+			gToken_X := 120 - (((Cam.Camera_Output.PosMatchX*313)/1.7/108000)-100);
+			gToken_Y := 165 - (((Cam.Camera_Output.PosMatchY*174)/195200)*1.83) + 45+ ((UINT_TO_REAL(Cam.Camera_Output.ProcesingTime)/1000.0)*ConvVelocityDegrees) ;
 			gMakeToken:=1;
 			
-		END_IF
-		OldPhotosNum:=Cam.Camera_Output.PhotosNum;
+			END_IF
+			
+			END_IF
+
 
 	END_IF 
 	

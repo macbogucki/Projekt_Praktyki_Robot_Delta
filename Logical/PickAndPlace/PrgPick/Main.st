@@ -67,24 +67,22 @@ PROGRAM _CYCLIC
             
 			ElapsedDistance := DistanceOverPeriod(PickConveyorPosition, LastProductConveyorPosition, PickConveyorLength);
             
-			IF (gMakeToken) AND NOT(OldMakeToken) THEN
+			IF EDGEPOS(gMakeToken) THEN
                 
 				MpPickRegCreateProduct.Parameters.LatchedConveyor.Position:= PickConveyorPosition;			
 				MpPickRegCreateProduct.Parameters.Mode := mpPICK_CREATE_SINGLEITEM;
 				MpPickRegCreateProduct.Parameters.ObjectTypeName := 'MyProduct';
-				MpPickRegCreateProduct.Parameters.Translation.X  := gToken_X;                
-				MpPickRegCreateProduct.Parameters.Translation.Y  := gToken_Y; // in the middle of conveyor width
-				MpPickRegCreateProduct.Parameters.Translation.Z  := 10;  
-				MpPickRegCreateProduct.Create := TRUE;
+				MpPickRegCreateProduct.Parameters.Translation.X  := gToken_Y;                
+				MpPickRegCreateProduct.Parameters.Translation.Y  := gToken_X; // in the middle of conveyor width
+					MpPickRegCreateProduct.Parameters.Translation.Z  := 2;  
+					MpPickRegCreateProduct.Create := TRUE;
 				gMakeToken := FALSE;
 				
 				LastProductConveyorPosition := MpPickRegCreateProduct.Parameters.LatchedConveyor.Position;
 			ELSE
 				MpPickRegCreateProduct.Create := FALSE;
 			END_IF
-				OldMakeToken:=gMakeToken;
-				gMakeToken:=0;
-				
+
 				
 				
 			IF MpPickRegCreateProduct.Error THEN

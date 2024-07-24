@@ -6,4 +6,5 @@ VAR
 	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
 	MakingPhoto : BOOL;
 	CameraStatus : UDINT;
+	RotationPeriod : REAL;
 END_VAR

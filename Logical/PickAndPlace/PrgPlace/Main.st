@@ -84,7 +84,7 @@ PROGRAM _CYCLIC
 				MpPickRegCreateContainer.Parameters.ObjectTypeName := 'MyContainer';
                 MpPickRegCreateContainer.Parameters.Translation.X := 30;
 				MpPickRegCreateContainer.Parameters.Translation.Y := 30;// in the middle of conveyor width
-				MpPickRegCreateContainer.Parameters.Translation.Z := 10;
+				MpPickRegCreateContainer.Parameters.Translation.Z := 5;
 				ContainerID := MpPickRegCreateContainer.ObjectPositionId;
 				MpPickRegCreateContainer.Create := TRUE; 
 			

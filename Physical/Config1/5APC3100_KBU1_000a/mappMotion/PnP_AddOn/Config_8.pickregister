@@ -6,7 +6,7 @@
       <Property ID="StandardFrameName" Value="ConveyorPick" />
       <Property ID="Length" Value="600" />
       <Property ID="Width" Value="120" />
-      <Property ID="Height" Value="10" />
+      <Property ID="Height" Value="6" />
       <Property ID="MaxPositionError" Value="10" />
       <Selector ID="MotionSource" Value="Axis">
         <Property ID="AxisRef" Value="gAxis_1" />

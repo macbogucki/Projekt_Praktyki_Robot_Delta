@@ -16,6 +16,8 @@ VAR
 	ResetExecutePickCore : BOOL;
 	gTokenStartPosY : USINT;
 	CmdStart : BOOL := FALSE; (*Set = 1 to start the process*)
+	gIsCameraActive : BOOL;
+	ConvVelocityDegrees : REAL;
 	gDeleteObjects : BOOL;
 	gManualHoming : BOOL;
 	gManualMode : BOOL;

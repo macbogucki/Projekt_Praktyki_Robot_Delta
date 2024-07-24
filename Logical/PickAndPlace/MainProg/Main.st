@@ -109,7 +109,7 @@ PROGRAM _CYCLIC
 	
 	//All axis configuration -mplink -config -init
 	AxisConfigAction;
-    
+    ConvVelocityDegrees:=MpAxisBasic_0.Velocity;
 	//Updating both conveyors position
 	PickConveyorPosition  := MpAxisBasic_0.Position;
 	PlaceConveyorPosition := MpAxisBasic_1.Position;

@@ -43,5 +43,7 @@
     <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
     <Object Type="Library" Language="Binary" Description="User management">MpUser</Object>
     <Object Type="Library" Language="binary" Description="[mapp Vision] Base library">ViBase</Object>
+    <Object Type="Library" Language="Binary" Description="Web access">MpWebXs</Object>
+    <Object Type="Library" Language="binary" Description="The AsArSdm library supports the System Diagnostics Manager">AsArSdm</Object>
   </Objects>
 </Package>

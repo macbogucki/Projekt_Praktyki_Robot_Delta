@@ -20,14 +20,13 @@ PROGRAM _CYCLIC
 		mpPACKML_STATE_STOPPING:
 			
 			PackMLCurrentStateString := 'Stopping';
-			MpAxisBasic_0.Stop := TRUE;
 			MpAxisBasic_0.MoveVelocity := FALSE;
 			MpAxisBasic_1.MoveVelocity := FALSE;
+			
 			StopExecute := TRUE;
 			CmdStart := FALSE;
-			IF StopExecutedPick AND MpAxisBasic_0.Stopped AND StopExecutedPickCore AND StopExecutedPlace THEN
+			IF StopExecutedPick AND StopExecutedPickCore AND StopExecutedPlace THEN
 				ReadyMechanics := FALSE;
-				MpAxisBasic_0.Stop := FALSE;
 				MpPackMLStateComplete(gPackMLCore,1);
 			END_IF
 		
@@ -75,6 +74,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
+			
 			PackMLCurrentStateString := 'Execute';
 		// aborting -> when imidiate stop is in use
 		mpPACKML_STATE_ABORTING:

@@ -57,13 +57,6 @@
                     </Target>
                   </Action>
                 </Step>
-                <Step order="1">
-                  <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-                    </Target>
-                  </Action>
-                </Step>
                 <Step order="2">
                   <Action>
                     <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="ReczneButton">
@@ -87,13 +80,6 @@
                 <Step order="0">
                   <Action>
                     <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto1Button">
-                      <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-                    </Target>
-                  </Action>
-                </Step>
-                <Step order="1">
-                  <Action>
-                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PCTopNavContent" widgetRefId="Auto2Button">
                       <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
                     </Target>
                   </Action>

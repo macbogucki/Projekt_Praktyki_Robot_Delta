@@ -6,6 +6,6 @@
     <Object Type="Package">PCServicePage</Object>
     <Object Type="Package">PCAlarmsPage</Object>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
-    <Object Type="Package">PCFilesPage</Object>
+    <Object Type="Package">PCUsersPage</Object>
   </Objects>
 </Package>

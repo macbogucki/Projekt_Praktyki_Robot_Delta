@@ -53,13 +53,5 @@
 <Source xsi:type="opcUa" refId="::PrgManual:ZVel" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ZVelNumericInput" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenNumber" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="PlaceImageList" attribute="selectedIndex" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Vision:Cam.Status.AquisitionComplete" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvImageList" attribute="selectedIndex" />
-</Binding>
-</Bindings>
+	</Bindings>
 </BindingsSet>

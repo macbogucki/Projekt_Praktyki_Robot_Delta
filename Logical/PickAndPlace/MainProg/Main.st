@@ -92,7 +92,7 @@ PROGRAM _CYCLIC
 	
 	IF MpAxisBasic_0.IsHomed THEN
 		gIsConvHomed := TRUE;
-	ELSE
+   ELSE
 		gIsConvHomed := FALSE;
 	END_IF
 	

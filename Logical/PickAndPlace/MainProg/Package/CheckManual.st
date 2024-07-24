@@ -1,6 +1,6 @@
 
 ACTION CheckManualAction: 
-	gIsConvHomed := MpDelta4Axis_0.IsHomed;
+
 	gTcpPositionX := MpDelta4Axis_0.X;
 	gTcpPositionY := MpDelta4Axis_0.Y;
 	gTcpPositionZ := MpDelta4Axis_0.Z;

@@ -67,7 +67,7 @@ PROGRAM _CYCLIC
             
 			ElapsedDistance := DistanceOverPeriod(PickConveyorPosition, LastProductConveyorPosition, PickConveyorLength);
             
-			IF (gMakeToken) THEN
+			IF (gMakeToken) AND NOT(OldMakeToken) THEN
                 
 				MpPickRegCreateProduct.Parameters.LatchedConveyor.Position:= PickConveyorPosition;			
 				MpPickRegCreateProduct.Parameters.Mode := mpPICK_CREATE_SINGLEITEM;
@@ -82,7 +82,11 @@ PROGRAM _CYCLIC
 			ELSE
 				MpPickRegCreateProduct.Create := FALSE;
 			END_IF
-			
+				OldMakeToken:=gMakeToken;
+				gMakeToken:=0;
+				
+				
+				
 			IF MpPickRegCreateProduct.Error THEN
 				LastStep := C_Step;
 				C_Step   := C_ERROR;

@@ -1,4 +1,5 @@
 VAR
+	OldPhotosNum : USINT;
 	Cam : Camera;
 	ViAxisAcquisition_0 : ViBaseAxisBasedAcquisition;
 	AcquisitionParameters : ViBaseAxBsdAcqAcqParType;

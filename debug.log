@@ -1,9 +1,0 @@
-[0718/092838:ERROR:tcp_socket_win.cc(372)] bind() returned an error: Tylko jedno u¿ycie ka¿dego adresu gniazda (protokó³/adres sieciowy/port) jest normalnie dozwolone. (0x2740)
-[0718/092838:ERROR:devtools_http_handler_impl.cc(295)] Cannot start http server for devtools. Stop devtools.
-[0718/092846:ERROR:renderer_main.cc(212)] Running without renderer sandbox
-[0718/134947:ERROR:tcp_socket_win.cc(372)] bind() returned an error: Tylko jedno u¿ycie ka¿dego adresu gniazda (protokó³/adres sieciowy/port) jest normalnie dozwolone. (0x2740)
-[0718/134947:ERROR:devtools_http_handler_impl.cc(295)] Cannot start http server for devtools. Stop devtools.
-[0718/134952:ERROR:renderer_main.cc(212)] Running without renderer sandbox
-[0718/135357:ERROR:tcp_socket_win.cc(372)] bind() returned an error: Tylko jedno u¿ycie ka¿dego adresu gniazda (protokó³/adres sieciowy/port) jest normalnie dozwolone. (0x2740)
-[0718/135357:ERROR:devtools_http_handler_impl.cc(295)] Cannot start http server for devtools. Stop devtools.
-[0718/135401:ERROR:renderer_main.cc(212)] Running without renderer sandbox

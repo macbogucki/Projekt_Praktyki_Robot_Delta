@@ -7,4 +7,12 @@ VAR
 	MakingPhoto : BOOL;
 	CameraStatus : UDINT;
 	RotationPeriod : REAL;
+	ImageGetter : ViBaseGetImage;
+	BufferForBinaryImageData : ARRAY[0..2500000] OF USINT;
+	BufferForBase64EncodedImageData : STRING[2500000];
+	ImgTransfer : httpEncodeBase64;
+	Buffersize : UDINT;
+	Bufferlen : UDINT;
+	Stringlen : UDINT;
+	CameraImageURL : STRING[2500000];
 END_VAR

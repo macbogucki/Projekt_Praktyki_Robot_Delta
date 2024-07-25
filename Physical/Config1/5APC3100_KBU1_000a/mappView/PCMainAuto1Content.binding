@@ -41,5 +41,10 @@
 <Source xsi:type="opcUa" refId="::Vision:Cam.Camera_Output.PosMatchX" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="NumericOutput1" attribute="value" />
 </Binding>
+
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Vision:CameraImageURL" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="Paper1" attribute="svgContent" />
+</Binding>
 </Bindings>
 </BindingsSet>

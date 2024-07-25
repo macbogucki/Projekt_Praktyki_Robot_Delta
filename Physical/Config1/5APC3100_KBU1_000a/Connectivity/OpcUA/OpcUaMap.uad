@@ -45,6 +45,7 @@
       <Task Name="Vision">
         <Variable Name="Cam" RecursiveEnable="2" />
         <Variable Name="MakingPhoto" />
+        <Variable Name="CameraImageURL" />
       </Task>
       <Task Name="MainProg">
         <Variable Name="MpPackMLMode_0">

@@ -21,13 +21,16 @@ PROGRAM _INIT
 	ViAxisAcquisition_0.AdvancedParameters := AdvancedParameters;
 	MakingPhoto := ViAxisAcquisition_0.InOperation;
 
-	
-	//advanced settings
-	
-	
+	//Config img Acquisition
+	ImageGetter.MpLink:= ADR(gCamera);
+	ImageGetter.Buffer:=ADR(BufferForBinaryImageData);
+	ImageGetter.BufferSize:= SIZEOF(BufferForBinaryImageData);
+	ImageGetter.Type:= viBASE_IMAGE_TYPE_JPG;
+	ImageGetter.QualityLevel:=10;
 
 	//AdvancedParameters.
 	
+	Cam.Parameters.MinScore := 80;
 
 	
 END_PROGRAM
@@ -50,7 +53,9 @@ PROGRAM _CYCLIC
 			
 			END_IF
 			
-			END_IF
+			ImageGetter.Execute:=TRUE;
+
+		END_IF
 
 
 	END_IF 
@@ -59,8 +64,30 @@ PROGRAM _CYCLIC
 	
 	// Token operations (sim creation; pos updater)
 	
+	//GetImage
+	IF EDGEPOS(ImageGetter.Done) THEN	
+		strcpy(ADR(CameraImageURL),ADR('<image x=$'0$' y=$'0$' width=$'615px$' height=$'630px$' href=$'data:image/jpeg;base64,')); // Start of the image element with image dimensions as set in the vision application. 
+		ImgTransfer.pDest :=ADR(BufferForBase64EncodedImageData);
+		Buffersize := SIZEOF(BufferForBase64EncodedImageData);
+		Bufferlen := strlen(ADR(BufferForBase64EncodedImageData));
+		Stringlen := strlen(ADR('$' />'));
+		ImgTransfer.destSize := Buffersize - Bufferlen - Stringlen;
+		ImgTransfer.pSrc := ADR(BufferForBinaryImageData);
+		ImgTransfer.srcLen := ImageGetter.BufferLen;
+		ImgTransfer.enable := TRUE;
+		ImgTransfer();
+		
+		strcat(ADR(CameraImageURL),ADR(BufferForBase64EncodedImageData));
+		strcat(ADR(CameraImageURL),ADR('$' />')) ; // Completion of the image element
+		
+	END_IF
+	
+	IF ImageGetter.Done THEN
+		ImageGetter.Execute := FALSE;
+		END_IF
 		
 	ViAxisAcquisition_0();
+	ImageGetter();
 	
 END_PROGRAM
 

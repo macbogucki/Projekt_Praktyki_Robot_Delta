@@ -5,7 +5,7 @@ PROGRAM _INIT
     Error := FALSE;
 
 	PlaceHoldersSpacing := 120; // distance between two consecutive place holders
-	numberOfDeletes := 0;
+	//numberOfDeletes := 2;
 	gTokenNumber := 0;
 	
 END_PROGRAM
@@ -82,9 +82,9 @@ PROGRAM _CYCLIC
                 MpPickRegCreateContainer.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
                 MpPickRegCreateContainer.Parameters.Mode := mpPICK_CREATE_CONTAINER_EMPTY;
 				MpPickRegCreateContainer.Parameters.ObjectTypeName := 'MyContainer';
-                MpPickRegCreateContainer.Parameters.Translation.X := 30;
-				MpPickRegCreateContainer.Parameters.Translation.Y := 30;// in the middle of conveyor width
-				MpPickRegCreateContainer.Parameters.Translation.Z := 5;
+                MpPickRegCreateContainer.Parameters.Translation.X := 43;
+				MpPickRegCreateContainer.Parameters.Translation.Y := 0;// in the middle of conveyor width
+				MpPickRegCreateContainer.Parameters.Translation.Z := 2;
 				ContainerID := MpPickRegCreateContainer.ObjectPositionId;
 				MpPickRegCreateContainer.Create := TRUE; 
 			
@@ -146,6 +146,7 @@ PROGRAM _CYCLIC
 		IF numberOfDeletes = 4 THEN
 			P_Step := P_WAIT_ENABLE;
 			numberOfDeletes := 0;
+			gTokenNumber := 0;	
 		END_IF
 		IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT) THEN
 			gTokenNumber := Iterator +1;		

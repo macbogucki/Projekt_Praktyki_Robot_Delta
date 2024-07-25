@@ -340,5 +340,28 @@ Aktuelle Alarme</seg>
         <seg>History of alarms</seg>
       </tuv>
     </tu>
+    <tu tuid="ExportToCSV">
+      <tuv xml:lang="pl">
+        <seg>Eksport do CSV</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Export nach CSV</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export to CSV</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ClearAll">
+      <tuv xml:lang="pl">
+        <seg>Wyczyść wszystko</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Alles löschen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Clear all</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

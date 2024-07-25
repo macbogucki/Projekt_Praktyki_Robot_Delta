@@ -93,6 +93,10 @@
 		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gManualHoming" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="HomingButton" attribute="value" />
+		</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Vision:MakingPhoto" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="TakePhotoPushButton" attribute="value" />
 </Binding>
-	</Bindings>
+</Bindings>
 </BindingsSet>

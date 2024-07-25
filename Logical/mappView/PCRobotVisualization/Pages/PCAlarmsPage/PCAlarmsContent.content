@@ -9,8 +9,7 @@
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmTimestamp" zIndex="3" columnType="timestamp" text="Timestamp" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeButton" top="710" left="845" width="210" height="50" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="Acknowledge" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="710" left="1065" width="210" height="50" zIndex="2" image="Media/SymbolLib/Symbols/Accept.svg" text="Acknowledge All" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="DetailsAlarmButton" top="710" left="445" width="210" height="50" zIndex="3" image="Media/SymbolLib/File/Search.svg" text="Details" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeButton" top="710" left="845" width="210" height="50" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Acknowledge" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="710" left="1065" width="210" height="50" zIndex="2" image="Media/SymbolLib/Symbols/Accept.svg" text="$IAT/AcknowledgeAll" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
   </Widgets>
 </Content>

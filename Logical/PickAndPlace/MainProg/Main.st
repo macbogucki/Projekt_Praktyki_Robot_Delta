@@ -32,6 +32,9 @@ PROGRAM _CYCLIC
 		
 		// Program is stopped and waiting for reset command 
 		mpPACKML_STATE_STOPPED:
+			MpAxisBasic_0.ErrorReset := FALSE;
+			MpDelta4Axis_0.ErrorReset := FALSE;
+			ClearingExecute := FALSE;
 			PackMLCurrentStateString := 'Stopped';
 			MpPackMLMode_0.Clear := FALSE;
 			MpPackMLMode_0.Stop := FALSE;
@@ -74,7 +77,9 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		mpPACKML_STATE_EXECUTE:
-			
+			IF NOT MpAxisBasic_0.PowerOn OR NOT MpDelta4Axis_0.PowerOn THEN
+				gAbort := TRUE;
+			END_IF
 			PackMLCurrentStateString := 'Execute';
 		// aborting -> when imidiate stop is in use
 		mpPACKML_STATE_ABORTING:
@@ -84,16 +89,23 @@ PROGRAM _CYCLIC
 		// Program is aborted. powers are shut down - waiting for cleaning command
 		mpPACKML_STATE_ABORTED:
 			PackMLCurrentStateString := 'Aborted';
-			MpPackMLMode_0.Abort := FALSE;
 			AbortExecute := FALSE;
+			gAbort := FALSE;
 			
 			//Clearing alarms/bugs/warnings
 		mpPACKML_STATE_CLEARING:
+			ClearingExecute := TRUE;
 			PackMLCurrentStateString := 'Clearing';
-			MpPackMLStateComplete(gPackMLCore,1);
+			IF ClearingExecutedPick
+				AND ClearingExecutedPickCore 
+				AND ClearingExecutedPlace THEN 
+				MpAxisBasic_0.ErrorReset := TRUE;
+				MpDelta4Axis_0.ErrorReset := TRUE;
+				MpPackMLStateComplete(gPackMLCore,1);
+			END_IF
 
 	END_CASE;
-	
+	MpPackMLMode_0.Abort := gAbort;
 	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
 	
 	//Conveyor homing information for camera

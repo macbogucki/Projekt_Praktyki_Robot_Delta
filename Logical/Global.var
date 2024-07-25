@@ -27,4 +27,9 @@ VAR
 	gTokenOnConv : BOOL;
 	gToken_Y : REAL;
 	gToken_X : REAL;
+	gAbort : BOOL := FALSE;
+	ClearingExecute : BOOL;
+	ClearingExecutedPick : BOOL;
+	ClearingExecutedPickCore : BOOL;
+	ClearingExecutedPlace : BOOL;
 END_VAR

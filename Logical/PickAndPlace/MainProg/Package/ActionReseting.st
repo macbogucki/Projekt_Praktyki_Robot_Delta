@@ -15,6 +15,7 @@ ACTION ResetingAction:
 				MpAxisBasic_0.Power := TRUE;
 				MpAxisBasic_1.Power := TRUE; // axis not used, do not worry
 				IF MpAxisBasic_0.PowerOn AND MpDelta4Axis_0.PowerOn THEN
+					MpAxisBasic_0.MoveVelocity := FALSE;
 					RES_Step := HOMING_AXIS; 
 				END_IF
 				

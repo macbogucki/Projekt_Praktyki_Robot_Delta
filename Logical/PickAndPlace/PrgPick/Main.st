@@ -15,9 +15,11 @@ PROGRAM _CYCLIC
 	CASE C_Step OF
 		C_WAIT_ENABLE:
 			LastStep := C_WAIT_ENABLE;
-			IF NOT AbortExecute AND NOT StopExecute THEN
+			IF NOT AbortExecute AND NOT StopExecute AND NOT MpPickRegister_0.Error THEN
 				C_Step   := C_ENABLE_REGISTER_FB;
 				StopExecutedPick := FALSE;
+				ClearingExecutedPick := FALSE;
+				MpPickRegister_0.ErrorReset := FALSE;
 			END_IF
 			
 			(* Pick-and-Place register handling for Picking conveyor *)
@@ -98,10 +100,28 @@ PROGRAM _CYCLIC
 			
 	END_CASE
 		
-	IF AbortExecute OR StopExecute THEN
+	IF StopExecute THEN
 		C_Step := C_WAIT_ENABLE;
 		ReadyPickReg := FALSE;
 		StopExecutedPick := TRUE;
+	END_IF
+		
+	IF MpPickRegCreateProduct.Error OR MpPickRegister_0.Error THEN
+		gAbort := TRUE;
+	END_IF
+		
+	IF AbortExecute THEN
+		ReadyPickReg := FALSE;
+		StopExecutedPick := TRUE;
+		MpPickRegCreateProduct.Enable := FALSE;
+		MpPickRegister_0.RegisterEnable := FALSE;	
+		MpPickRegister_0.Enable := FALSE;	
+	END_IF
+		
+	IF ClearingExecute THEN
+		C_Step := C_WAIT_ENABLE;
+		MpPickRegister_0.ErrorReset := TRUE;
+		ClearingExecutedPick := TRUE;	
 	END_IF
 	
 	(* FB calls *)

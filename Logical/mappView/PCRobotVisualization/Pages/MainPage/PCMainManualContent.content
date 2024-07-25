@@ -30,14 +30,14 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="StopButton" top="235" left="95" width="170" height="90" zIndex="26" image="Media/SymbolLib/Media/Stop.svg" text="Stop" backColor="rgba(255, 0, 0, 1)" mouseDownBackColor="rgba(139, 0, 0, 1)" fontSize="22px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ResetButton" top="345" left="95" width="170" height="90" zIndex="27" image="Media/SymbolLib/Symbols/Reset.svg" text="$IAT/Reset" fontSize="22px" bold="false" style="Command" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearButton" top="455" left="95" width="170" height="90" zIndex="28" image="Media/SymbolLib/Edit/Delete.svg" text="$IAT/Clear" fontSize="22px" bold="false" style="Command" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="AbortButton" top="565" left="95" width="170" height="90" zIndex="29" image="Media/SymbolLib/Edit/Close.svg" multiLine="true" text="$IAT/DeleteObjects" wordWrap="true" imageColor="rgba(0, 0, 0, 1)" fontSize="22px" bold="false" style="Command" />
-    <Widget xsi:type="widgets.brease.PushButton" id="StartButton" top="125" left="95" width="170" height="90" zIndex="30" image="Media/SymbolLib/Symbols/Start.svg" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="22px" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="475" left="740" width="130" zIndex="31" text="$IAT/CurrentState" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="CurrentStateTextOutput" top="470" left="875" width="145" height="35" zIndex="32" value="undefined" fontSize="24px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="575" left="655" width="130" zIndex="37" text="$IAT/TokenPosition" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="560" left="872" zIndex="34" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="590" left="872" zIndex="35" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="560" left="797" width="130" zIndex="36" text="X" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label10" top="590" left="795" width="130" zIndex="33" text="Y" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.PushButton" id="StartButton" top="125" left="95" width="170" height="90" zIndex="29" image="Media/SymbolLib/Symbols/Start.svg" text="Start" backColor="rgba(50, 205, 50, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="22px" style="Command" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="475" left="740" width="130" zIndex="30" text="$IAT/CurrentState" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="CurrentStateTextOutput" top="470" left="875" width="145" height="35" zIndex="31" value="undefined" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="575" left="655" width="130" zIndex="36" text="$IAT/TokenPosition" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="560" left="872" zIndex="33" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="590" left="872" zIndex="34" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="560" left="797" width="130" zIndex="35" text="X" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="590" left="795" width="130" zIndex="32" text="Y" fontSize="18px" />
+    <Widget xsi:type="widgets.brease.PushButton" id="HomingButton" top="565" left="95" width="170" height="90" zIndex="37" image="Media/SymbolLib/Symbols/Robot.svg" text="Homing" textColor="rgba(255, 255, 255, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="22px" style="Command" />
   </Widgets>
 </Content>

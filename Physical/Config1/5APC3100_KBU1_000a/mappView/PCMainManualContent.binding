@@ -90,9 +90,9 @@
 <Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="YVelNumericInput" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gDeleteObjects" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="AbortButton" attribute="value" />
+		<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gManualHoming" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="HomingButton" attribute="value" />
 </Binding>
-</Bindings>
+	</Bindings>
 </BindingsSet>

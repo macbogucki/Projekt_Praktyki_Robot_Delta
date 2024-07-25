@@ -18,8 +18,16 @@ PROGRAM _CYCLIC
 		DeltaParamConnections.Jog.Velocity[1] := 0;	
 		DeltaParamConnections.Jog.Velocity[2] := 0;
 		
-		IF NOT isMove THEN
+		IF isMove THEN
+			gManualHoming := FALSE;
+		END_IF;
+		
+		IF NOT isMove AND NOT gManualHoming THEN
 			ManualEnum := 8;
+		END_IF;
+		
+		IF gManualHoming THEN
+			ManualEnum := 1;
 		END_IF;
 			
 		gMpDelta4AxisEnable := TRUE; 

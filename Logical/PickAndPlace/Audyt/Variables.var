@@ -21,4 +21,7 @@ VAR
 	R_TRIG_5 : R_TRIG;
 	LoginFailed : BOOL;
 	MessageVarLoginFailed : WSTRING[100];
+	MessageVarManual : WSTRING[80];
+	MessageVarAutomat : WSTRING[80];
+	R_TRIG_6 : R_TRIG;
 END_VAR

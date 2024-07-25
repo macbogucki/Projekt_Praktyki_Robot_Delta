@@ -12,9 +12,8 @@ PROGRAM _CYCLIC
 	MessageVarLogin := "Zalogowano uzytkownia";
 	MessageVarLoginFailed := "Logowanie nie powiodlo sie";
 	MessageVarLogout := "Wylogowano uzytkownika";
-	MessageVarCase := "Zmiana trybu pracy";
-	MessageVarAlarm := "Wystapil alarm";
-
+	MessageVarManual := "Zmiana trybu pracy na Manualny";
+	MessageVarAutomat := "Zmiana trybu pracy na Automatyczny";
 	//Wywo³ywanie audytu
 	MpAuditTrail_0();
 	MpAuditTrail_0.MpLink := ADR(gAuditTrail);
@@ -53,16 +52,16 @@ PROGRAM _CYCLIC
 		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarLoginFailed, CommentVar);
 		LoginFailed := FALSE;
 	END_IF;
-	(*//Audyt zmiany trybu pracy
-	R_TRIG_5(CLK :=);
+	//Audyt zmiany trybu pracy
+	R_TRIG_5(CLK := gManualMode);
 	IF R_TRIG_5.Q THEN
-		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarCase, CommentVar);
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarManual, CommentVar);
 	END_IF;
-	//Audyt wystopiênie alarmu
-	R_TRIG_6(CLK := );
+
+	R_TRIG_6(CLK := NOT gManualMode);
 	IF R_TRIG_6.Q THEN
-		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarAlarm, CommentVar);
-	END_IF;*)
+		MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVarAutomat, CommentVar);
+	END_IF;
 
 END_PROGRAM
 

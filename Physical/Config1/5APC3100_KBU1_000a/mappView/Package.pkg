@@ -12,7 +12,6 @@
     <Object Type="File">TopNavContent.eventbinding</Object>
     <Object Type="File">PCTopContent.eventbinding</Object>
     <Object Type="File">PCAlarmsContent.eventbinding</Object>
-    <Object Type="File">AlarmDetailsContent.eventbinding</Object>
     <Object Type="File">PCMainManualContent.eventbinding</Object>
     <Object Type="File">LoginContent.eventbinding</Object>
     <Object Type="File">PCAlarmsNavContent.eventbinding</Object>
@@ -22,7 +21,6 @@
     <Object Type="File">PCAuditsContent.eventbinding</Object>
     <Object Type="File">PCAlarmsContent.binding</Object>
     <Object Type="File">PCAlarmsHistoryContent.binding</Object>
-    <Object Type="File">AlarmDetailsContent.binding</Object>
     <Object Type="File">PCAlarmsHistoryContent.eventbinding</Object>
   </Objects>
 </Package>

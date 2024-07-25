@@ -21,15 +21,5 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="PCAlarmsContent.DetailsAlarmButton.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PCAlarmsContent" widgetRefId="DetailsAlarmButton" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="AlarmDetailsDialog" headerText="Details" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
   </Bindings>
 </EventBindingSet>

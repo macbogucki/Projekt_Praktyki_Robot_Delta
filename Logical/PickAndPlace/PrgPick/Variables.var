@@ -5,6 +5,7 @@ VAR
 	ProductSpacing : LREAL;
 	LastProductConveyorPosition : LREAL;
 	ElapsedDistance : LREAL;
+	OldMakeToken : BOOL;
 END_VAR
 (*  *)
 (*Functionblocks*)

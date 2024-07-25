@@ -24,5 +24,7 @@ TYPE
 		PosMatchX : DINT;
 		PosMatchY : DINT;
 		NumResults : USINT;
+		PhotosNum : USINT;
+		ProcesingTime : UINT;
 	END_STRUCT;
 END_TYPE

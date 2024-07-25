@@ -99,7 +99,7 @@ PROGRAM _CYCLIC
 	//Conveyor homing information for camera
 	IF MpAxisBasic_0.IsHomed THEN
 		gIsConvHomed := TRUE;
-	ELSE
+   ELSE
 		gIsConvHomed := FALSE;
 	END_IF
 	
@@ -112,7 +112,7 @@ PROGRAM _CYCLIC
 	
 	//All axis configuration -mplink -config -init
 	AxisConfigAction;
-    
+    ConvVelocityDegrees:=MpAxisBasic_0.Velocity;
 	//Updating both conveyors position
 	PickConveyorPosition  := MpAxisBasic_0.Position;
 	PlaceConveyorPosition := MpAxisBasic_1.Position;

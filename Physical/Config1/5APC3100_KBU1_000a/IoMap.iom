@@ -10,4 +10,7 @@ VAR_CONFIG
 	::Vision:CameraStatus AT %ID."VSS112R24.042P-000".CameraStatus;
 	::Vision:Cam.Status.IsCameraReady AT %IX."VSS112R24.042P-000".ImageAcquisitionReady;
 	::Vision:Cam.Camera_Output.NumResults AT %IB."VSS112R24.042P-000".NumResultsMatching;
+	::Vision:Cam.Camera_Output.PhotosNum AT %IB."VSS112R24.042P-000".CompletedAcquisitionCnt;
+	::Vision:Cam.Camera_Output.ProcesingTime AT %IW."VSS112R24.042P-000".CameraProcessingTime;
+	::gIsCameraActive AT %IX."VSS112R24.042P-000".ImageProcessingActive;
 END_VAR

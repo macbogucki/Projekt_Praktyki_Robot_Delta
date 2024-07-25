@@ -1,8 +1,10 @@
 VAR
+	OldPhotosNum : USINT;
 	Cam : Camera;
 	ViAxisAcquisition_0 : ViBaseAxisBasedAcquisition;
 	AcquisitionParameters : ViBaseAxBsdAcqAcqParType;
 	AdvancedParameters : ViBaseAxBsdAcqAdvParType;
 	MakingPhoto : BOOL;
 	CameraStatus : UDINT;
+	RotationPeriod : REAL;
 END_VAR

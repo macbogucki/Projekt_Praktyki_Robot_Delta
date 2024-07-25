@@ -4,7 +4,7 @@
     <Widget xsi:type="widgets.brease.Image" id="Logo" top="10" left="5" width="145" zIndex="0" image="Media/logo_br.png" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="5" left="1615" zIndex="1" image="Media/SymbolLib/User/User.svg" />
     <Widget xsi:type="widgets.brease.LanguageSelector" id="LanguageSelector" top="30" left="1440" width="120" height="45" zIndex="2" />
-    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="5" left="1785" height="45" zIndex="3" multiLine="true" wordWrap="true" />
-    <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton1" top="60" left="1785" width="115" zIndex="4" text="Logout" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="5" left="1775" height="45" zIndex="3" multiLine="true" wordWrap="true" />
+    <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton1" top="60" left="1785" width="115" zIndex="4" text="$IAT/Logout" />
   </Widgets>
 </Content>

@@ -363,5 +363,16 @@ Alles löschen</seg>
         <seg>Clear all</seg>
       </tuv>
     </tu>
+    <tu tuid="Gripper">
+      <tuv xml:lang="pl">
+        <seg>Chwytak</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Greifer</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Gripper</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

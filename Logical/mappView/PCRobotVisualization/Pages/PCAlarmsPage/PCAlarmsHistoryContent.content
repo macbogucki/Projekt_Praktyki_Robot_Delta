@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PCAlarmsHistoryContent" height="800" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="80" left="445" width="830" height="600" zIndex="0" itemsPerPage="10">
+    <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="50" left="445" width="830" height="600" zIndex="0" itemsPerPage="10">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryID" width="50" zIndex="0" columnType="instanceId" text="ID" />
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryName" width="230" zIndex="1" columnType="name" text="Name" />
@@ -9,6 +9,6 @@
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryTimestamp" zIndex="3" columnType="timestamp" text="Timestamp" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="710" left="1065" width="210" height="50" zIndex="1" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/ExportToCSV" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="680" left="1065" width="210" height="65" zIndex="1" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/ExportToCSV" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
   </Widgets>
 </Content>

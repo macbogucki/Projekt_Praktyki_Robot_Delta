@@ -27,7 +27,15 @@
         <seg>Haupsteite</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Service Page</seg>
+        <seg>Service</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UsersPage">
+      <tuv xml:lang="pl">
+        <seg>Użytkownicy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Users</seg>
       </tuv>
     </tu>
     <tu tuid="AlarmsPage">
@@ -38,7 +46,7 @@
         <seg>Alarmseite</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Alarms Page</seg>
+        <seg>Alarms</seg>
       </tuv>
     </tu>
     <tu tuid="LoggedAs">
@@ -99,15 +107,15 @@ Angemeldet als</seg>
         <seg>Take a photo</seg>
       </tuv>
     </tu>
-    <tu tuid="Velocity">
+    <tu tuid="VelocityY">
       <tuv xml:lang="pl">
-        <seg>Prędkość</seg>
+        <seg> Prędkość Y</seg>
       </tuv>
       <tuv xml:lang="de">
-        <seg>Geschwindigkeit</seg>
+        <seg>Geschwindigkeit Y</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Velocity</seg>
+        <seg>Velocity Y</seg>
       </tuv>
     </tu>
     <tu tuid="TrackingTime">
@@ -175,6 +183,115 @@ Aktuellen Zustand</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Export</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoControl">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie automatyczne</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Automatische Steuerung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual">
+      <tuv xml:lang="pl">
+        <seg>Ręczne</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Manual</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StartStopConv">
+      <tuv xml:lang="pl">
+        <seg>Start/Stop Przenośnika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Start/Stop Conveyor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VelocityX">
+      <tuv xml:lang="pl">
+        <seg>Prędkość X</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit X</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity X</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VelocityZ">
+      <tuv xml:lang="pl">
+        <seg>Prędkość Z</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Z</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity Z</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControl">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie ręczne</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Manuelle Kontrolle
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual Control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mode">
+      <tuv xml:lang="pl">
+        <seg>Tryb</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Modus</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PositionPreview">
+      <tuv xml:lang="pl">
+        <seg>Podgląd stanowiska</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Positionsvorschau</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position preview</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PhotoPreview">
+      <tuv xml:lang="pl">
+        <seg>Podgląd zdjęcia</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Fotovorschau</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Photo Preview</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TokenPosition">
+      <tuv xml:lang="pl">
+        <seg>Pozycja krążka</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Puckposition</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Token position</seg>
       </tuv>
     </tu>
   </body>

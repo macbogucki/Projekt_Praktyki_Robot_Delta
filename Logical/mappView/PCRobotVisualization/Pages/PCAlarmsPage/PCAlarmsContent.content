@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PCAlarmsContent" height="800" width="1720" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="80" left="445" width="830" height="600" zIndex="0" itemsPerPage="10">
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="75" left="415" width="905" height="600" zIndex="0" imageActive="Media/SymbolLib/Alarm/Alarm.svg" imageActiveAcknowledged="Media/SymbolLib/Alarm/Acknowledge.svg" imageInactive="Media/SymbolLib/Alarm/Alarm.svg" itemsPerPage="10">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmID" width="50" zIndex="0" columnType="instanceId" text="ID" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmName" width="230" zIndex="1" columnType="name" text="Name" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmDescription" width="350" zIndex="2" text="Description" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmTimestamp" zIndex="3" columnType="timestamp" text="Timestamp" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem1" width="75" zIndex="4" columnType="state" text="State" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeButton" top="710" left="845" width="210" height="50" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="Acknowledge" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="710" left="1065" width="210" height="50" zIndex="2" image="Media/SymbolLib/Symbols/Accept.svg" text="Acknowledge All" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="DetailsAlarmButton" top="710" left="445" width="210" height="50" zIndex="3" image="Media/SymbolLib/File/Search.svg" text="Details" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeButton" top="685" left="890" width="210" height="50" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="Acknowledge" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AcknowledgeAllButton" top="685" left="1110" width="210" height="50" zIndex="2" image="Media/SymbolLib/Symbols/Accept.svg" text="Acknowledge All" imageColor="rgba(255, 255, 255, 1)" fontSize="18px" style="Command" />
   </Widgets>
 </Content>

@@ -11,6 +11,7 @@ TYPE
 		ExposureTime : UDINT := 10000;
 		FlashColor : USINT := 99;
 		FlashSegment : USINT := 15;
+		MinScore : USINT;
 	END_STRUCT;
 	Cmd : 	STRUCT 
 		Trigger : BOOL;

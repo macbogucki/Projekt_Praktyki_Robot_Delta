@@ -11,7 +11,7 @@
         <Group ID="Position[1]">
           <Property ID="Object" Value="MyProduct" />
           <Group ID="Translation">
-            <Property ID="X" Value="0.0" />
+            <Property ID="X" Value="4" />
             <Property ID="Y" Value="0.0" />
             <Property ID="Z" Value="0.0" />
           </Group>

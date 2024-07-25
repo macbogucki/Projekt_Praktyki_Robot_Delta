@@ -5,6 +5,5 @@
     <Object Type="File">PCAuditsContent.content</Object>
     <Object Type="File" Description="Page description">PCServicePage.page</Object>
     <Object Type="File">PCServiceNavContent.content</Object>
-    <Object Type="File">PCUpdatesContent.content</Object>
   </Objects>
 </Package>

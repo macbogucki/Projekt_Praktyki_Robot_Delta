@@ -44,7 +44,6 @@
     <Content refId="PCServiceNavContent" />
     <Content refId="PCAlarmsNavContent" />
     <Content refId="PCAlarmsHistoryContent" />
-    <Content refId="PCUpdatesContent" />
     <Content refId="PCPackMLContent" />
     <Content refId="PCUsersNavContent" />
     <Content refId="PCUsersContent" />

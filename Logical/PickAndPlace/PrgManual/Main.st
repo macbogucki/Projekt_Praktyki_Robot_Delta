@@ -17,7 +17,10 @@ PROGRAM _CYCLIC
 		DeltaParamConnections.Jog.Velocity[0] := 0;	
 		DeltaParamConnections.Jog.Velocity[1] := 0;	
 		DeltaParamConnections.Jog.Velocity[2] := 0;
-			
+		
+		IF NOT isMove THEN
+			ManualEnum := 8;
+		END_IF;
 			
 		gMpDelta4AxisEnable := TRUE; 
 		gMpDelta4AxisJog := TRUE;

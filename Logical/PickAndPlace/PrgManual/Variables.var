@@ -13,5 +13,6 @@ VAR
 	XVel : USINT;
 	YVel : USINT;
 	ZVel : USINT;
+	isMove : BOOL;
 	ManualEnum : MANUAL_ENUM;
 END_VAR

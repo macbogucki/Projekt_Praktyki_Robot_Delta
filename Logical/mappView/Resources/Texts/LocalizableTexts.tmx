@@ -294,5 +294,51 @@ Positionsvorschau</seg>
         <seg>Token position</seg>
       </tuv>
     </tu>
+    <tu tuid="DeleteObjects">
+      <tuv xml:lang="pl">
+        <seg>Usuń obiekty</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Objekte entfernen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Delete objects</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Audit">
+      <tuv xml:lang="pl">
+        <seg>Audyt</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Prüfung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurrentAlarms">
+      <tuv xml:lang="pl">
+        <seg>Aktualne alarmy</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>
+Aktuelle Alarme</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current Alarms</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HisotryAlarms">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Alarmverlauf</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>History of alarms</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

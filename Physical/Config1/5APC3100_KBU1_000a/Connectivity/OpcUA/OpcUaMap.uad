@@ -41,6 +41,8 @@
         <Variable Name="gTcpPositionX" />
         <Variable Name="gTcpPositionY" />
         <Variable Name="gTcpPositionZ" />
+        <Variable Name="gManualHoming" />
+        <Variable Name="gTokenOnConv" />
       </GlobalVariables>
       <Task Name="Vision">
         <Variable Name="Cam" RecursiveEnable="2" />
@@ -72,6 +74,9 @@
         </Variable>
         <Variable Name="PackMLCurrentState" />
         <Variable Name="PackMLCurrentStateString" />
+        <Variable Name="MpAxisBasic_0">
+          <Variable Name="MoveVelocity" />
+        </Variable>
       </Task>
       <Task Name="PrgManual">
         <Variable Name="MoveXNeg" />
@@ -88,6 +93,8 @@
         <Variable Name="HomeZ" />
         <Variable Name="HomingOffset" />
         <Variable Name="HomingVel" />
+        <Variable Name="ManualEnum" />
+        <Variable Name="isMove" />
       </Task>
       <Task Name="Audyt">
         <Variable Name="MpAuditTrail_0">

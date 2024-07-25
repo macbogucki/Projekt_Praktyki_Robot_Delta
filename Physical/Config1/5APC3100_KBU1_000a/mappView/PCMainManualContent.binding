@@ -1,46 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BindingsSet id="PCMainManualContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveYPos" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYPosButton" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveXNeg" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXNegButton" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveXPos" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXPosButton" attribute="value" />
-</Binding>
-		<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:XVel" attribute="node" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveZPos" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZPosButton" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveZNeg" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZNegButton" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:MoveYNeg" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYNegButton" attribute="value" />
-</Binding>
+
+
+
+		
+
+
+
 
 
 
 	
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:ZVel" attribute="node" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider2" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="node" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider1" attribute="node" />
-</Binding>
+
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::PrgManual:XVel" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="XVelNumericInput" attribute="value" />
@@ -54,9 +27,72 @@
 <Source xsi:type="opcUa" refId="::MainProg:PackMLCurrentStateString" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="CurrentStateTextOutput" attribute="value" />
 </Binding>
+
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="node" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="YVelNumericInput" attribute="node" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:CmdStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="StartButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Stop" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="StopButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Reset" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ResetButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Clear" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ClearButton" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MainProg:MpAxisBasic_0.MoveVelocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvToggleButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYNegButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXNegButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZPosButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveYPosButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveXPosButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:isMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="MoveZNegButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:XVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:ZVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="VelocitySlider2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgManual:YVel" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="YVelNumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gDeleteObjects" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="AbortButton" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

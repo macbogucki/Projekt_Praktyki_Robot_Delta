@@ -130,43 +130,47 @@ PROGRAM _CYCLIC
 		
 	END_IF;
 	
-	
-	FOR Iterator := 0 TO 3 DO
-		IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT AND gDeleteObjects) THEN
-			MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
-			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
-			MpPickRegDeleteTokens.Delete := TRUE;
-			numberOfDeletes := numberOfDeletes + 1;
+		MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
+		gTokenNumber := 0;
+		
+		FOR Iterator := 0 TO 3 DO
+			IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT AND gDeleteObjects) THEN
+				MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
+				MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
+				MpPickRegDeleteTokens.Delete := TRUE;
+				numberOfDeletes := numberOfDeletes + 1;
 			ELSE
 				MpPickRegDeleteTokens.Parameters.ObjectTypeName := 'MyContainer';
-			MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
-			MpPickRegDeleteTokens.Delete := FALSE;
-						
-		END_IF;
-		IF numberOfDeletes = 4 THEN
-			P_Step := P_WAIT_ENABLE;
-			numberOfDeletes := 0;
-			gTokenNumber := 0;	
-		END_IF
-		IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT) THEN
-			gTokenNumber := Iterator +1;		
-		END_IF
-		
-
+				MpPickRegDeleteTokens.Parameters.ObjectPositionId := gContainerInfo[Iterator].ObjectPositionId;
+				MpPickRegDeleteTokens.Delete := FALSE;						
+			END_IF;
+			
+			MpPickRegDeleteTokens();
+			
+			IF (gContainerInfo[Iterator].ObjectPositionInfo = mpPICK_INFO_CONTAINED_OBJECT) THEN
+				gTokenNumber := gTokenNumber +1;		
+				IF OldTokenNumber <> gTokenNumber THEN
+					gTokenOnConv := FALSE;
+				END_IF
+					
+			END_IF				
+	
 		END_FOR;
-	gDeleteObjects := 0;
-	
+		IF numberOfDeletes > 0 THEN
+			P_Step := P_WAIT_ENABLE;
+			gTokenNumber := 0;	
+			numberOfDeletes := 0;
+		END_IF
+		gDeleteObjects := 0;
+		OldTokenNumber := gTokenNumber;
     
-    (* FB calls *)    
-    MpPickRegister_0.MpLink := ADR(gPlaceRegister);
-    MpPickRegister_0();
+		(* FB calls *)    
+		MpPickRegister_0.MpLink := ADR(gPlaceRegister);
+		MpPickRegister_0();
 	
-	MpPickRegCreateContainer.MpLink := ADR(gPlaceRegister);
-	MpPickRegCreateContainer();
+		MpPickRegCreateContainer.MpLink := ADR(gPlaceRegister);
+		MpPickRegCreateContainer();
 	
-	
-	MpPickRegDeleteTokens.MpLink := ADR(gPlaceRegister);
-	MpPickRegDeleteTokens();
 	
 	
 	END_IF

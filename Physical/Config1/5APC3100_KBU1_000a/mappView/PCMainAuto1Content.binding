@@ -17,18 +17,12 @@
 <Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Clear" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ClearButton" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::MainProg:MpPackMLMode_0.Abort" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="AbortButton" attribute="value" />
-</Binding>
+
 	<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenNumber" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="PlaceImageList" attribute="selectedIndex" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Vision:Cam.Status.AquisitionComplete" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ConvImageList" attribute="selectedIndex" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::MainProg:PackMLCurrentStateString" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="CurrentStateTextOutput" attribute="value" />
@@ -40,6 +34,14 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Vision:Cam.Camera_Output.PosMatchX" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="NumericOutput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gDeleteObjects" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="AbortButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenOnConv" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ConvImageList" attribute="selectedIndex" />
 </Binding>
 </Bindings>
 </BindingsSet>

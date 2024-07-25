@@ -24,6 +24,7 @@ VAR
 	gIsConvHomed : BOOL;
 	gMakeToken : BOOL;
 	ResetExecutedPickCore : BOOL;
+	gTokenOnConv : BOOL;
 	gToken_Y : REAL;
 	gToken_X : REAL;
 END_VAR

@@ -19,9 +19,11 @@ PROGRAM _CYCLIC
 	
     CASE P_Step OF
 		P_WAIT_ENABLE:
-			IF NOT AbortExecute AND NOT StopExecute THEN
+			IF NOT AbortExecute AND NOT StopExecute AND NOT MpPickRegister_0.Error THEN
 				P_Step := P_ENABLE_REGISTER_FB;
 				StopExecutedPlace := FALSE;
+				ClearingExecutedPlace := FALSE;
+				MpPickRegister_0.ErrorReset := FALSE;
 			END_IF
 			
         P_ENABLE_REGISTER_FB:
@@ -100,12 +102,15 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	
-	IF AbortExecute OR StopExecute THEN
+	IF StopExecute OR AbortExecute THEN
 		ReadyPlaceReg := FALSE;
 		P_Step := P_WAIT_ENABLE;
 		StopExecutedPlace := TRUE;
 	END_IF
-	
+	IF ClearingExecute THEN
+		MpPickRegister_0.ErrorReset := TRUE;
+		ClearingExecutedPlace := TRUE;
+	END_IF
 
 	MpPickRegGetObjectsContainer.Get := FALSE;
 	MpPickRegDeleteTokens.Delete := FALSE;

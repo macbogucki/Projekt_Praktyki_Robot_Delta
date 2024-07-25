@@ -42,7 +42,7 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTokenOnConv" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="ConvImageList" attribute="selectedIndex" />
-
+</Binding>
 	<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Vision:CameraImageURL" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainAuto1Content" widgetRefId="Paper1" attribute="svgContent" />

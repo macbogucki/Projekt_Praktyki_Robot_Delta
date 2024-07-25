@@ -3,7 +3,7 @@
   <StartPage pageRefId="MobileMainPage" />
   <Pages>
     <Page refId="PCAlarmsPage" />
-    <Page refId="PCFilesPage" />
+    <Page refId="PCUsersPage" />
   </Pages>
   <Navigations />
   <BindingsSets>
@@ -13,11 +13,11 @@
     <BindingsSet refId="PCAuditsContent_binding" />
     <BindingsSet refId="PCAlarmsContent_binding" />
     <BindingsSet refId="PCAlarmsHistoryContent_binding" />
+    <BindingsSet refId="AlarmDetailsContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="eventbinding_1" />
     <EventBindingsSet refId="PCMainAuto1Content_eventbinding" />
-    <EventBindingsSet refId="TopNavContent_eventbinding" />
     <EventBindingsSet refId="PCTopContent_eventbinding" />
     <EventBindingsSet refId="PCAlarmsContent_eventbinding" />
     <EventBindingsSet refId="AlarmDetailsContent_eventbinding" />
@@ -25,6 +25,8 @@
     <EventBindingsSet refId="LoginContent_eventbinding" />
     <EventBindingsSet refId="PCAlarmsNavContent_eventbinding" />
     <EventBindingsSet refId="PCAuditsContent_eventbinding" />
+    <EventBindingsSet refId="PCAlarmsHistoryContent_eventbinding" />
+    <EventBindingsSet refId="TopNavContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="AlarmDetailsDialog" />
@@ -42,10 +44,10 @@
     <Content refId="PCServiceNavContent" />
     <Content refId="PCAlarmsNavContent" />
     <Content refId="PCAlarmsHistoryContent" />
-    <Content refId="PCFilesContent" />
-    <Content refId="PCFilesNavContent" />
     <Content refId="PCUpdatesContent" />
     <Content refId="PCPackMLContent" />
+    <Content refId="PCUsersNavContent" />
+    <Content refId="PCUsersContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

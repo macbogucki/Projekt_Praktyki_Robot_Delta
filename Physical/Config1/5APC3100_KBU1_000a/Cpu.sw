@@ -14,7 +14,7 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Audyt" Source="PickAndPlace.Audyt.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Vision" Source="Camera.Vision.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="UsersMenag" Source="PickAndPlace.UsersMenagment.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Alarmy" Source="PickAndPlace.Alarmy.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

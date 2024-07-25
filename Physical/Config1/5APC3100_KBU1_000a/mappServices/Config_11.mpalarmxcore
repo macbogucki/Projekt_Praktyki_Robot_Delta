@@ -4,8 +4,13 @@
   <Element ID="gAlarmXCore" Type="mpalarmxcore">
     <Group ID="mapp.AlarmX.Core.Configuration">
       <Group ID="[0]">
-        <Property ID="Name" Value="TestowyAlarm" />
-        <Property ID="Message" Value="TestowyAlarm" />
+        <Property ID="Name" Value="Alarm" />
+        <Property ID="Message" Value="Wystapil alarm" />
+        <Selector ID="Behavior" Value="RateOfChangeMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::Alarmy:MpAlarmXCore_0.PendingAlarms" />
+          </Group>
+        </Selector>
       </Group>
     </Group>
   </Element>

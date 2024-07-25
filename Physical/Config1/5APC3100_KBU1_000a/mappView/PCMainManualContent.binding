@@ -98,5 +98,9 @@
 <Source xsi:type="opcUa" refId="::Vision:MakingPhoto" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="TakePhotoPushButton" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::PrgPickCor:Gripper" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvToggleButton1" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

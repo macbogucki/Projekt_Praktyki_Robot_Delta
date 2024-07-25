@@ -112,6 +112,9 @@
           <Variable Name="Export" />
         </Variable>
       </Task>
+      <Task Name="PrgPickCor">
+        <Variable Name="Gripper" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

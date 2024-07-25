@@ -39,5 +39,6 @@
     <Widget xsi:type="widgets.brease.Label" id="Label10" top="590" left="795" width="130" zIndex="31" text="Y" fontSize="18px" />
     <Widget xsi:type="widgets.brease.PushButton" id="HomingButton" top="565" left="95" width="170" height="90" zIndex="36" image="Media/SymbolLib/Symbols/Robot.svg" text="Homing" textColor="rgba(255, 255, 255, 1)" mouseDownBackColor="rgba(34, 139, 34, 1)" fontSize="22px" style="Command" />
     <Widget xsi:type="widgets.brease.PushButton" id="TakePhotoPushButton" top="600" left="350" width="150" height="75" zIndex="37" image="Media/SymbolLib/Media/Video.svg" multiLine="true" text="$IAT/TakePhoto" wordWrap="true" fontSize="18px" style="Command" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ConvToggleButton1" top="465" left="530" width="150" height="75" zIndex="38" image="Media/SymbolLib/Symbols/Button.svg" multiLine="true" text="Gripper" wordWrap="true" fontSize="18px" style="Command" />
   </Widgets>
 </Content>

@@ -94,10 +94,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gManualHoming" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="HomingButton" attribute="value" />
 		</Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Vision:MakingPhoto" attribute="value" />
-<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="TakePhotoPushButton" attribute="value" />
-</Binding>
+	
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::PrgPickCor:Gripper" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="ConvToggleButton1" attribute="value" />
@@ -105,6 +102,18 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Vision:CameraImageURL" attribute="value" />
 <Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="Paper1" attribute="svgContent" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gToken_Y" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="NumericOutput2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gToken_X" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="NumericOutput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Vision:Cam.Cmd.Trigger" attribute="value" />
+<Target xsi:type="brease" contentRefId="PCMainManualContent" widgetRefId="TakePhotoPushButton" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

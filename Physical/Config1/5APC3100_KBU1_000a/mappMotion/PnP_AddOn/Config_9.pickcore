@@ -100,6 +100,27 @@
         </Selector>
       </Selector>
     </Group>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - Pick Core" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - Pick Core" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - Pick Core" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - Pick Core" />
+        </Group>
+        <Group ID="[16]">
+          <Property ID="Message" Value="Object creation problem - Pick Core" />
+        </Group>
+        <Group ID="[17]">
+          <Property ID="Message" Value="Object deletion problem - Pick Core" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
 </Configuration>

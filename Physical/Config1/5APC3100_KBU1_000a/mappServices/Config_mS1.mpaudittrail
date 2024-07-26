@@ -17,6 +17,15 @@
         <Property ID="Encrypt" Value="FALSE" />
       </Group>
     </Group>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="Archive Available for Audit" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Max Archive" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
 </Configuration>

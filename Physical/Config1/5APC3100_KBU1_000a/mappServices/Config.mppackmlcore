@@ -19,6 +19,18 @@
         <Selector ID="State[17]" Value="0" />
       </Group>
     </Group>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="State Transition Not Allowed" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Mode Transition Not Allowed" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Configuration Invalid" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
 </Configuration>

@@ -1,4 +1,3 @@
-
 PROGRAM _INIT
 	(* Insert code here *)
 	MpAlarmXCore_0.Enable := TRUE;

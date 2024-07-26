@@ -35,7 +35,58 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - axis Q1" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - axis Q1" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - axis Q1" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - axis Q1" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - axis Q1" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - axis Q1" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - axis Q1" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - axis Q1" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - axis Q1" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - axis Q1" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - axis Q1" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - axis Q1" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - axis Q1" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - axis Q1" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - axis Q1" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - axis Q1" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
   <Element ID="gAxisQ2" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -71,7 +122,58 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - axis Q2" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - axis Q2" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - axis Q2" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - axis Q2" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - axis Q2" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - axis Q2" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - axis Q2" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - axis Q2" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - axis Q2" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - axis Q2" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - axis Q2" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - axis Q2" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - axis Q2" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - axis Q2" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - axis Q2" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - axis Q2" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
   <Element ID="gAxisQ3" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -107,7 +209,58 @@
         <Property ID="Deceleration" Value="500000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - axis Q3" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - axis Q3" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - axis Q3" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - axis Q3" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - axis Q3" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - axis Q3" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - axis Q3" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - axis Q3" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - axis Q3" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - axis Q3" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - axis Q3" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - axis Q3" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - axis Q3" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - axis Q3" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - axis Q3" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - axis Q3" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
   <Element ID="gAxisQ4" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -146,6 +299,57 @@
       <Property ID="TorqueIsInvisible" Value="0" />
       <Property ID="TorqueIsReadOnly" Value="0" />
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - axis Q4" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - axis Q4" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - axis Q4" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - axis Q4" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - axis Q4" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - axis Q4" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - axis Q4" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - axis Q4" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - axis Q4" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - axis Q4" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - axis Q4" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - axis Q4" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - axis Q4" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - axis Q4" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - axis Q4" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - axis Q4" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
 </Configuration>

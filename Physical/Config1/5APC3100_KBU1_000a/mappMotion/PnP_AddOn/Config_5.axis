@@ -37,7 +37,58 @@
         <Property ID="Deceleration" Value="20" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - ConveyorPick" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - ConveyorPick" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - ConveyorPick" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - ConveyorPick" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - ConveyorPick" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - ConveyorPick" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - ConveyorPick" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - ConveyorPick" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - ConveyorPick" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - ConveyorPick" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - ConveyorPick" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - ConveyorPick" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - ConveyorPick" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - ConveyorPick" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - ConveyorPick" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - ConveyorPick" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
   <Element ID="gAxis_2" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -75,6 +126,57 @@
         <Property ID="Deceleration" Value="1" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Message" Value="System problem - PlaceHolder" />
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Message" Value="Initialization problem - PlaceHolder" />
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Message" Value="Parameter problem - PlaceHolder" />
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Message" Value="Operation problem - PlaceHolder" />
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Message" Value="Data access problem - PlaceHolder" />
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Message" Value="Syntax error - PlaceHolder" />
+        </Group>
+        <Group ID="[9]">
+          <Property ID="Message" Value="Network problem - PlaceHolder" />
+        </Group>
+        <Group ID="[10]">
+          <Property ID="Message" Value="Encoder problem - PlaceHolder" />
+        </Group>
+        <Group ID="[11]">
+          <Property ID="Message" Value="Drive problem - PlaceHolder" />
+        </Group>
+        <Group ID="[12]">
+          <Property ID="Message" Value="IO problem - PlaceHolder" />
+        </Group>
+        <Group ID="[13]">
+          <Property ID="Message" Value="Supply problem - PlaceHolder" />
+        </Group>
+        <Group ID="[14]">
+          <Property ID="Message" Value="Motor problem - PlaceHolder" />
+        </Group>
+        <Group ID="[15]">
+          <Property ID="Message" Value="Holding brake problem - PlaceHolder" />
+        </Group>
+        <Group ID="[19]">
+          <Property ID="Message" Value="Movement error limit reached - PlaceHolder" />
+        </Group>
+        <Group ID="[20]">
+          <Property ID="Message" Value="HW or SW movement limits reached - PlaceHolder" />
+        </Group>
+        <Group ID="[21]">
+          <Property ID="Message" Value="Enable input low - PlaceHolder" />
+        </Group>
+      </Group>
+    </Selector>
   </Element>
 </Configuration>

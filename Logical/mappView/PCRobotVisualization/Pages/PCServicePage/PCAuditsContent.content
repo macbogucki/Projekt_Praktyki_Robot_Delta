@@ -9,7 +9,7 @@
         <Widget xsi:type="widgets.brease.AuditListItem" id="AuditTimestamp" width="240" zIndex="3" columnType="timestamp" text="Timestamp" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ExportMomentaryPushButton" top="710" left="445" width="150" height="65" zIndex="1" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/Export" imageColor="rgba(255, 255, 255, 1)" style="Command" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearMomentaryPushButton" top="710" left="630" width="150" height="65" zIndex="2" image="Media/SymbolLib/Edit/Delete.svg" multiLine="true" text="$IAT/ClearAll" wordWrap="true" imageColor="rgba(255, 255, 255, 1)" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ExportMomentaryPushButton" top="710" left="445" width="150" height="65" zIndex="1" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/Export" imageColor="rgba(255, 255, 255, 1)" permissionOperate="['Administrators', 'Operators']" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ClearMomentaryPushButton" top="710" left="630" width="150" height="65" zIndex="2" image="Media/SymbolLib/Edit/Delete.svg" multiLine="true" text="$IAT/ClearAll" wordWrap="true" imageColor="rgba(255, 255, 255, 1)" permissionOperate="['Administrators', 'Everyone', 'Operators']" style="Command" />
   </Widgets>
 </Content>
